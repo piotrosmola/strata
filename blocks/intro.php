@@ -2,11 +2,9 @@
 <section class="section intro">
   <!-- Background -->
   <div class="section-bg">
-    <img src="assets/img/project01.jpg" alt="" />
-    <img src="assets/img/project02.jpg" alt="" />
-    <img src="assets/img/project03.jpg" alt="" />
-    <img src="assets/img/project04.jpg" alt="" />
-    <img src="assets/img/project05.jpg" alt="" />
+    <?php foreach ($images as $key => $image): ?>
+    <img src="<?php echo $image['url'] ?>" alt="">
+    <?php endforeach; ?>
   </div>
 
   <!-- Container -->

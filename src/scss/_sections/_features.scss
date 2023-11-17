@@ -1,0 +1,34 @@
+/* Features
+----------------------------------------------------------*/
+
+.section.features {
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+
+  .container-inner > .row > * {
+    display: flex;
+  }
+
+  .section-card {
+    padding: max(15%, 2rem);
+    background-color: rgba(white, 0.1);
+    backdrop-filter: blur(40px);
+
+    @include media('<=lg') {
+      transform: none !important;
+    }
+
+    h5 {
+      max-width: 12rem;
+
+      &::before {
+        width: 10px;
+        height: 1px;
+        background-color: currentColor;
+        margin-bottom: 1rem;
+        content: ' ';
+      }
+    }
+  }
+}

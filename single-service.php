@@ -3,16 +3,90 @@
 
   <!-- Section - Hero #2 -->
   <?php
-    includeBlock('blocks/hero-2.php', array(
+    includeBlock('blocks/hero-3.php', array(
       'title' => 'Creative Communications <br />& Strategies',
-      'description' => 'Every brand moment is an opportunity for positive reinforcement.',
     ));
   ?>
 
   <!-- Intro -->
   <?php
     includeBlock('blocks/intro.php', array(
-      'text' => 'We deliver innovative, integrated brand experiences that create captivating brand engagement.'
+      'text' => 'This is sample Service’S introduction text that spans on few lines',
+      'images' => array(
+        array('url' => 'assets/img/project03.jpg'),
+        array('url' => 'assets/img/project01.jpg'),
+        array('url' => 'assets/img/project05.jpg'),
+        array('url' => 'assets/img/project02.jpg'),
+        array('url' => 'assets/img/project04.jpg')
+      )
+    ));
+  ?>
+
+  <!-- Section - Media with content -->
+  <?php
+    includeBlock('blocks/media-with-content.php', array(
+      'content' => '
+        <p class="lead">Vivamus tempor velit id cursus tempor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        <p>Proin vehicula velit ligula, quis hendrerit ex tincidunt vitae. Integer eu mauris gravida, blandit elit in, vestibulum nisi. Every brand moment is an opportunity for positive reinforcement, a chance for your brand message to have clarity and relevance.</p>
+      ',
+      'image' => 'assets/img/service-about01.jpg',
+      'reversed' => false
+    ));
+  ?>
+
+  <!-- Section - Media with content -->
+  <?php
+    includeBlock('blocks/media-with-content.php', array(
+      'content' => '
+        <p class="lead">Vivamus tempor velit id cursus tempor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        <p>Proin vehicula velit ligula, quis hendrerit ex tincidunt vitae. Integer eu mauris gravida, blandit elit in, vestibulum nisi. Every brand moment is an opportunity for positive reinforcement, a chance for your brand message to have clarity and relevance.</p>
+      ',
+      'image' => 'assets/img/service-about02.jpg',
+      'reversed' => true
+    ));
+  ?>
+
+  <!-- Section - Boxes -->
+  <?php
+    includeBlock('blocks/features.php', array(
+      'boxes' => array(
+        array(
+          'title' => 'We Specialize in Providing',
+          'items' => array(
+            'Creative Communications & Strategies',
+            'Brand Ideation & Design Implementation',
+            'Moving Image',
+            'Digital Solutions',
+            'Event Management & Production',
+            'Brand Activation',
+            'Logistics and Asset Management'
+          )
+          ),
+        array(
+          'title' => 'In order to give our clients the very best in',
+          'items' => array(
+            'Brand Engagement & Installations',
+            'Stakeholder Engagement',
+            'Stakeholder Communications',
+            'Conferences',
+            'Exhibitions',
+            'Reward & Recognition Programmes',
+            'Experiential Activation',
+          )
+        )
+      )
+    ));
+  ?>
+
+  <!-- Section - Content #1 -->
+  <?php
+    includeBlock('blocks/content-1.php', array(
+      'title' => 'We call those communications that truly define a brand Moments',
+      'content' => '<p>Every brand moment is an opportunity for positive reinforcement, a chance for your brand message to have clarity and relevance.</p><p>Moments are precious and personal if they can make audiences feel part of something special.</p>',
+      'link' => array(
+        'title' => 'Read More',
+        'url' => '#'
+      )
     ));
   ?>
 
@@ -47,13 +121,36 @@
         array(
           'title' => 'Porsche Showroom',
           'category' => 'Insights',
+          'theme' => 'green',
           'image' => 'assets/img/project01.jpg',
           'url' => '/single-moment'
         ),
         array(
           'title' => 'Amazon Conference',
           'category' => 'Insights',
+          'theme' => 'green',
           'image' => 'assets/img/project02.jpg',
+          'url' => '/single-moment'
+        ),
+        array(
+          'title' => 'Snow Fest',
+          'category' => 'Insights',
+          'theme' => 'green',
+          'image' => 'assets/img/project03.jpg',
+          'url' => '/single-moment'
+        ),
+        array(
+          'title' => 'Amazon Conference',
+          'category' => 'Insights',
+          'theme' => 'green',
+          'image' => 'assets/img/project04.jpg',
+          'url' => '/single-moment'
+        ),
+        array(
+          'title' => 'Apple Showroom',
+          'category' => 'Insights',
+          'theme' => 'green',
+          'image' => 'assets/img/project05.jpg',
           'url' => '/single-moment'
         )
       )

@@ -39,7 +39,7 @@
   }
 }
 
-/* Hero #1 */
+/* Hero #2 */
 .section.hero-2 {
   min-height: 60vh;
   display: flex;
@@ -66,5 +66,37 @@
 
   .section-action {
     margin-left: auto;
+  }
+}
+
+/* Hero #3 */
+.section.hero-3 {
+  min-height: 75vh;
+  display: flex;
+  align-items: flex-end;
+
+  .section-bg {
+    mask-image: linear-gradient(to bottom, black, transparent);
+
+    .bg-image {
+      mask-image: linear-gradient(to right, black, transparent);
+    }
+  }
+
+  .section-content {
+    max-width: 65%;
+    @include last-mb-0;
+
+    .lead {
+      max-width: 28rem;
+    }
+  }
+
+  .section-action {
+    margin-left: auto;
+  }
+
+  + .section {
+    padding-top: 0;
   }
 }

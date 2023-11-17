@@ -2,8 +2,8 @@
 
 @font-face {
   font-family:"Icons";
-  src:url("../fonts/icons-08b1785265d89d668b6e5b5da6e82298.woff?08b1785265d89d668b6e5b5da6e82298") format("woff"),
-		url("../fonts/icons-08b1785265d89d668b6e5b5da6e82298.ttf?08b1785265d89d668b6e5b5da6e82298") format("truetype");
+  src:url("../fonts/icons-777f933d6dec931c5e1b4c6b143b94e7.woff?777f933d6dec931c5e1b4c6b143b94e7") format("woff"),
+		url("../fonts/icons-777f933d6dec931c5e1b4c6b143b94e7.ttf?777f933d6dec931c5e1b4c6b143b94e7") format("truetype");
   font-weight:normal;
   font-style:normal;
 }
@@ -14,24 +14,25 @@ $icons: (
   angle-down: "f101",
   angle-up: "f102",
   arrow-down: "f103",
-  arrow-left: "f104",
-  arrow-right: "f105",
-  arrow-top-right-fat: "f106",
-  arrow-top-right: "f107",
-  attach: "f108",
-  chart: "f109",
-  chat: "f10a",
-  check: "f10b",
-  email: "f10c",
-  facebook: "f10d",
-  instagram: "f10e",
-  linkedin: "f10f",
-  map-marker: "f110",
-  play: "f111",
-  plus: "f112",
-  tick: "f113",
-  ticket: "f114",
-  twitter: "f115",
+  arrow-left-fat: "f104",
+  arrow-left: "f105",
+  arrow-right: "f106",
+  arrow-top-right-fat: "f107",
+  arrow-top-right: "f108",
+  attach: "f109",
+  chart: "f10a",
+  chat: "f10b",
+  check: "f10c",
+  email: "f10d",
+  facebook: "f10e",
+  instagram: "f10f",
+  linkedin: "f110",
+  map-marker: "f111",
+  play: "f112",
+  plus: "f113",
+  tick: "f114",
+  ticket: "f115",
+  twitter: "f116",
 );
 
 @mixin icon($icon) {
@@ -65,6 +66,10 @@ $icons: (
 
 .i-arrow-down:before {
   @include icon(arrow-down);
+}
+
+.i-arrow-left-fat:before {
+  @include icon(arrow-left-fat);
 }
 
 .i-arrow-left:before {

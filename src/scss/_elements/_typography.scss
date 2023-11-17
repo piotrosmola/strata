@@ -191,4 +191,27 @@ address {
 
 .wysiwyg {
   @include last-mb-0;
+
+  ul {
+    @include reset('list');
+
+    > li {
+      position: relative;
+      padding-left: 1.5rem;
+      line-height: 1.2;
+
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
+
+      &::before {
+        position: absolute;
+        top: 0.15rem;
+        font-size: 0.7rem;
+        left: 0;
+        @include icon(arrow-left-fat);
+        opacity: 0.3;
+      }
+    }
+  }
 }

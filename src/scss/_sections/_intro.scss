@@ -10,7 +10,6 @@
     position: absolute;
     bottom: auto;
     height: 100vh;
-    mask-image: linear-gradient(to bottom, rgba(black, 1), rgba(black, var(--mask)) 100%);
 
     > img {
       position: absolute;
@@ -43,6 +42,7 @@
         left: 30%;
         width: 40%;
         height: 35%;
+        mask-image: linear-gradient(to bottom, rgba(black, 1), rgba(black, var(--mask)) 100%);
       }
 
       &:nth-child(4) {

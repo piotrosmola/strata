@@ -1,5 +1,5 @@
   <!-- Section - Media Row -->
-  <section class="section">
+  <section class="section media-row">
     <!-- Container -->
     <div class="section-container container pt-layout-xs pb-layout-xs">
       <div class="container-inner">
@@ -11,7 +11,7 @@
           <div class="swiper-wrapper">
             <?php foreach ($rows as $key => $media): ?>
             <div class="swiper-slide">
-              <div class="media" data-speed="<?php echo 1 + ($key * 0.1) ?>">
+              <div class="media">
                 <img src="<?php echo $media['image'] ?>" alt="">
                 <?php if ($media['videoUrl']): ?>
                 <button data-toggle="video-modal" data-video="<?php echo $media['videoUrl']; ?>" class="play play-<?php echo $media['theme']; ?>"></button>

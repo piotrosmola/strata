@@ -7,6 +7,8 @@ import Hero from './modules/hero'
 import Images from './modules/images'
 import Intro from './modules/intro'
 import Marquee from './modules/marquee'
+import MediaRow from './modules/media-row'
+import MediaWithContent from './modules/media-with-content'
 import MomentsGrid from './modules/moments-grid'
 import Mouse from './modules/mouse'
 import Navigation from './modules/navigation'
@@ -29,6 +31,8 @@ $(() => {
   Intro.init()
   Tabs.init()
   Panel.init()
+  MediaRow.init()
+  MediaWithContent.init()
 
   if (!isTouchDevice()) {
     Mouse.init()

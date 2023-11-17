@@ -7,7 +7,7 @@ const Hero = {
   init() {
     const _ = this
 
-    document.querySelectorAll('.hero-1').forEach(section => {
+    document.querySelectorAll('.section.hero-1').forEach(section => {
       const waves = section.querySelector('.waves')
 
       const tl = gsap.timeline({

@@ -35,7 +35,14 @@
   <!-- Intro -->
   <?php
     includeBlock('blocks/intro.php', array(
-      'text' => 'We deliver innovative, integrated brand experiences that create captivating brand engagement.'
+      'text' => 'We deliver innovative, integrated brand experiences that create captivating brand engagement.',
+      'images' => array(
+        array('url' => 'assets/img/project01.jpg'),
+        array('url' => 'assets/img/project02.jpg'),
+        array('url' => 'assets/img/project03.jpg'),
+        array('url' => 'assets/img/project04.jpg'),
+        array('url' => 'assets/img/project05.jpg')
+      )
     ));
   ?>
 

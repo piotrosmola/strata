@@ -1,6 +1,7 @@
 /* Other
 ----------------------------------------------------------*/
 
+/* Play */
 .play {
   @include reset(button);
   position: relative;
@@ -200,6 +201,8 @@
     display: block;
     width: 100%;
     object-fit: cover;
+
+    filter: blur(var(--blur));
   }
 
   > .play {

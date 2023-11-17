@@ -33,7 +33,8 @@ const Intro = {
       section.querySelectorAll('.section-bg img').forEach((card, index) => {
         tl.fromTo(card, { '--blur': '10px', scale: 0.75, opacity: 0 }, { scale: 1.25, opacity: 0.4, '--blur': '0px' }, `start+=${index * 0.1}`)
       })
-      tl.fromTo(bg, { scale: 1 }, { scale: () => (window.innerWidth > window.innerHeight ? 2.5 : 4), ease: 'power3.in' }, 'start+=95%').fromTo(
+      tl.addLabel('zooming')
+      tl.fromTo(bg, { scale: 1 }, { scale: () => (window.innerWidth > window.innerHeight ? 2.75 : 4), ease: 'power3.in' }, 'start+=95%').fromTo(
         bg,
         { '--mask': 1 },
         { '--mask': 0 },
