@@ -19,6 +19,7 @@ $font-secondary-regular: 400;
 $font-secondary-medium: 500;
 $font-secondary-bold: 700;
 $font-secondary-extrabold: 800;
+$font-secondary-black: 1000;
 
 $font-tertiary-regular: 700;
 
@@ -57,7 +58,7 @@ $color-medium: #485a67;
 $color-dark: #090909;
 
 $color-global: white;
-$color-inverted: white;
+$color-inverted: black;
 $color-muted: rgba(white, 0.45);
 $color-muted-inverted: rgba(black, 0.4);
 
@@ -67,8 +68,8 @@ $color-orange: #ff8e00;
 $color-red: red;
 $color-pink: #ff8ecb;
 
-$color-line: #eee;
-$color-line-inverted: rgba(255, 255, 255, 0.15);
+$color-line: rgba(white, 0.15);
+$color-line-inverted: rgba(black, 0.15);
 
 // Colors - Social
 $color-facebook: #213553;
@@ -142,6 +143,7 @@ $types: (
   orange: $color-orange,
   red: $color-red,
   green: $color-green,
+  pink: $color-pink,
   dark: $color-dark,
   light: $color-light
 );

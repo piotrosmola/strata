@@ -4,7 +4,7 @@ const Panel = {
     const _ = this
 
     if (_.$el.length) {
-      _.$el.find('.panel-header').on('click', function() {
+      _.$el.find('.panel-header').on('click', function () {
         const $self = $(this)
         if (!$self.parents('.panel').hasClass('panel-blocked')) {
           $self.parents('.panel').toggleClass('open')

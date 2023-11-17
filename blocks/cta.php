@@ -25,7 +25,7 @@
             <span class="btn-bg" data-mp-item data-mp-scale="1.15"></span>
             <span class="btn-outline" data-mp-item="0.05" data-mp-scale="1.075"></span>
             <i class="btn-icon i i-arrow-top-right"></i>
-            <span class="btn-label"><?php echo $link['label'] ?></span>
+            <span class="btn-label"><?php echo $link['title'] ?></span>
           </a>
         </div>
       </div>

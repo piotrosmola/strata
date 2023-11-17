@@ -79,7 +79,7 @@
   </section>
 
   <!-- Section - Moments -->
-  <section class="section pt-0">
+  <section class="section">
     <!-- Container -->
     <div class="section-container container">
       <div class="container-inner">
@@ -187,26 +187,26 @@
         </div>
       </div>
       <div class="container-inner">
-        <h5 class="mb-layout-xs">Our Clients</h4>
-          <div class="carousel carousel-logotypes swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="assets/img/awwards.svg" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img src="assets/img/clutch.svg" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img src="assets/img/css winner.svg" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img src="assets/img/css.svg" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img src="assets/img/dan.svg" alt="">
-              </div>
+        <h5 class="mb-layout-xs">Our Clients</h5>
+        <div class="carousel carousel-logotypes swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="assets/img/awwards.svg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/clutch.svg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/css winner.svg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/css.svg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/dan.svg" alt="">
             </div>
           </div>
+        </div>
       </div>
     </div>
   </section>
@@ -217,7 +217,7 @@
       'title' => 'Let\'s have <br />a chat!',
       'description' => 'If you need some help making a moment that matters, we\'d love to talk.',
       'link' => array(
-        'label' => 'Say Hello',
+        'title' => 'Say Hello',
         'url' => '#'
       )
     ));

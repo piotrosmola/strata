@@ -2,26 +2,88 @@
 ----------------------------------------------------------*/
 
 .carousel {
-  @include media('<=lg') {
+  position: relative;
+
+  @include media('<=md') {
     max-width: 80%;
+    margin-left: 0;
   }
 
   overflow: visible;
 
-  &-logotypes {
-    .swiper-wrapper {
+  @include media('<=md') {
+    .swiper-slide *[data-speed] {
+      transform: none !important;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    z-index: 10;
+    width: 50vw;
+    top: 0;
+    bottom: 0;
+  }
+
+  .swiper-button-disabled {
+    pointer-events: none;
+  }
+
+  .swiper-button-prev {
+    right: 100%;
+  }
+
+  .swiper-button-next {
+    left: 100%;
+  }
+}
+
+/* Logotypes */
+.carousel-logotypes {
+  .swiper-wrapper {
+    align-items: center;
+
+    .swiper-slide {
+      display: flex;
       align-items: center;
+      justify-content: center;
 
-      .swiper-slide {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+      img {
+        max-height: 4rem;
+        max-width: 8rem;
+        object-fit: contain;
+        display: block;
+      }
+    }
+  }
+}
 
-        img {
-          max-height: 4rem;
-          max-width: 8rem;
-          object-fit: contain;
-          display: block;
+/* Moments */
+.carousel-moments {
+  .swiper-wrapper {
+    align-items: center;
+
+    .swiper-slide {
+      @include transition-primary('opacity');
+      opacity: 0.25;
+
+      &.swiper-slide-visible {
+        opacity: 1;
+      }
+
+      &:nth-child(2n) {
+        margin: 4rem 0;
+        padding: 0 1.5rem;
+        @include media('<=xl') {
+          margin: 3rem 0;
+          padding: 0 0.75rem;
+        }
+        @include media('<=lg') {
+          margin: 2rem 0;
+        }
+        @include media('<=sm') {
+          margin: 1rem 0;
         }
       }
     }

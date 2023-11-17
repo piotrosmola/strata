@@ -73,12 +73,11 @@
     }
   }
 
-  &-arrow-left,
-  &-arrow-right {
+  &-arrows {
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
-    color: $color-inverted;
+    color: $color-global;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,20 +99,24 @@
     }
 
     &::before {
-      @include icon(arrow-left-thin);
+      @include icon(arrow-left);
     }
 
     &::after {
-      @include icon(arrow-right-thin);
+      @include icon(arrow-right);
     }
 
     #{$b}-arrow-left-active & {
+      opacity: 1;
+
       &::before {
         opacity: 1;
         transform: scale(1);
       }
     }
     #{$b}-arrow-right-active & {
+      opacity: 1;
+
       &::after {
         opacity: 1;
         transform: scale(1);

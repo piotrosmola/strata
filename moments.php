@@ -2,29 +2,15 @@
   <?php include 'header.php'; ?>
 
   <!-- Section - Hero #2 -->
-  <section class="section hero-2 pb-layout-sm">
-    <!-- Background -->
-    <div class="section-bg">
-      <div class="waves reversed">
-        <div class="waves-inner">
-          <video src="assets/video/waves.mp4" autoplay loop muted playsinline></video>
-        </div>
-      </div>
-    </div>
-    <!-- Container -->
-    <div class="section-container container">
-      <div class="container-inner">
-        <!-- Content -->
-        <div class="section-content">
-          <h1 class="h2">Moments That Matter</h1>
-          <p class="lead add-border">Every brand moment is an opportunity for positive reinforcement.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <?php
+    includeBlock('blocks/hero-2.php', array(
+      'title' => 'Moments <br>That Matter',
+      'description' => 'Every brand moment is an opportunity for positive reinforcement.',
+    ));
+  ?>
 
   <!-- Section - Moments -->
-  <section class="section pt-0">
+  <section class="section">
     <!-- Container -->
     <div class="section-container container">
       <div class="container-inner">
@@ -113,41 +99,41 @@
   </section>
 
   <!-- Section - Clients -->
-  <section class="section bg-white inverted pt-layout-sm pb-layout-sm">
-    <!-- Container -->
-    <div class="section-container container">
-      <div class="container-inner">
-        <h5 class="mb-layout-xs">Our Clients</h4>
-          <div class="carousel carousel-logotypes swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="assets/img/awwards.svg" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img src="assets/img/clutch.svg" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img src="assets/img/css winner.svg" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img src="assets/img/css.svg" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img src="assets/img/dan.svg" alt="">
-              </div>
-            </div>
-          </div>
-      </div>
-    </div>
-  </section>
+  <?php
+    includeBlock('blocks/clients.php', array(
+      'title' => 'Our Clients',
+      'logotypes' => array(
+        array(
+          'image' => 'assets/img/awwards.svg',
+          'url' => '#'
+        ),
+        array(
+          'image' => 'assets/img/clutch.svg',
+          'url' => '#'
+        ),
+        array(
+          'image' => 'assets/img/css winner.svg',
+          'url' => '#'
+        ),
+        array(
+          'image' => 'assets/img/css.svg',
+          'url' => '#'
+        ),
+        array(
+          'image' => 'assets/img/dan.svg',
+          'url' => '#'
+        )
+      )
+    ));
+  ?>
 
-  <!-- CTA -->
+  <!-- Section - CTA -->
   <?php
     includeBlock('blocks/cta.php', array(
       'title' => 'Let\'s have <br />a chat!',
       'description' => 'If you need some help making a moment that matters, we\'d love to talk.',
       'link' => array(
-        'label' => 'Say Hello',
+        'title' => 'Say Hello',
         'url' => '#'
       )
     ));

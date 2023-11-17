@@ -93,8 +93,7 @@ class Cursor {
           <span>More</span>
         </div>
       </div>
-      <div class="${BASE_CLASS}-inner ${BASE_CLASS}-arrow-left" data-cursor-id="arrow-left" data-cursor-lerp="0.1"></div>
-      <div class="${BASE_CLASS}-inner ${BASE_CLASS}-arrow-right" data-cursor-id="arrow-right" data-cursor-lerp="0.1"></div>
+      <div class="${BASE_CLASS}-inner ${BASE_CLASS}-arrows" data-cursor-id="arrows" data-cursor-lerp="0.1"></div>
     `
 
     this.DOM.el.innerHTML = HTML

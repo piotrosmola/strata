@@ -42,7 +42,7 @@ h1,
 
 h2,
 .h2 {
-  font-size: calc(4rem + 1.75vw);
+  font-size: calc(4.5rem + 1.75vw);
   line-height: 0.9;
 
   @include media('<=lg') {
@@ -149,6 +149,14 @@ address {
 
 /* Outline Text */
 .outline-text {
+  color: transparent;
+  -webkit-text-stroke: 0.75px $color-global;
+
+  strong {
+    color: $color-global;
+    font-weight: inherit;
+  }
+
   &[data-split-lines],
   &[data-animate] {
     position: relative;
@@ -162,6 +170,8 @@ address {
       }
 
       &:nth-child(2) {
+        color: $color-global;
+        -webkit-text-stroke: 0;
         position: absolute;
         top: 0;
         left: 0;
@@ -172,26 +182,13 @@ address {
       }
     }
   }
-
-  &.hoverable {
-    > span {
-      &:nth-child(2) {
-        > div {
-          clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
-          transform-origin: center top;
-          transition: clip-path 0.75s $easeOutQuint;
-          will-change: clip-path;
-
-          &:hover {
-            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-          }
-        }
-      }
-    }
-  }
 }
 
-.add-border {
+.border-left {
   border-left: 1px solid currentColor;
   padding-left: 1.25em;
+}
+
+.wysiwyg {
+  @include last-mb-0;
 }

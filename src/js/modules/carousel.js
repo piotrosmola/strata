@@ -1,4 +1,4 @@
-import Swiper from 'swiper'
+import Swiper, { Navigation } from 'swiper'
 
 const Carousel = {
   el: document.querySelectorAll('.carousel'),
@@ -13,10 +13,11 @@ const Carousel = {
       const spaceBetween = eval(el.getAttribute('data-space-between'))
       const breakpointsAttr = eval(
         el.getAttribute('data-breakpoints') || [
-          ['768', 2, 30],
-          ['1024', 3, 30],
-          ['1280', 4, 30],
-          ['1440', 5, 30]
+          ['0', 1, 30],
+          ['575', 2, 30],
+          ['767', 3, 30],
+          ['992', 4, 30],
+          ['1199', 5, 60]
         ]
       )
       const breakpoints = {}
@@ -29,11 +30,18 @@ const Carousel = {
       })
 
       const swiperRef = new Swiper(container, {
+        modules: [Navigation],
         slidesPerView,
         spaceBetween,
         freeMode: true,
+        simulateTouch: false,
         touchStartPreventDefault: false,
-        breakpoints
+        breakpoints,
+        watchSlidesProgress: true,
+        navigation: {
+          nextEl: el.querySelector('.swiper-button-next'),
+          prevEl: el.querySelector('.swiper-button-prev')
+        }
       })
 
       // const links = el.querySelectorAll('a')

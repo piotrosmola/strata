@@ -10,6 +10,7 @@ import Marquee from './modules/marquee'
 import MomentsGrid from './modules/moments-grid'
 import Mouse from './modules/mouse'
 import Navigation from './modules/navigation'
+import Panel from './modules/panel'
 import Scroll from './modules/scroll'
 import Tabs from './modules/tabs'
 import Typography from './modules/typography'
@@ -27,6 +28,7 @@ $(() => {
   MomentsGrid.init()
   Intro.init()
   Tabs.init()
+  Panel.init()
 
   if (!isTouchDevice()) {
     Mouse.init()
