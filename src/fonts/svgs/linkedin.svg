@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="12px" viewBox="0 0 13 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>linkedin</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-/-Footer" transform="translate(-1510.000000, -108.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="iconmonstr-linkedin-4" transform="translate(1501.000000, 100.000000)">
+                <path d="M12.5,12.5 L12.5,20 L10,20 L10,12.5 L12.5,12.5 Z M21.25,15.80125 L21.25,20 L18.7525,20 L18.7525,16.42375 C18.7525,14.0725 16.25,14.27125 16.25,16.42375 L16.25,20 L13.75,20 L13.75,12.5 L16.25,12.5 L16.25,13.86625 C17.34,11.84625 21.25,11.69625 21.25,15.80125 Z M11.25,8.61375 C12.01,8.61375 12.625,9.235 12.625,10 C12.625,10.76625 12.00875,11.38625 11.25,11.38625 C10.49125,11.38625 9.875,10.76625 9.875,10 C9.875,9.235 10.49,8.61375 11.25,8.61375 Z" id="linkedin"></path>
+            </g>
+        </g>
+    </g>
+</svg>

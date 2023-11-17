@@ -1,0 +1,81 @@
+/* ----------------------------------------------------------------------------- */
+/* --- SETUP
+/* ----------------------------------------------------------------------------- */
+
+html {
+  font-size: $base;
+
+  @include media('<=sm') {
+    font-size: $base-mobile;
+  }
+}
+
+body {
+  color: $color-global;
+  font-family: $font-primary;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: $font-primary-regular;
+  line-height: 1.5;
+  overflow-x: hidden;
+  position: relative;
+  background-color: $color-body;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+a {
+  @include transition-primary;
+  color: $color-primary;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $color-primary;
+    text-decoration: none;
+  }
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+textarea:focus,
+input:focus,
+a:focus,
+a:visited,
+*:focus {
+  outline: none;
+}
+
+iframe {
+  border: 0;
+}
+
+img {
+  backface-visibility: hidden;
+  height: auto;
+  max-width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 100%;
+
+  @include media('>xl') {
+    width: 1360px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#content {
+  position: relative;
+  overflow: hidden;
+}

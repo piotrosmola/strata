@@ -1,0 +1,166 @@
+// SASS Configuration File
+$base: 20px;
+$base-mobile: 18px;
+
+// Fonts
+// -----------------------------------------
+
+$font-path: '~@/fonts/';
+
+$font-primary: 'Sofia Pro', sans-serif;
+$font-secondary: 'Sofia Sans', sans-serif;
+$font-tertiary: 'Gotham', sans-serif;
+
+$font-primary-regular: normal;
+$font-primary-bold: bold;
+
+$font-secondary-thin: 100;
+$font-secondary-regular: 400;
+$font-secondary-medium: 500;
+$font-secondary-bold: 700;
+$font-secondary-extrabold: 800;
+
+$font-tertiary-regular: 700;
+
+$font-families: (
+  primary: $font-primary,
+  secondary: $font-secondary,
+  tertiary: $font-tertiary
+);
+
+$font-map: (
+  primary: (
+    regular: $font-primary-regular,
+    bold: $font-primary-bold
+  ),
+  secondary: (
+    thin: $font-secondary-thin,
+    regular: $font-secondary-regular,
+    medium: $font-secondary-medium,
+    bold: $font-secondary-bold,
+    extrabold: $font-secondary-extrabold
+  ),
+  tertiary: (
+    regular: $font-tertiary-regular
+  )
+);
+
+// Colors
+// -----------------------------------------
+
+$color-body: black;
+
+$color-primary: white;
+
+$color-light: #f6f6f6;
+$color-medium: #485a67;
+$color-dark: #090909;
+
+$color-global: white;
+$color-inverted: white;
+$color-muted: rgba(white, 0.45);
+$color-muted-inverted: rgba(black, 0.4);
+
+$color-blue: #56aee5;
+$color-green: #d3e300;
+$color-orange: #ff8e00;
+$color-red: red;
+$color-pink: #ff8ecb;
+
+$color-line: #eee;
+$color-line-inverted: rgba(255, 255, 255, 0.15);
+
+// Colors - Social
+$color-facebook: #213553;
+$color-twitter: #3aa8db;
+$color-google: #d04f3e;
+$color-behance: #1882ff;
+$color-dribbble: #e95aae;
+$color-flickr: #f9429c;
+$color-instagram: #4f86ac;
+$color-linkedin: #008bc2;
+$color-pinterest: #cb1f24;
+$color-skype: #00bef4;
+$color-slack: #44ba97;
+$color-tumblr: #435971;
+$color-vimeo: #0bc4ef;
+$color-vine: #00be9b;
+$color-youtube: #ed4533;
+
+// Header
+$header-height-desktop: 115px;
+$header-height-mobile: 78px;
+
+// Spacing
+$layout-spacing-desktop: calc(5rem + 5vh);
+$layout-spacing-mobile: 4rem;
+$layout-spacing-desktop-lg: calc(#{$layout-spacing-desktop} * 1.5);
+$layout-spacing-mobile-lg: calc(#{$layout-spacing-mobile} * 1.5);
+$layout-spacing-desktop-sm: calc(#{$layout-spacing-desktop}* 0.75);
+$layout-spacing-mobile-sm: calc(#{$layout-spacing-mobile}* 0.75);
+$layout-spacing-desktop-xs: calc(#{$layout-spacing-desktop}* 0.4);
+$layout-spacing-mobile-xs: calc(#{$layout-spacing-mobile}* 0.4);
+
+$shadow: 4px 4px 10px 1px rgba(black, 0.05);
+$shadow-primary: 0 0 20px 0 rgba($color-primary, 0.35);
+$shadow-sm: 0 2px 15px 0 rgba($color-dark, 0.2);
+
+$radius-sm: 0.3rem;
+$radius: 4px;
+$radius-lg: 1rem;
+
+// Grid Settings
+$grid-columns: 12;
+$gutter-width-desktop: 60px;
+$gutter-width-mobile: 20px;
+$outer-margin: 20px;
+$breakpoints-extended: xs 575px auto, sm 767px 720px, md 991px 950px, lg 1199px 1170px, xl 1439px min(90%, 80rem), xxl 1699px min(80%, 90rem);
+
+$gutter-compensation-desktop: $gutter-width-desktop * 0.5 * -1;
+$half-gutter-width-desktop: $gutter-width-desktop * 0.5;
+
+$gutter-compensation-mobile: $gutter-width-mobile * 0.5 * -1;
+$half-gutter-width-mobile: $gutter-width-mobile * 0.5;
+
+// Media Queries
+$breakpoints: (
+  xs: 575px,
+  sm: 767px,
+  md: 991px,
+  lg: 1199px,
+  xl: 1439px,
+  xxl: 1699px
+);
+
+// Types
+// -----------------------------------------
+
+// Basic
+$types: (
+  primary: $color-primary,
+  blue: $color-blue,
+  orange: $color-orange,
+  red: $color-red,
+  green: $color-green,
+  dark: $color-dark,
+  light: $color-light
+);
+
+// Social
+$types-social: (
+  facebook: $color-facebook,
+  twitter: $color-twitter,
+  google: $color-google,
+  behance: $color-behance,
+  dribbble: $color-dribbble,
+  flickr: $color-flickr,
+  instagram: $color-instagram,
+  linkedin: $color-linkedin,
+  pinterest: $color-pinterest,
+  skype: $color-skype,
+  slack: $color-slack,
+  tumblr: $color-tumblr,
+  vimeo: $color-vimeo,
+  vine: $color-vine,
+  youtube: $color-youtube
+);

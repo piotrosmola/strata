@@ -1,0 +1,48 @@
+/* Loader
+----------------------------------------------------------*/
+
+/* Loader */
+
+.spinner {
+  @include animation(loaderRotate 1.4s linear infinite);
+  display: inline-block;
+
+  .circle {
+    @include transform-origin(center);
+    @include animation(loaderTurn 1.4s ease-in-out infinite);
+    stroke: $color-primary;
+    stroke-dasharray: 96;
+    stroke-dashoffset: 0;
+  }
+
+  &.loader-white .circle {
+    stroke: white;
+  }
+}
+
+@include keyframes(loaderRotate) {
+  0% {
+    @include rotate(0deg);
+  }
+
+  100% {
+    @include rotate(270deg);
+  }
+}
+
+@include keyframes(loaderTurn) {
+  0% {
+    stroke-dashoffset: 96;
+  }
+
+  50% {
+    @include rotate(135deg);
+    stroke-dashoffset: 23;
+  }
+
+  100% {
+    @include rotate(450deg);
+    stroke-dashoffset: 96;
+  }
+};
+

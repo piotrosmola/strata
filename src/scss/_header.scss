@@ -1,0 +1,85 @@
+/* ---------------------------------------------------------------------------- */
+/* --- HEADER
+/* ----------------------------------------------------------------------------- */
+
+#header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 500;
+  height: $header-height-desktop;
+  display: flex;
+  justify-content: center;
+  user-select: none;
+
+  @include media('<=sm') {
+    height: $header-height-mobile;
+  }
+
+  .container,
+  .container-inner {
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+  }
+
+  .container-inner {
+    align-items: flex-end;
+    @include media('<=md') {
+      max-width: 80%;
+      width: 80%;
+    }
+  }
+
+  .module {
+    &-emblem {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      left: $outer-margin;
+
+      img {
+        display: block;
+        height: 100%;
+      }
+    }
+
+    &-cta {
+      margin-left: auto;
+
+      @include media('<=xs') {
+        display: none;
+      }
+    }
+
+    &-burger {
+      position: absolute;
+      bottom: 0;
+      right: $outer-margin;
+
+      .burger {
+        @include media('>xs') {
+          margin-bottom: 0.5rem;
+        }
+        @include media('<=xs') {
+          margin-bottom: 0.25rem;
+        }
+      }
+    }
+
+    &-logo {
+      img {
+        height: $header-height-desktop * 0.25;
+        display: block;
+        @include media('<=sm') {
+          height: $header-height-mobile * 0.3;
+        }
+      }
+    }
+  }
+}
+
+.nav-primary {
+  position: relative;
+}

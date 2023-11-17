@@ -1,0 +1,140 @@
+
+
+@font-face {
+  font-family:"Icons";
+  src:url("../fonts/icons-08b1785265d89d668b6e5b5da6e82298.woff?08b1785265d89d668b6e5b5da6e82298") format("woff"),
+		url("../fonts/icons-08b1785265d89d668b6e5b5da6e82298.ttf?08b1785265d89d668b6e5b5da6e82298") format("truetype");
+  font-weight:normal;
+  font-style:normal;
+}
+
+
+$icons: (
+
+  angle-down: "f101",
+  angle-up: "f102",
+  arrow-down: "f103",
+  arrow-left: "f104",
+  arrow-right: "f105",
+  arrow-top-right-fat: "f106",
+  arrow-top-right: "f107",
+  attach: "f108",
+  chart: "f109",
+  chat: "f10a",
+  check: "f10b",
+  email: "f10c",
+  facebook: "f10d",
+  instagram: "f10e",
+  linkedin: "f10f",
+  map-marker: "f110",
+  play: "f111",
+  plus: "f112",
+  tick: "f113",
+  ticket: "f114",
+  twitter: "f115",
+);
+
+@mixin icon($icon) {
+  font-family: "Icons";
+  $code: map-get($icons, $icon);
+  content: unquote('\'\\#{ $code }\'');
+}
+
+.i {
+  font-family: "Icons";
+  display:inline-block;
+  line-height:1;
+  font-weight:normal;
+  font-style:normal;
+  speak:none;
+  text-decoration:inherit;
+  text-transform:none;
+  text-rendering:auto;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+
+.i-angle-down:before {
+  @include icon(angle-down);
+}
+
+.i-angle-up:before {
+  @include icon(angle-up);
+}
+
+.i-arrow-down:before {
+  @include icon(arrow-down);
+}
+
+.i-arrow-left:before {
+  @include icon(arrow-left);
+}
+
+.i-arrow-right:before {
+  @include icon(arrow-right);
+}
+
+.i-arrow-top-right-fat:before {
+  @include icon(arrow-top-right-fat);
+}
+
+.i-arrow-top-right:before {
+  @include icon(arrow-top-right);
+}
+
+.i-attach:before {
+  @include icon(attach);
+}
+
+.i-chart:before {
+  @include icon(chart);
+}
+
+.i-chat:before {
+  @include icon(chat);
+}
+
+.i-check:before {
+  @include icon(check);
+}
+
+.i-email:before {
+  @include icon(email);
+}
+
+.i-facebook:before {
+  @include icon(facebook);
+}
+
+.i-instagram:before {
+  @include icon(instagram);
+}
+
+.i-linkedin:before {
+  @include icon(linkedin);
+}
+
+.i-map-marker:before {
+  @include icon(map-marker);
+}
+
+.i-play:before {
+  @include icon(play);
+}
+
+.i-plus:before {
+  @include icon(plus);
+}
+
+.i-tick:before {
+  @include icon(tick);
+}
+
+.i-ticket:before {
+  @include icon(ticket);
+}
+
+.i-twitter:before {
+  @include icon(twitter);
+}

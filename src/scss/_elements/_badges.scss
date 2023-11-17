@@ -1,0 +1,15 @@
+/* Badges
+----------------------------------------------------------*/
+
+.badge {
+  @include text-uppercase;
+  border-left: 1px solid currentColor;
+  padding: 0.1rem 0.75rem;
+  user-select: none;
+
+  @each $type, $color in $types {
+    &.badge-#{$type} {
+      border-color: $color;
+    }
+  }
+}

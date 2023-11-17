@@ -1,0 +1,21 @@
+/* CTA
+----------------------------------------------------------*/
+
+.section.cta {
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+
+  .section-bg {
+    @include media('<=xs') {
+      transform: translateY(25%);
+      left: -100%;
+    }
+  }
+
+  .section-content {
+    p {
+      max-width: 24rem;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+/* Marquee
+----------------------------------------------------------*/
+
+.section.marquee {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+  .section-bg {
+    mask-image: linear-gradient(to right, rgba(black, 0), rgba(black, 1), rgba(black, 0));
+
+    .bg-image {
+      mask-image: linear-gradient(to bottom, rgba(black, 0), rgba(black, 1), rgba(black, 0));
+      opacity: 0.3;
+    }
+  }
+
+  h2 {
+    font-size: calc(10rem + 8vw);
+    font-weight: $font-secondary-thin;
+    white-space: nowrap;
+    filter: blur(3px);
+    margin-bottom: 0;
+    mask-image: linear-gradient(to top, rgba(black, 1), rgba(black, 0));
+    padding: 0 35vw;
+    @include media('<=lg') {
+      font-size: calc(7rem + 7vw);
+    }
+    @include media('<=md') {
+      font-size: calc(6rem + 6vw);
+      padding: 0 55vw;
+    }
+    @include media('<=xs') {
+      font-size: calc(5rem + 6vw);
+    }
+  }
+}

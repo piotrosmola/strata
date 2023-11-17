@@ -1,0 +1,66 @@
+/* ---------------------------------------------------------------------------- */
+/* --- FOOTER
+/* ----------------------------------------------------------------------------- */
+
+#footer {
+  position: relative;
+  @include media('>lg') {
+    padding-bottom: $layout-spacing-desktop-xs;
+  }
+  @include media('<=lg') {
+    padding-bottom: $layout-spacing-mobile-xs;
+  }
+
+  .module {
+    &-about {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-social {
+      margin-top: auto;
+      @include media('<=sm') {
+        margin-top: 1rem;
+      }
+
+      h6 {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    &-navigation {
+      @include media('<=md') {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+        .nav-footer {
+          flex-direction: row;
+          flex-wrap: wrap;
+
+          > li {
+            flex: 0 0 50%;
+          }
+        }
+      }
+    }
+
+    &-copyright {
+      font-size: 0.8rem;
+      @include media('>md') {
+        display: flex;
+      }
+
+      .nav {
+        @include media('>md') {
+          margin-left: auto;
+        }
+      }
+      @include media('>md') {
+        margin-top: $layout-spacing-desktop-sm;
+      }
+      @include media('<=md') {
+        margin-top: $layout-spacing-mobile-sm;
+      }
+    }
+  }
+}

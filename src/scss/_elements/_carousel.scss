@@ -1,0 +1,29 @@
+/* Carousel
+----------------------------------------------------------*/
+
+.carousel {
+  @include media('<=lg') {
+    max-width: 80%;
+  }
+
+  overflow: visible;
+
+  &-logotypes {
+    .swiper-wrapper {
+      align-items: center;
+
+      .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          max-height: 4rem;
+          max-width: 8rem;
+          object-fit: contain;
+          display: block;
+        }
+      }
+    }
+  }
+}

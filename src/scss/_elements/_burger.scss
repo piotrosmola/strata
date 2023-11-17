@@ -1,0 +1,53 @@
+/* Burger
+----------------------------------------------------------*/
+
+.burger {
+  @include reset(button);
+  cursor: pointer;
+  display: block;
+  height: 22px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  width: 37px;
+  color: inherit;
+
+  span {
+    display: block;
+    height: 1px;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    transition: 0.25s ease-in-out;
+    width: 100%;
+    background: currentColor;
+
+    &:nth-child(1) {
+      top: 0;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      top: 11px;
+    }
+
+    &:nth-child(4) {
+      top: 22px;
+    }
+  }
+
+  &.open span {
+    &:nth-child(1),
+    &:nth-child(4) {
+      transform: scale(0);
+    }
+
+    &:nth-child(2) {
+      transform: rotate(45deg);
+    }
+
+    &:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+  }
+}

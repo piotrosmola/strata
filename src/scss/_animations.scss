@@ -1,0 +1,123 @@
+/* ---------------------------------------------------------------------------- */
+/* --- ANIMATIONS
+/* ----------------------------------------------------------------------------- */
+
+*[data-animation] {
+  visibility: hidden;
+  animation-delay: 0.15s;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+
+  &.visible {
+    visibility: visible;
+  }
+}
+
+.fade-in-right {
+  animation-name: fadeInRight;
+  @keyframes fadeInRight {
+    0% {
+      transform: translate3d(20px, 0, 0);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+}
+
+.fade-in-left {
+  animation-name: fadeInLeft;
+  @keyframes fadeInLeft {
+    0% {
+      transform: translate3d(-20px, 0, 0);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+}
+
+.fade-in-down {
+  animation-name: fadeInDown;
+  @keyframes fadeInDown {
+    0% {
+      transform: translate3d(0, -20px, 0);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+}
+
+.fade-in-up {
+  animation-name: fadeInUp;
+  @keyframes fadeInUp {
+    0% {
+      transform: translate3d(0, 20px, 0);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+}
+
+.fade-in {
+  animation-name: fadeIn;
+  opacity: 0;
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+.scale-x-in-left {
+  animation-name: scaleInXLeft;
+  transform-origin: left center;
+  transform: scaleX(0);
+  animation-duration: 2s;
+  animation-timing-function: $easeOutExpo;
+  @keyframes scaleInXLeft {
+    0% {
+      transform: scaleX(0);
+    }
+
+    100% {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.scale-x-in-right {
+  animation-name: scaleInXRight;
+  transform-origin: right center;
+  transform: scaleX(0);
+  animation-duration: 2s;
+  animation-timing-function: $easeOutExpo;
+  @keyframes scaleInXRight {
+    0% {
+      transform: scaleX(0);
+    }
+
+    100% {
+      transform: scaleX(1);
+    }
+  }
+}

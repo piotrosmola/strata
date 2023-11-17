@@ -1,0 +1,61 @@
+/* Backgrounds
+----------------------------------------------------------*/
+
+/* Image */
+.bg-image {
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: 1.5s opacity linear;
+  width: 100%;
+  z-index: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  &.loaded {
+    opacity: 1;
+
+    &.bg-transparent {
+      opacity: 0.6;
+    }
+  }
+
+  &.bg-image-fixed {
+    background-attachment: fixed;
+
+    @include media('<=md') {
+      background-attachment: scroll;
+    }
+  }
+}
+
+/* Colors */
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-light {
+  background-color: $color-light !important;
+}
+
+.bg-grey {
+  background-color: $color-medium;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+@each $type, $color in $types {
+  .bg-#{$type} {
+    background-color: $color;
+  }
+}

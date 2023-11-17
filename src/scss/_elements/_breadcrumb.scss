@@ -1,0 +1,33 @@
+/* Breadctrumbs
+----------------------------------------------------------*/
+
+.breadcrumb {
+  background-color: transparent;
+  border-bottom: 2px solid $color-light;
+  color: $color-global;
+  font-size: 0.9rem;
+  margin-bottom: 0;
+  overflow: auto;
+  padding: 1rem 1.5rem;
+
+  .breadcrumb-item {
+    display: inline-block;
+    font-weight: $font-primary-bold;
+    padding: 0;
+    position: relative;
+
+    a {
+      color: inherit;
+    }
+
+    &.active {
+      color: $color-muted;
+    }
+
+    + .breadcrumb-item::before {
+      content: '/';
+      font-size: 80%;
+      margin: 0 1rem;
+    }
+  }
+}

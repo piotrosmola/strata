@@ -1,0 +1,42 @@
+/* ---------------------------------------------------------------------------- */
+/* --- SECTIONS
+/* ----------------------------------------------------------------------------- */
+
+.section {
+  @include layout-spacing;
+  position: relative;
+
+  &-bg {
+    @include cover;
+    z-index: 0;
+  }
+
+  &-inner {
+    @include layout-spacing;
+    position: relative;
+  }
+
+  &:first-child {
+    @include media('>lg') {
+      padding-top: calc($header-height-desktop + $layout-spacing-desktop);
+      padding-bottom: $layout-spacing-desktop;
+    }
+    @include media('<=lg') {
+      padding-top: calc($header-height-mobile + $layout-spacing-mobile * 0.5);
+      padding-bottom: $layout-spacing-mobile;
+    }
+  }
+
+  &-container {
+    position: relative;
+  }
+
+  &.bg-white {
+    z-index: 2;
+  }
+}
+
+@import '_sections/cta';
+@import '_sections/hero';
+@import '_sections/intro';
+@import '_sections/marquee';

@@ -1,0 +1,37 @@
+@charset 'UTF-8';
+/* -----------------------------------------------------------------------------
+
+Strata - Website Template
+
+File:           Base SCSS File
+Author:         Piotr Osmola (www.piotrosmola.com)
+
+-------------------------------------------------------------------------------- */
+
+// Import Libs
+@import 'include-media/dist/_include-media.scss';
+@import 'sass-easing/_easings.scss';
+@import 'normalize.css/normalize';
+
+// Import Plugins
+@import '../../node_modules/swiper/swiper.scss';
+
+// Import Config
+@import 'variables';
+@import 'mixins';
+
+// Import Icons & Fonts
+@import '../fonts/fonts';
+@import '../fonts/icons';
+
+// Import Styles
+@import 'animations';
+@import 'setup';
+@import 'basics';
+@import 'grid';
+@import 'header';
+@import 'navigation';
+@import 'sections';
+@import 'footer';
+@import 'elements';
+@import 'helpers';

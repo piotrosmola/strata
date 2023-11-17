@@ -1,0 +1,35 @@
+/* Pagination
+----------------------------------------------------------*/
+
+.pagination {
+  > .page-item {
+    display: inline-block;
+    vertical-align: middle;
+
+    > .page-link {
+      @include border-radius(0);
+      border-color: $color-line;
+      color: $color-global;
+      display: block;
+      padding: 1rem;
+
+      &:hover, &:focus {
+        background-color: $color-light;
+      }
+
+      &.active {
+        color: $color-primary;
+
+        &:hover, &:focus {
+          background-color: white;
+        }
+      }
+    }
+
+    &:first-child, &:last-child {
+      > .page-link {
+        color: $color-muted;
+      }
+    }
+  }
+}

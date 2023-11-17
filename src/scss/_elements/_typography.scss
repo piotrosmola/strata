@@ -1,0 +1,197 @@
+/* Typography
+----------------------------------------------------------*/
+
+/* Headings */
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+  font-family: $font-secondary;
+  font-weight: $font-secondary-extrabold;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+h1,
+.h1 {
+  font-size: calc(7rem + 2vw);
+  line-height: 0.85;
+
+  @include media('<=lg') {
+    font-size: calc(5rem + 0.5vw);
+  }
+  @include media('<=md') {
+    font-size: 4.5rem;
+  }
+  @include media('<=xs') {
+    font-size: 4rem;
+  }
+}
+
+h2,
+.h2 {
+  font-size: calc(4rem + 1.75vw);
+  line-height: 0.9;
+
+  @include media('<=lg') {
+    font-size: calc(4rem + 0.5vw);
+  }
+  @include media('<=md') {
+    font-size: 3.5rem;
+  }
+  @include media('<=xs') {
+    font-size: 2.75rem;
+  }
+}
+
+h3,
+.h3 {
+  font-size: calc(2.5rem + 1.75vw);
+  line-height: 1;
+
+  @include media('<=lg') {
+    font-size: calc(2.5rem + 0.5vw);
+  }
+  @include media('<=md') {
+    font-size: 2.5rem;
+  }
+  @include media('<=xs') {
+    font-size: 2rem;
+  }
+}
+
+h4,
+.h4 {
+  font-size: 2.25rem;
+
+  @include media('<=lg') {
+    font-size: 2rem;
+  }
+  @include media('<=md') {
+    font-size: 1.75rem;
+  }
+  @include media('<=xs') {
+    font-size: 1.5rem;
+  }
+}
+
+h5,
+.h5 {
+  font-size: 1.5rem;
+}
+
+h6,
+.h6 {
+  font-size: 0.625rem;
+  opacity: 0.45;
+  letter-spacing: 0.2em;
+  font-weight: $font-primary-regular;
+}
+
+/* Paragraph */
+
+p {
+  margin-top: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.lead {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  margin-bottom: 1.25rem;
+
+  @include media('<=xs') {
+    font-size: 1.15rem;
+  }
+}
+
+/* Address */
+address {
+  margin-bottom: 1.5rem;
+  font-style: normal;
+}
+
+/* Sizes */
+
+.text-lg {
+  font-size: 1.2rem;
+}
+
+.text-sm {
+  font-size: 0.9rem;
+}
+
+.text-xs {
+  font-size: 0.8rem;
+}
+
+/* Colors */
+
+@each $type, $color in $types {
+  .text-#{$type} {
+    color: $color;
+  }
+}
+
+/* Outline Text */
+.outline-text {
+  &[data-split-lines],
+  &[data-animate] {
+    position: relative;
+
+    > span {
+      display: block;
+
+      &:nth-child(1) {
+        color: transparent;
+        -webkit-text-stroke: 0.75px $color-global;
+      }
+
+      &:nth-child(2) {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        > div {
+          clip-path: polygon(0% 0%, 100% 0%, 100% var(--progress), 0% var(--progress));
+        }
+      }
+    }
+  }
+
+  &.hoverable {
+    > span {
+      &:nth-child(2) {
+        > div {
+          clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+          transform-origin: center top;
+          transition: clip-path 0.75s $easeOutQuint;
+          will-change: clip-path;
+
+          &:hover {
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+          }
+        }
+      }
+    }
+  }
+}
+
+.add-border {
+  border-left: 1px solid currentColor;
+  padding-left: 1.25em;
+}

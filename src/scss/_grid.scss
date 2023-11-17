@@ -1,0 +1,252 @@
+/* ---------------------------------------------------------------------------- */
+/* --- GRID
+/* ----------------------------------------------------------------------------- */
+
+@use 'sass:math';
+@use 'sass:list';
+
+@mixin flexboxgrid-sass-col-common {
+  box-sizing: border-box;
+  flex-grow: 0;
+  flex-shrink: 0;
+  @include media('>md') {
+    padding-left: $half-gutter-width-desktop;
+    padding-right: $half-gutter-width-desktop;
+  }
+  @include media('<=md') {
+    padding-left: $half-gutter-width-mobile;
+    padding-right: $half-gutter-width-mobile;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0 $outer-margin;
+
+  @include media('<=xs') {
+    width: 100%;
+  }
+}
+
+.container-inner {
+  margin: 0 auto;
+  @include media('>md') {
+    max-width: 86%;
+    width: 86%;
+  }
+  @include media('<=md', '>sm') {
+    max-width: 80%;
+    width: 80%;
+  }
+}
+
+.container-fluid {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $outer-margin;
+  padding-right: $outer-margin;
+}
+
+.row {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  @include media('>md') {
+    margin-left: $gutter-compensation-desktop;
+    margin-right: $gutter-compensation-desktop;
+  }
+  @include media('<=md') {
+    margin-left: $gutter-compensation-mobile;
+    margin-right: $gutter-compensation-mobile;
+  }
+}
+
+*[class^='col-'],
+*[class*='col-'] {
+  @include flexboxgrid-sass-col-common;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.row.reverse {
+  flex-direction: row-reverse;
+}
+
+.col.reverse {
+  flex-direction: column-reverse;
+}
+
+.col {
+  @include flexboxgrid-sass-col-common;
+  flex-basis: auto;
+}
+
+.row.no-gutters {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+
+  > *[class^='col-'],
+  > *[class*='col-'] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+.row.gutters-lg {
+  @include media('>lg') {
+    margin-left: $gutter-compensation-desktop * 2 !important;
+    margin-right: $gutter-compensation-desktop * 2 !important;
+  }
+
+  > *[class^='col-'],
+  > *[class*='col-'] {
+    @include media('>lg') {
+      padding-left: $half-gutter-width-desktop * 2 !important;
+      padding-right: $half-gutter-width-desktop * 2 !important;
+    }
+  }
+}
+
+@for $i from 1 through $grid-columns {
+  .col-#{$i} {
+    @include flexboxgrid-sass-col-common;
+    flex-basis: math.div(100%, $grid-columns) * $i;
+    max-width: math.div(100%, $grid-columns) * $i;
+  }
+}
+@for $i from 1 through $grid-columns {
+  .col-offset-#{$i} {
+    @include flexboxgrid-sass-col-common;
+    margin-left: math.div(100%, $grid-columns) * $i;
+  }
+}
+
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.justify-content-start {
+  justify-content: flex-start;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+  text-align: end;
+}
+
+.justify-content-top {
+  align-items: flex-start;
+}
+
+.align-items-start {
+  align-items: flex-start;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-end {
+  align-items: flex-end;
+}
+
+.justify-content-space-around {
+  justify-content: space-around;
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
+}
+
+.first {
+  order: -1;
+}
+
+.last {
+  order: 1;
+}
+
+@each $breakpoint in $breakpoints-extended {
+  $name: list.nth($breakpoint, 1);
+  $size: list.nth($breakpoint, 2);
+  $container: list.nth($breakpoint, 3);
+  @media only screen and (min-width: $size) {
+    .container {
+      @if ($container == 'auto') {
+        width: 100%;
+      } @else {
+        width: calc(#{$container} + 2 * #{$outer-margin});
+      }
+    }
+
+    .col-#{$name} {
+      @include flexboxgrid-sass-col-common;
+      flex-basis: auto;
+    }
+    .col-#{$name} {
+      flex-basis: 0;
+      flex-grow: 1;
+      max-width: 100%;
+    }
+    .justfy-content-start-#{$name} {
+      justify-content: flex-start;
+    }
+
+    .justfy-content-center-#{$name} {
+      justify-content: center;
+    }
+
+    .justfy-content-end-#{$name} {
+      justify-content: flex-end;
+    }
+
+    .align-items-start-#{$name} {
+      align-items: flex-start;
+    }
+
+    .align-items-center-#{$name} {
+      align-items: center;
+    }
+
+    .align-items-end-#{$name} {
+      align-items: flex-end;
+    }
+
+    .justfy-content-space-around-#{$name} {
+      justify-content: space-around;
+    }
+
+    .justfy-content-space-between-#{$name} {
+      justify-content: space-between;
+    }
+
+    .first-#{$name} {
+      order: -1;
+    }
+
+    .last-#{$name} {
+      order: 1;
+    }
+    @for $i from 1 through $grid-columns {
+      .col-#{$name}-#{$i} {
+        @include flexboxgrid-sass-col-common;
+        flex-basis: math.div(100%, $grid-columns) * $i;
+        max-width: math.div(100%, $grid-columns) * $i;
+      }
+    }
+    @for $i from 1 through $grid-columns {
+      .col-#{$name}-offset-#{$i} {
+        @include flexboxgrid-sass-col-common;
+        margin-left: math.div(100%, $grid-columns) * $i;
+      }
+    }
+  }
+}
