@@ -171,15 +171,15 @@
 
       &::before {
         position: absolute;
-        left: -25%;
+        left: -1rem;
         bottom: 0;
-        right: -25%;
+        right: -1rem;
         height: 1px;
         background-image: linear-gradient(to right, transparent, white, transparent);
         content: ' ';
         transform: scaleX(0);
         opacity: 0;
-        @include transition-primary('transform, opacity');
+        @include transition-secondary('transform, opacity');
       }
 
       &:hover {

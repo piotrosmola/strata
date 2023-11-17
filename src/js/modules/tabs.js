@@ -1,8 +1,9 @@
 const Tabs = {
-  $toggler: $('[data-toggle="tab"]'),
-  $pane: $('.tabs-pane'),
   init: function () {
     const _ = this
+
+    _.$toggler = $('[data-toggle="tab"]')
+    _.$pane = $('.tabs-pane')
 
     _.$toggler.on('click', function (e) {
       const $self = $(this)

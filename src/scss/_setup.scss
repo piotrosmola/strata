@@ -73,6 +73,14 @@ img {
 
 * {
   box-sizing: border-box;
+
+  &::selection {
+    background-color: rgba(white, 0.1);
+
+    .inverted & {
+      background-color: rgba(black, 0.1);
+    }
+  }
 }
 
 #content {

@@ -30,11 +30,11 @@
       <div class="container-inner">
         <!-- Tabs -->
         <ul class="nav nav-tabs mb-layout-xs">
-          <li><button class="active">All</button></li>
-          <li><button>Automotive</button></li>
-          <li><button>Experimental</button></li>
-          <li><button>Engagement</button></li>
-          <li><button>Virtual Events</button></li>
+          <li><button data-toggle="tab" class="active">All</button></li>
+          <li><button data-toggle="tab">Automotive</button></li>
+          <li><button data-toggle="tab">Experimental</button></li>
+          <li><button data-toggle="tab">Engagement</button></li>
+          <li><button data-toggle="tab">Virtual Events</button></li>
         </ul>
         <!-- Moments Grid -->
         <div class="moments-grid mb-layout-xs">
