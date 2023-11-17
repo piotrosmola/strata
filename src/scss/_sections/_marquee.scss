@@ -22,7 +22,7 @@
     filter: blur(3px);
     margin-bottom: 0;
     mask-image: linear-gradient(to top, rgba(black, 1), rgba(black, 0));
-    padding: 0 35vw;
+    padding: 0 55vw 0 35vw;
     @include media('<=lg') {
       font-size: calc(7rem + 7vw);
     }

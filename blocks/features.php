@@ -11,9 +11,8 @@
     <!-- Container -->
     <div class="section-container container">
       <div class="container-inner">
-        <div class="row">
+        <div class="section-content">
           <?php foreach($boxes as $key => $box): ?>
-          <div class="col-md-6">
             <!-- Feature Card -->
             <div class="section-card wysiwyg" data-speed="<?php echo 1 + ($key * 0.15) ?>">
               <h5><?php echo $box['title'] ?></h5>
@@ -22,7 +21,6 @@
                 <li><?php echo $item ?></li>
                 <?php endforeach; ?>
               </ul>
-            </div>
           </div>
           <?php endforeach; ?>
         </div>

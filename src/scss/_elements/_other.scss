@@ -196,8 +196,8 @@
 .media {
   position: relative;
 
-  img,
-  video {
+  > img,
+  > video {
     display: block;
     width: 100%;
     object-fit: cover;
@@ -213,11 +213,18 @@
     z-index: 2;
   }
 
+  .list-logotypes {
+    @include cover;
+    background-color: rgba($color-body, 0.35);
+    justify-content: center;
+    padding: 2rem;
+  }
+
   &.absolute {
-    @include media('>lg') {
+    @include media('>md') {
       height: 100%;
 
-      img {
+      > img {
         position: absolute;
         left: 0;
         top: 0;

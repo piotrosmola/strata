@@ -7,7 +7,7 @@ const Marquee = {
   init() {
     document.querySelectorAll('.marquee').forEach(el => {
       const text = el.querySelector('.section-content h2')
-      const media = el.querySelector('.section-bg img')
+      const media = el.querySelector('.section-bg')
       const { width, height } = text.getBoundingClientRect()
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -37,10 +37,10 @@ const Marquee = {
       tl.fromTo(
         media,
         {
-          y: 0
+          y: '-10%'
         },
         {
-          y: '25%',
+          y: '10%',
           scale: 0.6
         },
         'start'

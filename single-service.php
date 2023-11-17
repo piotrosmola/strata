@@ -5,6 +5,7 @@
   <?php
     includeBlock('blocks/hero-3.php', array(
       'title' => 'Creative Communications <br />& Strategies',
+      'image' => 'assets/img/hero-service.jpg',
     ));
   ?>
 

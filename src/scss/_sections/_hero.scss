@@ -84,7 +84,9 @@
   }
 
   .section-content {
-    max-width: 65%;
+    @include media('>lg') {
+      max-width: 75%;
+    }
     @include last-mb-0;
 
     .lead {
@@ -98,5 +100,16 @@
 
   + .section {
     padding-top: 0;
+  }
+
+  &.reversed {
+    .section-content {
+      text-align: right;
+      margin-left: auto;
+
+      p {
+        margin-left: auto;
+      }
+    }
   }
 }

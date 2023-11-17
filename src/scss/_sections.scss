@@ -33,6 +33,10 @@
 
   &.bg-white {
     z-index: 2;
+
+    + .section.bg-white {
+      padding-top: 0 !important;
+    }
   }
 
   &.border-top {
@@ -56,7 +60,7 @@
     }
   }
 
-  + .section:not(.bg-white):not(.border-top) {
+  &:not(.bg-white) + .section:not(.bg-white):not(.border-top) {
     padding-top: 0 !important;
   }
 }

@@ -6,17 +6,54 @@
   display: flex;
   align-items: center;
 
+  .section-bg {
+    @include media('<=xs') {
+      top: 0%;
+      left: -100%;
+      right: -100%;
+    }
+  }
+
   .container-inner > .row > * {
     display: flex;
   }
 
+  .section-content {
+    @include media('>xs') {
+      display: flex;
+      @include media('>lg') {
+        gap: $gutter-width-desktop;
+      }
+      @include media('<=lg') {
+        gap: $gutter-width-mobile;
+      }
+    }
+  }
+
   .section-card {
-    padding: max(15%, 2rem);
     background-color: rgba(white, 0.1);
     backdrop-filter: blur(40px);
+    width: 100%;
+    flex: 1 0 0;
+    padding: 5rem;
+
+    @include media('<=xl') {
+      padding: 4rem;
+    }
 
     @include media('<=lg') {
+      padding: 3rem;
       transform: none !important;
+    }
+    @include media('<=md') {
+      padding: 2rem;
+    }
+    @include media('<=xs') {
+      padding: 1.75rem;
+
+      &:not(:last-child) {
+        margin-bottom: $outer-margin;
+      }
     }
 
     h5 {
