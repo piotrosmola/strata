@@ -37,6 +37,7 @@
 
     &.i-arrow-top-right,
     &.i-arrow-top-right-fat {
+      margin-right: -0.3em;
       @include transition-primary('transform, opacity');
 
       &::before,
@@ -102,14 +103,10 @@
   &:focus,
   &:active,
   &:focus:active,
-  .hover-button:hover & {
+  a:hover & {
     box-shadow: none;
     outline: none;
     color: inherit;
-
-    &::before {
-      transform: scale(0.96, 0.93);
-    }
 
     #{$b}-emot {
       animation: wave infinite 0.8s linear;
@@ -237,6 +234,51 @@
   &:focus:active {
     &:not(:disabled),
     &:not(.disabled) {
+    }
+  }
+}
+
+.btn-arrow {
+  height: 3rem;
+  width: 3rem;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 0.85rem;
+  @include transition-primary('transform, color');
+  padding: 0;
+
+  &::before {
+    @include cover;
+    border-radius: 50%;
+    border: 1px solid $color-global;
+    @include transition-primary('transform, background, border');
+  }
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:focus:active,
+  a:hover & {
+    &::before {
+      transform: scale(1.2);
+    }
+  }
+
+  @each $type, $color in $types {
+    &.btn-#{$type} {
+      &:hover,
+      &:focus,
+      &:active,
+      &:focus:active,
+      a:hover & {
+        color: $color-inverted;
+
+        &::before {
+          background-color: $color;
+          border: $color;
+          transform: scale(1.15);
+        }
+      }
     }
   }
 }

@@ -56,16 +56,27 @@
       // will-change: transform;
     }
 
+    &-text {
+      @include text-uppercase;
+      font-size: 0.4rem;
+      max-width: 75%;
+      text-align: center;
+    }
+
+    &-icon {
+      margin-bottom: 0.5rem;
+
+      &::after {
+        @include icon('plus');
+      }
+    }
+
     &-body {
       position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-
-      span {
-        @include text-uppercase;
-      }
 
       i {
         margin-bottom: 0.5rem;

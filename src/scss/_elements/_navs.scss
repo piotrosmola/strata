@@ -150,6 +150,11 @@
   padding-left: $outer-margin;
   padding-right: $outer-margin;
 
+  &-centered {
+    justify-content: center;
+    gap: 5%;
+  }
+
   li {
     button,
     a {

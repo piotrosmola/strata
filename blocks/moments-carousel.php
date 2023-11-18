@@ -15,7 +15,8 @@
               <!-- Moment Card -->
               <a href="#" class="moment-card" data-cursor="oval">
                 <div class="moment-card-media">
-                  <img src="<?php echo $moment['image']; ?>" alt="" />
+                  <?php if($moment['image']): ?><img src="<?php echo $moment['image']; ?>" alt="" /><?php endif; ?>
+                  <?php if($moment['video']): ?><video src="<?php echo $moment['video']; ?>" alt="" data-play-on-hover></video><?php endif; ?>
                 </div>
                 <div class="moment-card-content">
                   <span class="badge badge-<?php echo $moment['theme']; ?>"><?php echo $moment['category']; ?></span>

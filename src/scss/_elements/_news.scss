@@ -1,0 +1,96 @@
+/* News
+----------------------------------------------------------*/
+
+.news-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gutter-width-desktop;
+
+  @include media('<=md') {
+    gap: $gutter-width-mobile;
+  }
+
+  > * {
+    flex: 1 0 25%;
+
+    @include media('<=md') {
+      flex: 1 0 50%;
+    }
+
+    @include media('<=xs') {
+      flex: 1 0 100%;
+    }
+  }
+}
+
+.news-card {
+  $b: &;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background-color: rgba($color-global, 0.1);
+
+  &-content {
+    @include cover;
+    background-color: rgba($color-body, 0.5);
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+
+    @include media('<=lg') {
+      padding: 2rem;
+    }
+
+    .btn-arrow {
+      margin-left: auto;
+    }
+
+    .badge {
+      margin-top: auto;
+    }
+
+    h5 {
+      margin-top: 1rem;
+      margin-bottom: 0;
+      font-size: 1.5rem;
+      max-width: 14rem;
+      @include media('<=xl') {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &-media {
+    width: 100%;
+    height: 100%;
+    @include transition-secondary('transform');
+    padding-top: 125%;
+
+    @include transition-secondary('opacity, transform,visibility');
+
+    @media (hover: hover) {
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(1.05);
+    }
+
+    video,
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &:hover {
+    #{$b}-media {
+      transform: scale(1);
+      opacity: 0.5;
+      visibility: visible;
+    }
+  }
+}

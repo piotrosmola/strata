@@ -96,42 +96,35 @@
   <?php
     includeBlock('blocks/news-carousel.php', array(
       'title' => '<strong>Explore</strong> Our Blog',
-      'moments' => array(
+      'items' => array(
         array(
-          'title' => 'Porsche Showroom',
-          'category' => 'Insights',
-          'theme' => 'green',
-          'image' => 'assets/img/project01.jpg',
-          'url' => '/single-moment'
-        ),
-        array(
-          'title' => 'Amazon Conference',
-          'category' => 'Insights',
-          'theme' => 'green',
-          'image' => 'assets/img/project02.jpg',
-          'url' => '/single-moment'
-        ),
-        array(
-          'title' => 'Snow Fest',
+          'title' => 'How Strata are offering their clients the added value they expect Insights',
           'category' => 'Insights',
           'theme' => 'green',
           'image' => 'assets/img/project03.jpg',
-          'url' => '/single-moment'
+          'url' => '/single-news.php'
         ),
         array(
-          'title' => 'Amazon Conference',
+          'title' => 'What is the future of Automotive Event Experiences?',
           'category' => 'Insights',
           'theme' => 'green',
-          'image' => 'assets/img/project04.jpg',
-          'url' => '/single-moment'
+          'image' => 'assets/img/project02.jpg',
+          'url' => '/single-news.php'
         ),
         array(
-          'title' => 'Apple Showroom',
-          'category' => 'Insights',
-          'theme' => 'green',
+          'title' => 'Delivering Unforgettable Brand Moments: The Power of Hybrid Events',
+          'category' => 'Event',
+          'theme' => 'pink',
           'image' => 'assets/img/project05.jpg',
-          'url' => '/single-moment'
-        )
+          'url' => '/single-news.php'
+        ),
+        array(
+          'title' => 'How Strata are offering their clients the added value they expect Insights',
+          'category' => 'Insights',
+          'theme' => 'green',
+          'image' => 'assets/img/project03.jpg',
+          'url' => '/single-news.php'
+        ),
       )
     ));
   ?>

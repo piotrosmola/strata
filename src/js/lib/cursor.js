@@ -41,6 +41,8 @@ class Cursor {
       y: 0
     }
 
+    this.DOM.text = this.DOM.el.querySelector(`.${BASE_CLASS}-oval-text`)
+
     Array.from(this.DOM.el.children).forEach(el => {
       const name = el.dataset.cursorId
 
@@ -65,18 +67,17 @@ class Cursor {
     window.addEventListener('mousemove', mouseMove, false)
 
     document.querySelectorAll('[data-cursor]').forEach(el => {
-      const name = el.dataset.cursor
       el.addEventListener(
         'mouseover',
         () => {
-          this.enter({ name })
+          this.enter(el)
         },
         false
       )
       el.addEventListener(
         'mouseleave',
         () => {
-          this.leave({ name })
+          this.leave(el)
         },
         false
       )
@@ -89,8 +90,8 @@ class Cursor {
         <div class="${BASE_CLASS}-oval-bg"></div>
         <div class="${BASE_CLASS}-oval-outline"></div>
         <div class="${BASE_CLASS}-oval-body">
-          <i class="i i-plus"></i>
-          <span>More</span>
+        <span class="${BASE_CLASS}-oval-icon"></span>
+          <span class="${BASE_CLASS}-oval-text">More</span>
         </div>
       </div>
       <div class="${BASE_CLASS}-inner ${BASE_CLASS}-arrows" data-cursor-id="arrows" data-cursor-lerp="0.1"></div>
@@ -115,11 +116,20 @@ class Cursor {
     })
   }
 
-  enter({ name }) {
+  enter(el) {
+    const name = el.dataset.cursor
+
     this.DOM.el.classList.add(`${BASE_CLASS}-${name}-active`)
+
+    if (name === 'oval' && this.DOM.text) {
+      const text = el.dataset.cursorText
+      this.DOM.text.innerHTML = text || 'More'
+    }
   }
 
-  leave({ name }) {
+  leave(el) {
+    const name = el.dataset.cursor
+
     this.DOM.el.classList.remove(`${BASE_CLASS}-${name}-active`)
   }
 }
