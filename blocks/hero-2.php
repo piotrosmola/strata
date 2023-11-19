@@ -13,7 +13,7 @@
       <div class="container-inner">
         <!-- Content -->
         <div class="section-content">
-          <h1 class="h2"><?php echo $title ?></h1>
+          <h1 class="h2 outline-text"><?php echo $title ?></h1>
           <p class="lead border-<?php echo $align ? $align : 'left'; ?>"><?php echo $description ?></p>
         </div>
       </div>

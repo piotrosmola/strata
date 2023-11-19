@@ -10,7 +10,7 @@ label:not(.custom-control-label) {
 
 .form-group {
   position: relative;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 
   &.form-group-hidden {
     display: none;
@@ -36,28 +36,22 @@ label:not(.custom-control-label) {
 // Form Control
 
 .form-control {
+  @include reset('all');
   appearance: none;
-  border-color: $color-line;
-  border-radius: 0.3rem;
   box-shadow: none;
+  border-bottom: 1px solid $color-global;
   color: $color-global;
-  padding: 1rem;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  height: calc(3.25rem + 2px);
+  padding-bottom: 0.75rem;
+  width: 100%;
+  resize: none;
 
   &:focus {
-    border-color: mix(black, $color-line, 5%);
+    border-bottom: 1px solid rgba($color-global, 0.5);
     box-shadow: none;
   }
 
-  &.qty {
-    width: 70px;
-    font-size: 1.2rem;
-    font-weight: $font-primary-bold;
-  }
-
-  .form-error & {
-    border-color: $color-red;
+  &::placeholder {
+    color: $color-muted;
   }
 }
 
@@ -72,21 +66,21 @@ label:not(.custom-control-label) {
 
 /* Select */
 
-.select-container {
+.form-select {
   position: relative;
   cursor: pointer;
 
-  .form-control   {
+  .form-control {
     padding-right: 4rem;
-
-    &:focus + .select-indicator {
-      background-color: $color-primary;
-    }
   }
-}
 
-select.form-control:not([size]):not([multiple]) {
-  height: calc(3.25rem + 2px);
+  &::after {
+    position: absolute;
+    bottom: 0.9rem;
+    right: 0;
+    font-size: 0.8rem;
+    @include icon('arrow-down');
+  }
 }
 
 /* Custom Controls */
@@ -95,78 +89,15 @@ select.form-control:not([size]):not([multiple]) {
   padding-left: 1.9em;
   margin-right: 2em;
   font-size: inherit;
-  margin-bottom: 0.25rem;
 
-  .custom-control-label {
-    font-size: 1rem;
-    cursor: pointer;
+  &-input {
+    display: none;
   }
-}
 
-/* Radio - Custom */
-
-.custom-radio {
-  .custom-control-input {
-    + .custom-control-label {
-      &::before {
-        @include transition-primary;
-        position: absolute;
-        top: 0;
-        left: -1.9rem;
-        font-weight: 400;
-        width: 1.4rem;
-        height: 1.4rem;
-        margin-right: 0.5rem;
-        border-radius: 50%;
-        border: 2px solid $color-line;
-        background-color: white;
-        pointer-events: initial;
-
-        .form-error & {
-          border-color: $color-red;
-        }
-      }
-
-      &::after {
-        @include transition-primary;
-        position: absolute;
-        width: 0.5rem;
-        height: 0.5rem;
-        top: 0.45rem;
-        left: -1.45rem;
-        border-radius: 50%;
-        background-color: $color-primary;
-        background-image: none !important;
-        transform: scale(0);
-        visibility: hidden;
-      }
-    }
-
-    &:focus + .custom-control-label::before {
-      box-shadow: none;
-      border-color: $color-primary;
-      box-shadow: 0 0 0 2px rgba($color-primary, 0.2);
-
-      .form-error & {
-        border-color: $color-red;
-      }
-    }
-
-    &:active + .custom-control-label::before {
-      background-color: white;
-      border-color: $color-primary;
-    }
-
-    &:checked + .custom-control-label {
-      &::before {
-        border-color: $color-primary;
-      }
-
-      &::after {
-        transform: scale(1);
-        visibility: visible;
-      }
-    }
+  &-label {
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: block;
   }
 }
 
@@ -179,14 +110,13 @@ select.form-control:not([size]):not([multiple]) {
         @include transition-primary;
         position: absolute;
         top: 0;
-        left: -1.9rem;
+        left: 0;
         font-weight: 400;
-        width: 1.4rem;
-        height: 1.4rem;
+        width: 1.1rem;
+        height: 1.1rem;
         margin-right: 0.5rem;
-        border-radius: 0.3rem;
-        border: 2px solid $color-line;
-        background-color: white;
+        border: 1px solid currentColor;
+        content: ' ';
 
         .form-error & {
           border-color: $color-red;
@@ -196,26 +126,15 @@ select.form-control:not([size]):not([multiple]) {
       &::after {
         @include transition-primary;
         position: absolute;
-        top: 0.25rem;
-        left: -1.55rem;
-        font-family: 'Icons';
-        content:'\f105';
-        font-size: 0.6rem;
+        top: 0.3rem;
+        left: 0.35rem;
+        @include icon(tick);
+        font-size: 0.45rem;
         color: $color-primary;
         background-image: none !important;
-        transform: translate3d(0,-25%,0);
+        transform: translate3d(0, -25%, 0);
         visibility: hidden;
         opacity: 0;
-      }
-    }
-
-    &:focus + .custom-control-label::before {
-      box-shadow: none;
-      border-color: $color-line;
-      box-shadow: 0 0 0 2px rgba($color-primary, 0.2);
-
-      .form-error & {
-        border-color: $color-red;
       }
     }
 
@@ -230,7 +149,7 @@ select.form-control:not([size]):not([multiple]) {
       }
 
       &::after {
-        transform: translate3d(0,0%,0);
+        transform: translate3d(0, 0%, 0);
         visibility: visible;
         opacity: 1;
       }

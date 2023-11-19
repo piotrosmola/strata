@@ -123,6 +123,21 @@ p {
 address {
   margin-bottom: 1.5rem;
   font-style: normal;
+
+  a {
+    @include link-underline-hover;
+  }
+
+  &.text-lg {
+    font-size: 1.4rem;
+
+    @include media('<=md') {
+      font-size: 1.2rem;
+    }
+    @include media('<=xs') {
+      font-size: 1.1rem;
+    }
+  }
 }
 
 /* Sizes */
@@ -132,11 +147,11 @@ address {
 }
 
 .text-sm {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .text-xs {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 
 /* Colors */
@@ -145,6 +160,10 @@ address {
   .text-#{$type} {
     color: $color;
   }
+}
+
+.text-muted {
+  color: $color-muted;
 }
 
 /* Outline Text */
@@ -192,6 +211,11 @@ address {
 .border-right {
   border-right: 1px solid currentColor;
   padding-right: 1.25em;
+}
+
+.border-bottom {
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.25em;
 }
 
 .border-left,

@@ -57,7 +57,7 @@
     outline: none;
     color: inherit;
   }
-  @if $type == everything {
+  @if $type == all {
     background-color: transparent;
     border: 0;
     float: none;

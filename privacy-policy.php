@@ -1,7 +1,7 @@
   <!-- Header -->
   <?php include 'header.php'; ?>
 
-  <!-- Section - Hero #2 -->
+  <!-- Section - Hero #2 (Privacy Policy) -->
   <section class="section hero-2">
     <!-- Background -->
     <div class="section-bg">

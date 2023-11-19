@@ -1,0 +1,121 @@
+/* Contact
+----------------------------------------------------------*/
+
+.section.contact {
+  .col-map {
+    position: relative;
+    z-index: 1;
+    @include media('<=md') {
+      padding-bottom: 85%;
+    }
+  }
+
+  .col-form,
+  .row-details {
+    position: relative;
+    z-index: 2;
+  }
+
+  .section-map {
+    position: absolute;
+    top: -100%;
+    left: -80%;
+    right: -20%;
+
+    @include media('<=xxl') {
+      top: -75%;
+    }
+    @include media('<=xl') {
+      top: -50%;
+    }
+    @include media('<=md') {
+      top: -80%;
+      left: -100%;
+      right: 0%;
+    }
+
+    &-image {
+      mask-image: linear-gradient(to bottom, transparent, black 25%, black 75%, transparent);
+
+      img {
+        width: 100%;
+        display: block;
+        opacity: 0.055;
+        @include media('<=md') {
+          opacity: 0.08;
+        }
+      }
+    }
+
+    &-marker {
+      position: absolute;
+      left: calc(var(--left) - 0.5rem);
+      top: calc(var(--top) - 0.5rem);
+
+      &-dot {
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        background-color: $color-global;
+        display: block;
+
+        @each $type, $color in $types {
+          &.#{$type} {
+            background-color: $color;
+          }
+        }
+      }
+
+      &-popup {
+        position: absolute;
+        bottom: calc(100% + 1rem);
+        left: -7.5rem;
+        right: -7.5rem;
+        background-color: $color-global;
+        color: $color-inverted;
+        padding: 1.15rem;
+        @include last-mb-0;
+
+        h5 {
+          font-size: 1rem;
+          margin-bottom: 0.3rem;
+        }
+
+        address {
+          font-size: 0.875rem;
+          line-height: 1.25;
+        }
+
+        &::after {
+          position: absolute;
+          top: 100%;
+          left: calc(50% - 7px);
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 9px 7.5px 0;
+          border-color: $color-global transparent transparent transparent;
+          content: ' ';
+        }
+
+        &.bottom {
+          bottom: auto;
+          top: calc(100% + 1rem);
+
+          &::after {
+            top: auto;
+            bottom: 100%;
+            border-width: 0 7.5px 9px;
+            border-color: transparent transparent $color-global transparent;
+          }
+        }
+
+        // transform: translateY(-1rem);
+
+        &.bottom {
+          // transform: translateY(1rem);
+        }
+      }
+    }
+  }
+}
