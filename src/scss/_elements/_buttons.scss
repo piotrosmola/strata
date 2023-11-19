@@ -186,6 +186,7 @@
   height: 11rem;
   width: 11rem;
   flex-direction: column;
+  padding: 0.5rem;
 
   @include media('>xl') {
     height: 13rem;

@@ -161,3 +161,33 @@
     }
   }
 }
+
+/* Error */
+.section.hero-error {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+
+  .section-bg {
+    @include media('<=xs') {
+      top: 0%;
+      left: -100%;
+      right: -100%;
+    }
+  }
+
+  h1 {
+    font-size: calc(13rem + 5vw);
+    line-height: 0.85;
+
+    @include media('<=lg') {
+      font-size: calc(9rem + 2.5vw);
+    }
+    @include media('<=md') {
+      font-size: 8rem;
+    }
+    @include media('<=xs') {
+      font-size: 6rem;
+    }
+  }
+}

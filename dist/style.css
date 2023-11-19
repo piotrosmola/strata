@@ -5411,6 +5411,39 @@ body.navigation-open #navigation .module-navigation .nav-primary li:nth-child(10
   margin-left: auto;
 }
 
+/* Error */
+.section.hero-error {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 575px) {
+  .section.hero-error .section-bg {
+    top: 0%;
+    left: -100%;
+    right: -100%;
+  }
+}
+.section.hero-error h1 {
+  font-size: calc(13rem + 5vw);
+  line-height: 0.85;
+}
+@media (max-width: 1199px) {
+  .section.hero-error h1 {
+    font-size: calc(9rem + 2.5vw);
+  }
+}
+@media (max-width: 991px) {
+  .section.hero-error h1 {
+    font-size: 8rem;
+  }
+}
+@media (max-width: 575px) {
+  .section.hero-error h1 {
+    font-size: 6rem;
+  }
+}
+
 /* Intro
 ----------------------------------------------------------*/
 .section.intro {
@@ -6136,6 +6169,8 @@ body.navigation-open #navigation .module-navigation .nav-primary li:nth-child(10
   width: 220px;
   width: 11rem;
   flex-direction: column;
+  padding: 10px;
+  padding: 0.5rem;
 }
 @media (min-width: 1440px) {
   .btn-oval {
@@ -8543,10 +8578,10 @@ blockquote footer {
     text-align: center;
   }
   .text-xs-left {
-    text-align: center;
+    text-align: left;
   }
   .text-xs-right {
-    text-align: center;
+    text-align: right;
   }
 }
 @media (min-width: 768px) {
@@ -8554,10 +8589,10 @@ blockquote footer {
     text-align: center;
   }
   .text-sm-left {
-    text-align: center;
+    text-align: left;
   }
   .text-sm-right {
-    text-align: center;
+    text-align: right;
   }
 }
 @media (min-width: 992px) {
@@ -8565,10 +8600,10 @@ blockquote footer {
     text-align: center;
   }
   .text-md-left {
-    text-align: center;
+    text-align: left;
   }
   .text-md-right {
-    text-align: center;
+    text-align: right;
   }
 }
 @media (min-width: 1200px) {
@@ -8576,10 +8611,10 @@ blockquote footer {
     text-align: center;
   }
   .text-lg-left {
-    text-align: center;
+    text-align: left;
   }
   .text-lg-right {
-    text-align: center;
+    text-align: right;
   }
 }
 @media (min-width: 1440px) {
@@ -8587,10 +8622,10 @@ blockquote footer {
     text-align: center;
   }
   .text-xl-left {
-    text-align: center;
+    text-align: left;
   }
   .text-xl-right {
-    text-align: center;
+    text-align: right;
   }
 }
 @media (min-width: 1700px) {
@@ -8598,10 +8633,10 @@ blockquote footer {
     text-align: center;
   }
   .text-xxl-left {
-    text-align: center;
+    text-align: left;
   }
   .text-xxl-right {
-    text-align: center;
+    text-align: right;
   }
 }
 /* Spacing
