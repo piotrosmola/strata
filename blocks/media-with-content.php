@@ -3,7 +3,7 @@
     <!-- Container -->
     <div class="section-container container">
       <div class="container-inner">
-        <div class="row gutters-lg align-items-end justify-content-center <?php echo $reversed ? 'reverse' : ''; ?>">
+        <div class="row gutters-lg align-items-<?php echo $reversed ? 'start' : 'end'; ?> justify-content-center <?php echo $reversed ? 'reverse' : ''; ?>">
           <div class="col-lg-5 col-md-6 wysiwyg mb-layout-sm mb-md-0">
             <?php echo $content ?>
           </div>

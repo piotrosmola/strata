@@ -5327,7 +5327,7 @@ body.navigation-open #navigation .module-navigation .nav-primary li:nth-child(10
   margin-bottom: 0;
 }
 @media (min-width: 992px) {
-  .section.hero-2 .section-content {
+  .section.hero-2 .section-content:not(.fullwidth) {
     max-width: 65%;
   }
 }
@@ -7316,6 +7316,41 @@ hr.sep-line.sep-line-lg {
   transform: scaleX(0);
 }
 .nav-footer li a:hover:not(:disabled):not(.disabled)::after, .nav-footer li a:focus:not(:disabled):not(.disabled)::after, a:hover .nav-footer li a:not(:disabled):not(.disabled)::after {
+  transform: scaleX(1);
+  transform-origin: left center;
+}
+
+/* Vertical */
+.nav-vertical {
+  font-weight: 700;
+  font-family: "Sofia Sans", sans-serif;
+  text-transform: uppercase;
+  flex-direction: column;
+  font-size: 19px;
+  font-size: 0.95rem;
+}
+.nav-vertical li:not(:last-child) {
+  margin-bottom: 20px;
+  margin-bottom: 1rem;
+}
+.nav-vertical li a {
+  color: inherit;
+  position: relative;
+}
+.nav-vertical li a::after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  bottom: 0;
+  border-radius: 2px;
+  background-color: currentColor;
+  content: " ";
+  transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  transform-origin: right center;
+  transform: scaleX(0);
+}
+.nav-vertical li a:hover:not(:disabled):not(.disabled)::after, .nav-vertical li a:focus:not(:disabled):not(.disabled)::after, a:hover .nav-vertical li a:not(:disabled):not(.disabled)::after {
   transform: scaleX(1);
   transform-origin: left center;
 }
