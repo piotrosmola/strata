@@ -5,7 +5,6 @@ import Background from './modules/background'
 import Carousel from './modules/carousel'
 import Counter from './modules/counter'
 import Cta from './modules/cta'
-import Hero from './modules/hero'
 import Mouse from './modules/mouse'
 import Navigation from './modules/navigation'
 import Panel from './modules/panel'
@@ -20,7 +19,6 @@ $(() => {
   Typography.init()
   Animations.init()
   Background.init()
-  Hero.init()
   Carousel.init()
   Scroll.init()
   Cta.init()

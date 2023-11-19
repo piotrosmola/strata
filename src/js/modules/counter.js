@@ -9,9 +9,9 @@ const Counter = {
 
     _.$el.forEach($el => {
       $el.counter = new CountUp($el, $el.getAttribute('data-count-to'), {
-        plugin: new Odometer({ duration: 1.3, lastDigitDelay: 0 }),
+        plugin: new Odometer({ duration: 0.75, lastDigitDelay: 0 }),
         startVal: $el.innerHTML,
-        duration: 2.5,
+        duration: 1.5,
         separator: ''
       })
     })

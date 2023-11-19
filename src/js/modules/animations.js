@@ -52,8 +52,6 @@ const Animations = {
           return
         } else if ($el[0].poTimeline) {
           $el[0].poTimeline.play()
-        } else if ($el[0].carousel) {
-          $el[0].carousel.start()
         }
       }, delay)
     )
@@ -77,8 +75,6 @@ const Animations = {
       } catch (e) {
         console.warn('Timeline not found', $el[0])
       }
-    } else if ($el[0].carousel) {
-      $el[0].carousel.reset()
     }
   },
   handle(direction) {

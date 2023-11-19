@@ -201,6 +201,33 @@ address {
         -webkit-text-stroke: 0;
         position: absolute;
         top: 0;
+        pointer-events: none;
+        left: 0;
+
+        > div {
+          clip-path: polygon(0% 0%, 100% 0%, 100% var(--progress), 0% var(--progress));
+        }
+      }
+    }
+  }
+
+  &[data-hover-lines] {
+    position: relative;
+    --progress: 0%;
+
+    > span {
+      display: block;
+
+      &:nth-child(1) {
+        color: transparent;
+        -webkit-text-stroke: 0.75px $color-global;
+      }
+
+      &:nth-child(2) {
+        color: $color-global;
+        -webkit-text-stroke: 0;
+        position: absolute;
+        top: 0;
         left: 0;
 
         > div {

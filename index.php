@@ -16,7 +16,7 @@
       <div class="container-inner">
         <!-- Content -->
         <div class="section-content">
-          <h1 class="outline-text" data-animate="true" data-split-lines>Every Moment Matters</h1>
+          <h1 class="outline-text" data-animate="true" data-fill-first="true" data-hover-lines data-split-chars>Every Moment Matters</h1>
         </div>
         <!-- Action -->
         <div class="section-action">

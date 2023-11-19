@@ -215,7 +215,7 @@
       display: flex;
     }
     @include media('<=sm') {
-      padding-top: 10rem;
+      padding-top: 6rem;
     }
   }
 
@@ -226,6 +226,9 @@
       margin-right: 0;
       margin-bottom: 2rem;
       flex: 0 0 100%;
+    }
+    @include media('<=sm') {
+      display: none;
     }
 
     img {

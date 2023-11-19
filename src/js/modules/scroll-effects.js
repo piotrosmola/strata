@@ -11,6 +11,7 @@ const ScrollEffects = {
     _.initMediaRow()
     _.initMediaWithContent()
     _.initBlurIn()
+    _.initHero()
   },
   initMediaWithContent() {
     document.querySelectorAll('.section.media-with-content').forEach(section => {
@@ -170,6 +171,56 @@ const ScrollEffects = {
       })
 
       tl.fromTo(el, { opacity: 0, '--blur': '20px', scale: 0.8 }, { opacity: 1, '--blur': '0px', scale: 1 })
+    })
+  },
+  initHero() {
+    // Hero #1
+    document.querySelectorAll('.section.hero-1').forEach(section => {
+      const waves = section.querySelector('.waves')
+      const textLines = section.querySelector('[data-hover-lines]')?.querySelectorAll('span')
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          pin: false,
+          trigger: section,
+          scrub: 1,
+          start: `top top`,
+          end: () => `bottom ${-window.innerHeight}`,
+          invalidateOnRefresh: true
+        }
+      })
+
+      if (textLines.length) {
+        Array.from(textLines[0].children).forEach((line, i) => {
+          const solidLines = textLines[1]
+          line.addEventListener('mouseenter', () => {
+            Array.from(solidLines.children).forEach((solidLine, k) => {
+              if (i === k) gsap.to(solidLine, { '--progress': '100%', duration: 0.5, ease: 'power3.out' })
+              else gsap.to(solidLine, { '--progress': '0%', duration: 0.5, ease: 'power3.out' })
+            })
+          })
+        })
+      }
+
+      tl.to(waves, { x: '-25%', opacity: 0 }, 'start')
+    })
+
+    // Hero #2
+    document.querySelectorAll('.section.hero-2').forEach(section => {
+      const waves = section.querySelector('.waves')
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          pin: false,
+          trigger: section,
+          scrub: 1,
+          start: `top top`,
+          end: () => `bottom ${-window.innerHeight}`,
+          invalidateOnRefresh: true
+        }
+      })
+
+      tl.to(waves, { x: '25%', opacity: 0 }, 'start')
     })
   }
 }

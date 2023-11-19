@@ -5472,7 +5472,7 @@ body.navigation-open #navigation .module-navigation .nav-primary li:nth-child(10
 }
 @media (max-width: 767px) {
   .section.hero-moment .container-inner {
-    padding-top: 10rem;
+    padding-top: 6rem;
   }
 }
 .section.hero-moment .section-logo {
@@ -5486,6 +5486,11 @@ body.navigation-open #navigation .module-navigation .nav-primary li:nth-child(10
     margin-right: 0;
     margin-bottom: 2rem;
     flex: 0 0 100%;
+  }
+}
+@media (max-width: 767px) {
+  .section.hero-moment .section-logo {
+    display: none;
   }
 }
 .section.hero-moment .section-logo img {
@@ -8472,9 +8477,32 @@ address.text-lg {
   -webkit-text-stroke: 0;
   position: absolute;
   top: 0;
+  pointer-events: none;
   left: 0;
 }
 .outline-text[data-split-lines] > span:nth-child(2) > div, .outline-text[data-animate] > span:nth-child(2) > div {
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% var(--progress), 0% var(--progress));
+          clip-path: polygon(0% 0%, 100% 0%, 100% var(--progress), 0% var(--progress));
+}
+.outline-text[data-hover-lines] {
+  position: relative;
+  --progress: 0%;
+}
+.outline-text[data-hover-lines] > span {
+  display: block;
+}
+.outline-text[data-hover-lines] > span:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 0.75px white;
+}
+.outline-text[data-hover-lines] > span:nth-child(2) {
+  color: white;
+  -webkit-text-stroke: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.outline-text[data-hover-lines] > span:nth-child(2) > div {
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% var(--progress), 0% var(--progress));
           clip-path: polygon(0% 0%, 100% 0%, 100% var(--progress), 0% var(--progress));
 }
