@@ -129,7 +129,9 @@
 
   .section-content {
     @include media('>lg') {
-      max-width: 75%;
+      &:not(.fullwidth) {
+        max-width: 75%;
+      }
     }
     @include last-mb-0;
 

@@ -194,8 +194,78 @@ address {
   padding-right: 1.25em;
 }
 
+.border-left,
+.border-right {
+  @each $type, $color in $types {
+    &.border-#{$type} {
+      border-color: $color;
+    }
+  }
+}
+
+blockquote {
+  margin: 0;
+  padding: 0;
+  @include media('>md') {
+    margin-bottom: $layout-spacing-desktop-xs;
+  }
+  @include media('<=md') {
+    margin-bottom: $layout-spacing-mobile-xs;
+  }
+
+  p {
+    @include font('secondary', 'light');
+    text-transform: uppercase;
+    font-size: 1.75rem;
+    border-left: 1px solid currentColor;
+    padding-left: 2.5rem;
+    margin-bottom: 1.5rem;
+
+    @include media('<=md') {
+      font-size: 1.5rem;
+    }
+    @include media('<=xs') {
+      font-size: 1.35rem;
+      padding-left: 2rem;
+    }
+  }
+
+  footer {
+    @include font('secondary', 'medium');
+    text-transform: uppercase;
+    margin-left: 2.5rem;
+    font-size: 0.9rem;
+    color: $color-muted;
+    @include media('<=xs') {
+      margin-left: 2rem;
+    }
+  }
+}
+
 .wysiwyg {
   @include last-mb-0;
+
+  p,
+  ul,
+  ol,
+  .media-row,
+  blockquote {
+    + h1,
+    + h2,
+    + h3,
+    + h4,
+    + h5,
+    + h6,
+    + .media-row,
+    + blockquote {
+      @include media('>md') {
+        margin-top: $layout-spacing-desktop-xs;
+      }
+      @include media('<=md') {
+        margin-top: $layout-spacing-mobile-sm;
+      }
+    }
+  }
 
   ul {
     @include reset('list');

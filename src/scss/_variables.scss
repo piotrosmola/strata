@@ -15,6 +15,7 @@ $font-primary-regular: normal;
 $font-primary-bold: bold;
 
 $font-secondary-thin: 100;
+$font-secondary-light: 300;
 $font-secondary-regular: 400;
 $font-secondary-medium: 500;
 $font-secondary-bold: 700;
@@ -36,6 +37,7 @@ $font-map: (
   ),
   secondary: (
     thin: $font-secondary-thin,
+    light: $font-secondary-light,
     regular: $font-secondary-regular,
     medium: $font-secondary-medium,
     bold: $font-secondary-bold,

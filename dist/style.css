@@ -5386,7 +5386,7 @@ body.navigation-open #navigation .module-navigation .nav-primary li:nth-child(10
           mask-image: linear-gradient(to right, black, transparent);
 }
 @media (min-width: 1200px) {
-  .section.hero-3 .section-content {
+  .section.hero-3 .section-content:not(.fullwidth) {
     max-width: 75%;
   }
 }
@@ -5776,6 +5776,7 @@ body.navigation-open #navigation .module-navigation .nav-primary li:nth-child(10
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  display: inline-block;
 }
 .badge.badge-primary {
   border-color: white;
@@ -6660,6 +6661,90 @@ select.form-control:not([size]):not([multiple]) {
 
 /* Other
 ----------------------------------------------------------*/
+@media (max-width: 767px) {
+  .row.media-row > *:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+/* Author */
+@media (max-width: 991px) {
+  .author {
+    display: flex;
+  }
+}
+.author-image {
+  width: 100px;
+  width: 5rem;
+  margin-bottom: 25px;
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+@media (max-width: 575px) {
+  .author-image {
+    width: 3.75rem;
+  }
+}
+.author-image::after {
+  position: absolute;
+  content: " ";
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  mix-blend-mode: multiply;
+}
+.author-image img {
+  display: block;
+  width: 100%;
+}
+@media (max-width: 991px) {
+  .author-content {
+    padding-left: 1.5rem;
+  }
+}
+.author-content > * {
+  margin-bottom: 2px;
+  margin-bottom: 0.1rem;
+}
+.author-content > h5 {
+  font-size: 24px;
+  font-size: 1.2rem;
+}
+.author-content > span {
+  font-size: 17px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.45);
+}
+.author-content .social-icons {
+  margin-top: 10px;
+  margin-top: 0.5rem;
+}
+.author.author-primary .author-image::after {
+  background-color: white;
+}
+.author.author-blue .author-image::after {
+  background-color: #56aee5;
+}
+.author.author-orange .author-image::after {
+  background-color: #ff8e00;
+}
+.author.author-red .author-image::after {
+  background-color: red;
+}
+.author.author-green .author-image::after {
+  background-color: #d3e300;
+}
+.author.author-pink .author-image::after {
+  background-color: #ff8ecb;
+}
+.author.author-dark .author-image::after {
+  background-color: #090909;
+}
+.author.author-light .author-image::after {
+  background-color: #f6f6f6;
+}
+
 /* Play */
 .play {
   padding: 0;
@@ -8071,8 +8156,182 @@ address {
   padding-right: 1.25em;
 }
 
+.border-left.border-primary,
+.border-right.border-primary {
+  border-color: white;
+}
+.border-left.border-blue,
+.border-right.border-blue {
+  border-color: #56aee5;
+}
+.border-left.border-orange,
+.border-right.border-orange {
+  border-color: #ff8e00;
+}
+.border-left.border-red,
+.border-right.border-red {
+  border-color: red;
+}
+.border-left.border-green,
+.border-right.border-green {
+  border-color: #d3e300;
+}
+.border-left.border-pink,
+.border-right.border-pink {
+  border-color: #ff8ecb;
+}
+.border-left.border-dark,
+.border-right.border-dark {
+  border-color: #090909;
+}
+.border-left.border-light,
+.border-right.border-light {
+  border-color: #f6f6f6;
+}
+
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 992px) {
+  blockquote {
+    margin-bottom: calc(calc(5rem + 5vh) * 0.4);
+  }
+}
+@media (max-width: 991px) {
+  blockquote {
+    margin-bottom: calc(4rem * 0.4);
+  }
+}
+blockquote p {
+  font-weight: 300;
+  font-family: "Sofia Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 35px;
+  font-size: 1.75rem;
+  border-left: 1px solid currentColor;
+  padding-left: 50px;
+  padding-left: 2.5rem;
+  margin-bottom: 30px;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 991px) {
+  blockquote p {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 575px) {
+  blockquote p {
+    font-size: 1.35rem;
+    padding-left: 2rem;
+  }
+}
+blockquote footer {
+  font-weight: 500;
+  font-family: "Sofia Sans", sans-serif;
+  text-transform: uppercase;
+  margin-left: 50px;
+  margin-left: 2.5rem;
+  font-size: 18px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.45);
+}
+@media (max-width: 575px) {
+  blockquote footer {
+    margin-left: 2rem;
+  }
+}
+
 .wysiwyg > *:last-child {
   margin-bottom: 0;
+}
+@media (min-width: 992px) {
+  .wysiwyg p + h1,
+  .wysiwyg p + h2,
+  .wysiwyg p + h3,
+  .wysiwyg p + h4,
+  .wysiwyg p + h5,
+  .wysiwyg p + h6,
+  .wysiwyg p + .media-row,
+  .wysiwyg p + blockquote,
+  .wysiwyg ul + h1,
+  .wysiwyg ul + h2,
+  .wysiwyg ul + h3,
+  .wysiwyg ul + h4,
+  .wysiwyg ul + h5,
+  .wysiwyg ul + h6,
+  .wysiwyg ul + .media-row,
+  .wysiwyg ul + blockquote,
+  .wysiwyg ol + h1,
+  .wysiwyg ol + h2,
+  .wysiwyg ol + h3,
+  .wysiwyg ol + h4,
+  .wysiwyg ol + h5,
+  .wysiwyg ol + h6,
+  .wysiwyg ol + .media-row,
+  .wysiwyg ol + blockquote,
+  .wysiwyg .media-row + h1,
+  .wysiwyg .media-row + h2,
+  .wysiwyg .media-row + h3,
+  .wysiwyg .media-row + h4,
+  .wysiwyg .media-row + h5,
+  .wysiwyg .media-row + h6,
+  .wysiwyg .media-row + .media-row,
+  .wysiwyg .media-row + blockquote,
+  .wysiwyg blockquote + h1,
+  .wysiwyg blockquote + h2,
+  .wysiwyg blockquote + h3,
+  .wysiwyg blockquote + h4,
+  .wysiwyg blockquote + h5,
+  .wysiwyg blockquote + h6,
+  .wysiwyg blockquote + .media-row,
+  .wysiwyg blockquote + blockquote {
+    margin-top: calc(calc(5rem + 5vh) * 0.4);
+  }
+}
+@media (max-width: 991px) {
+  .wysiwyg p + h1,
+  .wysiwyg p + h2,
+  .wysiwyg p + h3,
+  .wysiwyg p + h4,
+  .wysiwyg p + h5,
+  .wysiwyg p + h6,
+  .wysiwyg p + .media-row,
+  .wysiwyg p + blockquote,
+  .wysiwyg ul + h1,
+  .wysiwyg ul + h2,
+  .wysiwyg ul + h3,
+  .wysiwyg ul + h4,
+  .wysiwyg ul + h5,
+  .wysiwyg ul + h6,
+  .wysiwyg ul + .media-row,
+  .wysiwyg ul + blockquote,
+  .wysiwyg ol + h1,
+  .wysiwyg ol + h2,
+  .wysiwyg ol + h3,
+  .wysiwyg ol + h4,
+  .wysiwyg ol + h5,
+  .wysiwyg ol + h6,
+  .wysiwyg ol + .media-row,
+  .wysiwyg ol + blockquote,
+  .wysiwyg .media-row + h1,
+  .wysiwyg .media-row + h2,
+  .wysiwyg .media-row + h3,
+  .wysiwyg .media-row + h4,
+  .wysiwyg .media-row + h5,
+  .wysiwyg .media-row + h6,
+  .wysiwyg .media-row + .media-row,
+  .wysiwyg .media-row + blockquote,
+  .wysiwyg blockquote + h1,
+  .wysiwyg blockquote + h2,
+  .wysiwyg blockquote + h3,
+  .wysiwyg blockquote + h4,
+  .wysiwyg blockquote + h5,
+  .wysiwyg blockquote + h6,
+  .wysiwyg blockquote + .media-row,
+  .wysiwyg blockquote + blockquote {
+    margin-top: calc(4rem * 0.75);
+  }
 }
 .wysiwyg ul {
   margin: 0;
