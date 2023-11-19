@@ -52,7 +52,6 @@ const Typography = {
           onComplete: () => {
             el.classList.add('completed')
             if (el.dataset.fillFirst) {
-              console.log(el.querySelectorAll('span')[1].children[0])
               gsap.to(el.querySelectorAll('span')[1].children[0], { '--progress': '100%', duration: 0.5 })
             }
           }

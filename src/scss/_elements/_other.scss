@@ -1,6 +1,106 @@
 /* Other
 ----------------------------------------------------------*/
 
+/* Preloader */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $color-global;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include transition-secondary('opacity, visibility');
+
+  // display: none;
+
+  .page-loaded & {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .page-loaded.page-changed & {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  > div {
+    position: relative;
+    width: min(20rem, 50vh);
+    height: min(20rem, 50vh);
+    @include transition-secondary('opacity');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(1.1);
+    animation: showLoader 0.25s forwards;
+
+    @keyframes showLoader {
+      0% {
+        opacity: 0;
+        transform: scale(1.1);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes hideLoader {
+      0% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      100% {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+    }
+
+    .page-loaded & {
+      animation: hideLoader 0.25s forwards;
+    }
+
+    .page-loaded.page-changed & {
+      opacity: 0;
+      animation: none;
+    }
+
+    > span[data-page-progress-value] {
+      margin-bottom: 0;
+      color: transparent;
+      -webkit-text-stroke: 1px $color-global;
+      font-size: 3rem;
+      @include font('secondary', 'extrabold');
+      opacity: 0.2;
+    }
+
+    > svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      circle {
+        stroke-width: 1px;
+        stroke: white;
+
+        &:first-child {
+          opacity: 0.2;
+        }
+      }
+    }
+  }
+}
+
+/* Stats */
 .stats-row {
   @include media('>sm') {
     > * {

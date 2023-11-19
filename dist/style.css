@@ -6863,6 +6863,101 @@ label:not(.custom-control-label) {
 
 /* Other
 ----------------------------------------------------------*/
+/* Preloader */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.75s;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-property: opacity, visibility;
+  transition-delay: 0s;
+}
+.page-loaded #preloader {
+  opacity: 0;
+  visibility: hidden;
+}
+.page-loaded.page-changed #preloader {
+  opacity: 1;
+  visibility: visible;
+}
+#preloader > div {
+  position: relative;
+  width: min(400px, 50vh);
+  width: min(20rem, 50vh);
+  height: min(400px, 50vh);
+  height: min(20rem, 50vh);
+  transition-duration: 0.75s;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-property: opacity;
+  transition-delay: 0s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(1.1);
+  animation: showLoader 0.25s forwards;
+}
+@keyframes showLoader {
+  0% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes hideLoader {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+.page-loaded #preloader > div {
+  animation: hideLoader 0.25s forwards;
+}
+.page-loaded.page-changed #preloader > div {
+  opacity: 0;
+  animation: none;
+}
+#preloader > div > span[data-page-progress-value] {
+  margin-bottom: 0;
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+  font-size: 60px;
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: "Sofia Sans", sans-serif;
+  opacity: 0.2;
+}
+#preloader > div > svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#preloader > div > svg circle {
+  stroke-width: 1px;
+  stroke: white;
+}
+#preloader > div > svg circle:first-child {
+  opacity: 0.2;
+}
+
+/* Stats */
 @media (min-width: 768px) {
   .stats-row > *:nth-child(1) {
     margin-top: 2rem;
