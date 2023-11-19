@@ -43,7 +43,7 @@
               to experiential events and retail environments, Strata leverages creativity and expertise to craft immersive experiences that leave a lasting
               impression on consumers. By engaging multiple senses and creating a sense of wonder, Strata helps your brand make a memorable impact.</p>
             <!-- Blockquote -->
-            <blockquote>
+            <blockquote data-animate>
               <p>The array of stunning Porsche models and interactive experiences left a lasting impression, underscoring the bond that these exceptional cars
                 can create among enthusiasts.</p>
               <footer>Uk Sales Director, Porsche</footer>

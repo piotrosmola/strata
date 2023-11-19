@@ -21,12 +21,13 @@
         <!-- Action -->
         <div class="section-action">
           <!-- Button -->
-          <a href="#" class="btn btn-oval" data-mp>
+          <button class="btn btn-oval" data-toggle="video-modal"
+            data-video="https://player.vimeo.com/video/861153826?h=9cdd1907eb&color=0B8946&title=0&byline=0&portrait=0" data-mp>
             <span class="btn-bg" data-mp-item data-mp-scale="1.15"></span>
             <span class="btn-outline" data-mp-item="0.05" data-mp-scale="1.075"></span>
             <i class="btn-icon i i-play"></i>
             <span class="btn-label">Showreel Video</span>
-          </a>
+          </button>
         </div>
       </div>
     </div>

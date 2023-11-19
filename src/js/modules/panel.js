@@ -1,7 +1,8 @@
 const Panel = {
-  $el: $('.panel'),
   init() {
     const _ = this
+
+    _.$el = $('.panel')
 
     if (_.$el.length) {
       _.$el.find('.panel-header').on('click', function () {

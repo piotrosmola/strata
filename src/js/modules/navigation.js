@@ -3,9 +3,10 @@ import { disablePageScroll, enablePageScroll } from 'scroll-lock'
 const $body = $('body')
 
 const Navigation = {
-  $nav: $('#navigation'),
   init() {
     const _ = this
+
+    _.$nav = $('#navigation')
     _.scrollers = $('[data-local-scroll]')
     _.navToggle = $('[data-toggle="navigation"]')
 

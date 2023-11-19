@@ -1,11 +1,9 @@
 import Scroll from './scroll'
 
-const $body = $('body')
-
 const Animations = {
   init() {
     const _ = this
-    const offset = $(window).height() * 0.7
+    const offset = $(window).height() * 0.8
 
     $('[data-animation-group]').each(function () {
       const $self = $(this)
@@ -85,7 +83,7 @@ const Animations = {
   },
   handle(direction) {
     const _ = this
-    const offset = $(window).height() * 0.65
+    const offset = $(window).height() * 0.8
 
     $('[data-animation-group]').each(function () {
       const $self = $(this)

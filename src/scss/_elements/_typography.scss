@@ -45,6 +45,10 @@ h2,
   font-size: calc(4.5rem + 1.75vw);
   line-height: 0.9;
 
+  @include media('<=xxl') {
+    font-size: calc(4.25rem + 1vw);
+  }
+
   @include media('<=lg') {
     font-size: calc(4rem + 0.5vw);
   }
@@ -90,6 +94,10 @@ h4,
 h5,
 .h5 {
   font-size: 1.5rem;
+
+  &.text-sm {
+    font-weight: $font-secondary-medium;
+  }
 }
 
 h6,
@@ -238,12 +246,23 @@ blockquote {
   }
 
   p {
+    position: relative;
     @include font('secondary', 'light');
     text-transform: uppercase;
     font-size: 1.75rem;
-    border-left: 1px solid currentColor;
     padding-left: 2.5rem;
     margin-bottom: 1.5rem;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 1px;
+      background-color: currentColor;
+      transform-origin: center top;
+      content: ' ';
+    }
 
     @include media('<=md') {
       font-size: 1.5rem;
@@ -262,6 +281,24 @@ blockquote {
     color: $color-muted;
     @include media('<=xs') {
       margin-left: 2rem;
+    }
+  }
+
+  &[data-animate] {
+    p {
+      &::before {
+        transform: scaleY(0);
+        will-change: transform;
+      }
+    }
+
+    &.visible {
+      p {
+        &::before {
+          transition: transform 1s $easeOutExpo;
+          transform: scaleY(1);
+        }
+      }
     }
   }
 }
@@ -291,7 +328,7 @@ blockquote {
     }
   }
 
-  ul {
+  ul:not(.list-logotypes) {
     @include reset('list');
 
     > li {
@@ -311,6 +348,41 @@ blockquote {
         @include icon(arrow-left-fat);
         opacity: 0.3;
       }
+    }
+  }
+}
+
+.collab {
+  @include text-uppercase;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+
+  span {
+    position: relative;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: block;
+    margin: 0 0.5em;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: currentColor;
+      content: ' ';
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      transform: rotate(45deg);
     }
   }
 }

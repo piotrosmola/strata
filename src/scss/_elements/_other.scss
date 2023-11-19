@@ -1,6 +1,42 @@
 /* Other
 ----------------------------------------------------------*/
 
+.stats-row {
+  @include media('>sm') {
+    > * {
+      @for $i from 1 through 3 {
+        &:nth-child(#{$i}) {
+          margin-top: 2rem * $i;
+        }
+      }
+    }
+  }
+}
+
+.stat {
+  margin-bottom: 2rem;
+  @include last-mb-0;
+
+  &-value {
+    @include font('secondary', 'extrabold');
+    font-size: calc(7rem + 2vw);
+    line-height: 0.85;
+    color: transparent;
+    -webkit-text-stroke: 1px $color-global;
+
+    @include media('<=lg') {
+      font-size: calc(5rem + 0.5vw);
+    }
+    @include media('<=md') {
+      font-size: 4.5rem;
+    }
+    @include media('<=xs') {
+      font-size: 4rem;
+    }
+  }
+}
+
+/* Row - Media */
 .row.media-row {
   @include media('<=sm') {
     > * {

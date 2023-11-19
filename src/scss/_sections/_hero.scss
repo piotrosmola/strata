@@ -191,3 +191,71 @@
     }
   }
 }
+
+/* Moment */
+.section.hero-moment {
+  min-height: 80vh;
+  display: flex;
+  align-items: flex-end;
+
+  .section-bg {
+    mask-image: linear-gradient(to bottom, black, transparent);
+    opacity: 0.7;
+
+    @include media('<=sm') {
+      opacity: 0.5;
+    }
+  }
+
+  .container-inner {
+    @include media('<=lg') {
+      flex-wrap: wrap;
+    }
+    @include media('>md') {
+      display: flex;
+    }
+    @include media('<=sm') {
+      padding-top: 10rem;
+    }
+  }
+
+  .section-logo {
+    flex: 0 0 8rem;
+    margin-right: 2rem;
+    @include media('<=lg') {
+      margin-right: 0;
+      margin-bottom: 2rem;
+      flex: 0 0 100%;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 8rem;
+      display: block;
+      @include media('<=lg') {
+        max-width: 10rem;
+        max-height: 5rem;
+      }
+      @include media('<=sm') {
+        max-width: 6rem;
+        max-height: 3rem;
+      }
+    }
+  }
+
+  .section-content {
+    @include media('>sm') {
+      max-width: 80%;
+      @include last-mb-0;
+    }
+    flex: 1 1 auto;
+
+    .lead {
+      max-width: 28rem;
+    }
+  }
+
+  .section-action {
+    margin-left: auto;
+  }
+}

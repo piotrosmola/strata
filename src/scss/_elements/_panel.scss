@@ -84,6 +84,7 @@
     margin-left: auto;
     height: 3rem;
     width: 3rem;
+    min-width: 3rem;
     color: $color-global;
     cursor: pointer;
     display: flex;
@@ -93,6 +94,12 @@
     transform: rotate(90deg);
     font-size: 0.85rem;
     @include transition-primary('transform, color');
+
+    @include media('<=md') {
+      height: 2.5rem;
+      width: 2.5rem;
+      min-width: 2.5rem;
+    }
 
     &::before {
       @include cover;

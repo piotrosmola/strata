@@ -1,38 +1,32 @@
 import isTouchDevice from 'is-touch-device'
 
 import Animations from './modules/animations'
+import Background from './modules/background'
 import Carousel from './modules/carousel'
+import Counter from './modules/counter'
 import Cta from './modules/cta'
 import Hero from './modules/hero'
-import Images from './modules/images'
-import Intro from './modules/intro'
-import Marquee from './modules/marquee'
-import MediaRow from './modules/media-row'
-import MediaWithContent from './modules/media-with-content'
-import MomentsGrid from './modules/moments-grid'
 import Mouse from './modules/mouse'
 import Navigation from './modules/navigation'
 import Panel from './modules/panel'
 import Scroll from './modules/scroll'
+import ScrollEffects from './modules/scroll-effects'
 import Tabs from './modules/tabs'
 import Typography from './modules/typography'
 
 $(() => {
+  Counter.init()
   Navigation.init()
   Typography.init()
   Animations.init()
-  Images.init()
-  Marquee.init()
+  Background.init()
   Hero.init()
   Carousel.init()
   Scroll.init()
   Cta.init()
-  MomentsGrid.init()
-  Intro.init()
   Tabs.init()
   Panel.init()
-  MediaRow.init()
-  MediaWithContent.init()
+  ScrollEffects.init()
 
   if (!isTouchDevice()) {
     Mouse.init()

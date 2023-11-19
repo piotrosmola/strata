@@ -1,8 +1,8 @@
 /* Backgrounds
 ----------------------------------------------------------*/
 
-/* Image */
-.bg-image {
+.bg-image,
+.bg-video {
   height: 100%;
   left: 0;
   opacity: 0;
@@ -12,26 +12,30 @@
   width: 100%;
   z-index: 0;
 
-  img {
+  &.loaded,
+  &.playing {
+    opacity: 1;
+  }
+
+  img,
+  video {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
   }
+}
 
-  &.loaded {
-    opacity: 1;
-
-    &.bg-transparent {
-      opacity: 0.6;
-    }
+.bg-video {
+  img {
+    position: relative;
+    z-index: 2;
+    @include transition-primary('opacity');
   }
 
-  &.bg-image-fixed {
-    background-attachment: fixed;
-
-    @include media('<=md') {
-      background-attachment: scroll;
+  &.playing {
+    img {
+      opacity: 0;
     }
   }
 }

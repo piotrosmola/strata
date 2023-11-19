@@ -2,7 +2,6 @@ import Cursor from '../lib/cursor'
 import MouseParallax from '../lib/mouse-parallax'
 
 const Mouse = {
-  $mouseParallax: null,
   init() {
     const _ = this
 
