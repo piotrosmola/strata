@@ -5,6 +5,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0 10%;
+  align-items: center;
 
   @include media('<=xxl') {
     gap: 7%;
@@ -103,7 +104,7 @@
       transform: scale(1);
     }
     #{$b}-media {
-      transform: scale(1.05);
+      // transform: scale(1.05);
     }
   }
 }

@@ -22,7 +22,7 @@
             <?php endif; ?>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 mb-md-0">
           <?php echo $content; ?>
           <?php if ($link): ?>
           <a href="<?php echo $link['url']; ?>" class="btn btn-primary" data-mp>

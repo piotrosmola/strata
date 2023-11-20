@@ -27,7 +27,7 @@
           'content' => '<p>Every brand moment is an opportunity for positive reinforcement, a chance for your brand message to have clarity and relevance.</p>',
           'link' => array(
             'title' => 'Read More',
-            'url' => '#'
+            'url' => 'single-service.php'
           )
         ),
         array(
@@ -35,7 +35,7 @@
           'content' => '<p>Every brand moment is an opportunity for positive reinforcement, a chance for your brand message to have clarity and relevance.</p>',
           'link' => array(
             'title' => 'Read More',
-            'url' => '#'
+            'url' => 'single-service.php'
           )
         ),
         array(
@@ -43,7 +43,7 @@
           'content' => '<p>Every brand moment is an opportunity for positive reinforcement, a chance for your brand message to have clarity and relevance.</p>',
           'link' => array(
             'title' => 'Read More',
-            'url' => '#'
+            'url' => 'single-service.php'
           )
         )
       )

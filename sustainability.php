@@ -77,7 +77,7 @@
       'image' => 'assets/img/about-sustainability.jpg',
       'link' => array(
         'title' => 'Read More',
-        'url' => '#'
+        'url' => ''
       ),
       'logotypes' => array(
         array(

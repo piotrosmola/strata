@@ -33,7 +33,19 @@ const Background = {
       const $self = $(this)
       const $video = $self.find('video')
 
+      $video[0]
+        .play()
+        .then(() => {
+          $self.addClass('playing')
+        })
+        .catch(() => {
+          console.warn('Video not playing', $video[0])
+        })
+
+      if (!$video[0].paused) $self.addClass('playing')
+
       $video.on('playing', () => $self.addClass('playing'))
+      $video.on('play', () => $self.addClass('playing'))
     })
   }
 }

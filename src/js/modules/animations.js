@@ -119,7 +119,7 @@ const Animations = {
         } else if (direction === 'UP' && selfOffset > $(window).height() && $self.hasClass('in')) {
           _.animateReset($self)
         } else if (direction === 'DOWN' && selfOffset < -selfHeight && $self.hasClass('in')) {
-          _.animateReset($self)
+          // _.animateReset($self)
         }
       }
     })

@@ -5011,8 +5011,8 @@ body.page-show-content #header {
 }
 @media (min-width: 992px) {
   #navigation {
-    padding-top: calc(115px + 5rem + 5vh);
-    padding-bottom: calc(5rem + 5vh);
+    padding-top: calc(115px + 4rem + 4.5vh);
+    padding-bottom: calc(4rem + 4.5vh);
   }
 }
 @media (max-width: 991px) {
@@ -5188,8 +5188,8 @@ body.navigation-open #navigation .module-navigation .nav-primary li:nth-child(10
 }
 @media (min-width: 1200px) {
   .section {
-    padding-top: calc(5rem + 5vh);
-    padding-bottom: calc(5rem + 5vh);
+    padding-top: calc(4rem + 4.5vh);
+    padding-bottom: calc(4rem + 4.5vh);
   }
 }
 @media (max-width: 1199px) {
@@ -5219,8 +5219,8 @@ body.page-show-content .section-bg {
 }
 @media (min-width: 1200px) {
   .section-inner {
-    padding-top: calc(5rem + 5vh);
-    padding-bottom: calc(5rem + 5vh);
+    padding-top: calc(4rem + 4.5vh);
+    padding-bottom: calc(4rem + 4.5vh);
   }
 }
 @media (max-width: 1199px) {
@@ -5231,8 +5231,8 @@ body.page-show-content .section-bg {
 }
 @media (min-width: 1200px) {
   .section:first-child {
-    padding-top: calc(115px + 5rem + 5vh);
-    padding-bottom: calc(5rem + 5vh);
+    padding-top: calc(115px + 4rem + 4.5vh);
+    padding-bottom: calc(4rem + 4.5vh);
   }
 }
 @media (max-width: 1199px) {
@@ -5263,7 +5263,7 @@ body.page-show-content .section-bg {
 }
 @media (min-width: 1200px) {
   .section.border-top .container-inner::after {
-    top: calc(-1 * calc(5rem + 5vh));
+    top: calc(-1 * calc(4rem + 4.5vh));
   }
 }
 @media (max-width: 1199px) {
@@ -5353,7 +5353,7 @@ body.page-show-content .section-bg {
 }
 @media (max-width: 991px) {
   .section.hero-2 .section-bg {
-    top: 0%;
+    top: -25%;
     left: -100%;
     right: -100%;
   }
@@ -5364,6 +5364,11 @@ body.page-show-content .section-bg {
 }
 .section.hero-2 .section-content > *:last-child {
   margin-bottom: 0;
+}
+@media (max-width: 767px) {
+  .section.hero-2 .section-content {
+    padding-top: 5rem;
+  }
 }
 @media (min-width: 992px) {
   .section.hero-2 .section-content:not(.fullwidth) {
@@ -5401,7 +5406,7 @@ body.page-show-content .section-bg {
 }
 @media (min-width: 1200px) {
   .section.hero-2 + .section .nav-tabs {
-    margin-top: calc(-1 * calc(5rem + 5vh) * 0.5);
+    margin-top: calc(-1 * calc(4rem + 4.5vh) * 0.5);
   }
 }
 @media (max-width: 1199px) {
@@ -5921,7 +5926,7 @@ body.page-show-content .section-bg {
 }
 @media (min-width: 1200px) {
   #footer {
-    padding-bottom: calc(calc(5rem + 5vh) * 0.4);
+    padding-bottom: calc(calc(4rem + 4.5vh) * 0.4);
   }
 }
 @media (max-width: 1199px) {
@@ -5974,7 +5979,7 @@ body.page-show-content .section-bg {
 }
 @media (min-width: 992px) {
   #footer .module-copyright {
-    margin-top: calc(calc(5rem + 5vh) * 0.75);
+    margin-top: calc(calc(4rem + 4.5vh) * 0.75);
   }
 }
 @media (max-width: 991px) {
@@ -6015,6 +6020,9 @@ body.page-show-content .section-bg {
   display: block;
 }
 
+.bg-video {
+  opacity: 1;
+}
 .bg-video img {
   position: relative;
   z-index: 2;
@@ -7317,8 +7325,8 @@ body.page-loading #preloader > .preloader-inner {
 }
 @media (min-width: 1200px) {
   .scroller {
-    padding-top: calc(5rem + 5vh);
-    padding-bottom: calc(5rem + 5vh);
+    padding-top: calc(4rem + 4.5vh);
+    padding-bottom: calc(4rem + 4.5vh);
   }
 }
 @media (max-width: 1199px) {
@@ -7631,8 +7639,8 @@ hr.sep-line.sep-line-lg {
 .nav-primary > li > a {
   position: relative;
   position: relative;
-  font-size: calc(2.5rem + 5vh);
-  line-height: 1.15;
+  font-size: calc(2.25rem + 4vh);
+  line-height: 1.1;
   display: inline-block;
 }
 .nav-primary > li > a::after {
@@ -7652,7 +7660,7 @@ hr.sep-line.sep-line-lg {
   transform: scaleX(1);
   transform-origin: left center;
 }
-@media (max-width: 1439px) {
+@media (max-width: 1699px) {
   .nav-primary > li > a {
     font-size: calc(2rem + 3vh);
     line-height: 1.05;
@@ -8155,6 +8163,7 @@ hr.sep-line.sep-line-lg {
   display: flex;
   flex-wrap: wrap;
   gap: 0 10%;
+  align-items: center;
 }
 @media (max-width: 1699px) {
   .moments-grid {
@@ -8267,10 +8276,6 @@ hr.sep-line.sep-line-lg {
   visibility: visible;
   transform: scale(1);
 }
-.moment-card:hover .moment-card-media {
-  transform: scale(1.05);
-}
-
 /* News
 ----------------------------------------------------------*/
 .news-grid {
@@ -8757,7 +8762,7 @@ blockquote {
 }
 @media (min-width: 992px) {
   blockquote {
-    margin-bottom: calc(calc(5rem + 5vh) * 0.4);
+    margin-bottom: calc(calc(4rem + 4.5vh) * 0.4);
   }
 }
 @media (max-width: 991px) {
@@ -8866,7 +8871,7 @@ blockquote[data-animate].visible p::before {
   .wysiwyg blockquote + h6,
   .wysiwyg blockquote + .media-row,
   .wysiwyg blockquote + blockquote {
-    margin-top: calc(calc(5rem + 5vh) * 0.4);
+    margin-top: calc(calc(4rem + 4.5vh) * 0.4);
   }
 }
 @media (max-width: 991px) {
@@ -9144,7 +9149,7 @@ blockquote[data-animate].visible p::before {
 ----------------------------------------------------------*/
 @media (min-width: 992px) {
   .mt-layout {
-    margin-top: calc(5rem + 5vh) !important;
+    margin-top: calc(4rem + 4.5vh) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9155,7 +9160,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .mt-layout-lg {
-    margin-top: calc(calc(5rem + 5vh) * 1.5) !important;
+    margin-top: calc(calc(4rem + 4.5vh) * 1.5) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9166,7 +9171,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .mt-layout-sm {
-    margin-top: calc(calc(5rem + 5vh) * 0.75) !important;
+    margin-top: calc(calc(4rem + 4.5vh) * 0.75) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9177,7 +9182,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .mt-layout-xs {
-    margin-top: calc(calc(5rem + 5vh) * 0.4) !important;
+    margin-top: calc(calc(4rem + 4.5vh) * 0.4) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9188,7 +9193,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .mr-layout {
-    margin-right: calc(5rem + 5vh) !important;
+    margin-right: calc(4rem + 4.5vh) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9199,7 +9204,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .mr-layout-lg {
-    margin-right: calc(calc(5rem + 5vh) * 1.5) !important;
+    margin-right: calc(calc(4rem + 4.5vh) * 1.5) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9210,7 +9215,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .mr-layout-sm {
-    margin-right: calc(calc(5rem + 5vh) * 0.75) !important;
+    margin-right: calc(calc(4rem + 4.5vh) * 0.75) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9221,7 +9226,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .mr-layout-xs {
-    margin-right: calc(calc(5rem + 5vh) * 0.4) !important;
+    margin-right: calc(calc(4rem + 4.5vh) * 0.4) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9232,7 +9237,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .mb-layout {
-    margin-bottom: calc(5rem + 5vh) !important;
+    margin-bottom: calc(4rem + 4.5vh) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9243,7 +9248,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .mb-layout-lg {
-    margin-bottom: calc(calc(5rem + 5vh) * 1.5) !important;
+    margin-bottom: calc(calc(4rem + 4.5vh) * 1.5) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9254,7 +9259,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .mb-layout-sm {
-    margin-bottom: calc(calc(5rem + 5vh) * 0.75) !important;
+    margin-bottom: calc(calc(4rem + 4.5vh) * 0.75) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9265,7 +9270,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .mb-layout-xs {
-    margin-bottom: calc(calc(5rem + 5vh) * 0.4) !important;
+    margin-bottom: calc(calc(4rem + 4.5vh) * 0.4) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9276,7 +9281,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .ml-layout {
-    margin-left: calc(5rem + 5vh) !important;
+    margin-left: calc(4rem + 4.5vh) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9287,7 +9292,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .ml-layout-lg {
-    margin-left: calc(calc(5rem + 5vh) * 1.5) !important;
+    margin-left: calc(calc(4rem + 4.5vh) * 1.5) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9298,7 +9303,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .ml-layout-sm {
-    margin-left: calc(calc(5rem + 5vh) * 0.75) !important;
+    margin-left: calc(calc(4rem + 4.5vh) * 0.75) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9309,7 +9314,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .ml-layout-xs {
-    margin-left: calc(calc(5rem + 5vh) * 0.4) !important;
+    margin-left: calc(calc(4rem + 4.5vh) * 0.4) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9320,7 +9325,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .pt-layout {
-    padding-top: calc(5rem + 5vh) !important;
+    padding-top: calc(4rem + 4.5vh) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9331,7 +9336,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .pt-layout-lg {
-    padding-top: calc(calc(5rem + 5vh) * 1.5) !important;
+    padding-top: calc(calc(4rem + 4.5vh) * 1.5) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9342,7 +9347,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .pt-layout-sm {
-    padding-top: calc(calc(5rem + 5vh) * 0.75) !important;
+    padding-top: calc(calc(4rem + 4.5vh) * 0.75) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9353,7 +9358,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .pt-layout-xs {
-    padding-top: calc(calc(5rem + 5vh) * 0.4) !important;
+    padding-top: calc(calc(4rem + 4.5vh) * 0.4) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9364,7 +9369,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .pr-layout {
-    padding-right: calc(5rem + 5vh) !important;
+    padding-right: calc(4rem + 4.5vh) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9375,7 +9380,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .pr-layout-lg {
-    padding-right: calc(calc(5rem + 5vh) * 1.5) !important;
+    padding-right: calc(calc(4rem + 4.5vh) * 1.5) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9386,7 +9391,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .pr-layout-sm {
-    padding-right: calc(calc(5rem + 5vh) * 0.75) !important;
+    padding-right: calc(calc(4rem + 4.5vh) * 0.75) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9397,7 +9402,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .pr-layout-xs {
-    padding-right: calc(calc(5rem + 5vh) * 0.4) !important;
+    padding-right: calc(calc(4rem + 4.5vh) * 0.4) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9408,7 +9413,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .pb-layout {
-    padding-bottom: calc(5rem + 5vh) !important;
+    padding-bottom: calc(4rem + 4.5vh) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9419,7 +9424,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .pb-layout-lg {
-    padding-bottom: calc(calc(5rem + 5vh) * 1.5) !important;
+    padding-bottom: calc(calc(4rem + 4.5vh) * 1.5) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9430,7 +9435,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .pb-layout-sm {
-    padding-bottom: calc(calc(5rem + 5vh) * 0.75) !important;
+    padding-bottom: calc(calc(4rem + 4.5vh) * 0.75) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9441,7 +9446,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .pb-layout-xs {
-    padding-bottom: calc(calc(5rem + 5vh) * 0.4) !important;
+    padding-bottom: calc(calc(4rem + 4.5vh) * 0.4) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9452,7 +9457,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .pl-layout {
-    padding-left: calc(5rem + 5vh) !important;
+    padding-left: calc(4rem + 4.5vh) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9463,7 +9468,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .pl-layout-lg {
-    padding-left: calc(calc(5rem + 5vh) * 1.5) !important;
+    padding-left: calc(calc(4rem + 4.5vh) * 1.5) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9474,7 +9479,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .pl-layout-sm {
-    padding-left: calc(calc(5rem + 5vh) * 0.75) !important;
+    padding-left: calc(calc(4rem + 4.5vh) * 0.75) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9485,7 +9490,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .pl-layout-xs {
-    padding-left: calc(calc(5rem + 5vh) * 0.4) !important;
+    padding-left: calc(calc(4rem + 4.5vh) * 0.4) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9496,7 +9501,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .p-layout {
-    padding: calc(5rem + 5vh) !important;
+    padding: calc(4rem + 4.5vh) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9507,7 +9512,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .p-layout-lg {
-    padding: calc(calc(5rem + 5vh) * 1.5) !important;
+    padding: calc(calc(4rem + 4.5vh) * 1.5) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9518,7 +9523,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .p-layout-sm {
-    padding: calc(calc(5rem + 5vh) * 0.75) !important;
+    padding: calc(calc(4rem + 4.5vh) * 0.75) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9529,7 +9534,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .p-layout-xs {
-    padding: calc(calc(5rem + 5vh) * 0.4) !important;
+    padding: calc(calc(4rem + 4.5vh) * 0.4) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9540,7 +9545,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .m-layout {
-    margin: calc(5rem + 5vh) !important;
+    margin: calc(4rem + 4.5vh) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9551,7 +9556,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .m-layout-lg {
-    margin: calc(calc(5rem + 5vh) * 1.5) !important;
+    margin: calc(calc(4rem + 4.5vh) * 1.5) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9562,7 +9567,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .m-layout-sm {
-    margin: calc(calc(5rem + 5vh) * 0.75) !important;
+    margin: calc(calc(4rem + 4.5vh) * 0.75) !important;
   }
 }
 @media (max-width: 991px) {
@@ -9573,7 +9578,7 @@ blockquote[data-animate].visible p::before {
 
 @media (min-width: 992px) {
   .m-layout-xs {
-    margin: calc(calc(5rem + 5vh) * 0.4) !important;
+    margin: calc(calc(4rem + 4.5vh) * 0.4) !important;
   }
 }
 @media (max-width: 991px) {

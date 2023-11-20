@@ -24,11 +24,11 @@
     > a {
       position: relative;
       @include link-underline-hover;
-      font-size: calc(2.5rem + 5vh);
-      line-height: 1.15;
+      font-size: calc(2.25rem + 4vh);
+      line-height: 1.1;
       display: inline-block;
 
-      @include media('<=xl') {
+      @include media('<=xxl') {
         font-size: calc(2rem + 3vh);
         line-height: 1.05;
       }

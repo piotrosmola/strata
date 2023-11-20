@@ -5,9 +5,10 @@
   <section class="section hero-1">
     <!-- Background -->
     <div class="section-bg">
-      <div class="waves">
+      <div class="waves bg-video">
         <div class="waves-inner">
           <video src="assets/video/waves.mp4" autoplay loop muted playsinline></video>
+          <img src="assets/img/waves.jpg" alt="">
         </div>
       </div>
     </div>
@@ -170,7 +171,11 @@
         <p>With communications changing faster than ever, our many combined decades of experience and adaptability really matter.</p>
         <p>We work as an extension of your team to manage every aspect of a project; strategy and planning, creative services, content, technical production, logistics, storage, and asset management.</p>
       ',
-      'image' => 'assets/img/our-culture.jpg'
+      'image' => 'assets/img/our-culture.jpg',
+      'link' => array(
+        'title' => 'Read More',
+        'url' => ''
+      ),
     ));
   ?>
 

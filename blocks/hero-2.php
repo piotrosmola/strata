@@ -2,9 +2,10 @@
 <section class="section hero-2 <?php echo $align ? $align : 'left'; ?>">
   <!-- Background -->
   <div class="section-bg">
-    <div class="waves reversed ">
+    <div class="waves reversed bg-video">
       <div class="waves-inner">
         <video src="assets/video/waves.mp4" autoplay loop muted playsinline></video>
+        <img src="assets/img/waves.jpg" alt="">
       </div>
     </div>
   </div>

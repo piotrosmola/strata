@@ -29,6 +29,7 @@ const Page = {
           const $media = $self.find('.moment-card-media > *')
           const $preloaderMedia = _.$preloader.find('[data-loader-media]')
           const bounds = $media[0].getBoundingClientRect()
+          // const styles = window.getComputedStyle($media[0])
 
           _.$mediaClone = $media.clone()
 
@@ -38,6 +39,8 @@ const Page = {
             width: `${bounds.width}px`,
             height: `${bounds.height}px`
           })
+
+          console.log(bounds, window.getComputedStyle($media[0]))
 
           $preloaderMedia.html('').append(_.$mediaClone)
 
