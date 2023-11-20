@@ -6,7 +6,8 @@
     includeBlock('blocks/hero-2.php', array(
       'title' => 'Our Culture',
       'description' => 'Every brand moment is an opportunity for positive reinforcement.',
-      'align' => 'right'
+      'align' => 'right',
+      'largeTitle' => true
     ));
   ?>
 

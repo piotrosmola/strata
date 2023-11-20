@@ -13,10 +13,19 @@
   <div class="section-container container">
     <div class="container-inner">
       <!-- Content -->
-      <div class="section-content">
-        <h1 class="h2 <?php echo $outlineTitle ? 'outline-text' : ''; ?>" data-split-chars data-animate="true"><?php echo $title ?></h1>
+      <div class="section-content <?php echo $images ? 'has-images' : ''; ?>">
+        <h1 class="<?php echo $largeTitle ? 'h1' : 'h2'; ?> <?php echo $outlineTitle ? 'outline-text' : ''; ?>" data-split-chars data-animate="true">
+          <?php echo $title ?></h1>
         <p class="lead border-<?php echo $align ? $align : 'left'; ?>"><?php echo $description ?></p>
       </div>
+      <?php if($images): ?>
+      <!-- Images -->
+      <div class="section-images">
+        <?php foreach ($images as $key => $image): ?>
+        <img src="<?php echo $image ?>" alt="">
+        <?php endforeach; ?>
+      </div>
+      <?php endif; ?>
     </div>
   </div>
 </section>

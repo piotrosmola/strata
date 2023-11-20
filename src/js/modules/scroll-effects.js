@@ -95,7 +95,7 @@ const ScrollEffects = {
         bg,
         { '--mask': 1 },
         { '--mask': 0 },
-        '>-35%'
+        '>-25%'
       )
 
       Array.from(textLines).forEach((line, index) => {
@@ -144,8 +144,7 @@ const ScrollEffects = {
           y: '-10%'
         },
         {
-          y: '10%',
-          scale: 0.6
+          y: '10%'
         },
         'start'
       )
@@ -202,6 +201,7 @@ const ScrollEffects = {
     // Hero #2
     document.querySelectorAll('.section.hero-2').forEach(section => {
       const waves = section.querySelector('.waves')
+      const images = section.querySelectorAll('.section-images img')
 
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -212,6 +212,10 @@ const ScrollEffects = {
           end: () => `bottom ${-window.innerHeight}`,
           invalidateOnRefresh: true
         }
+      })
+
+      images.forEach((image, index) => {
+        tl.fromTo(image, { opacity: 1, '--blur': '0px', scale: 1 }, { opacity: 0, '--blur': '20px', scale: 0.5 }, index * 0.05)
       })
 
       tl.to(waves, { x: '25%', opacity: 0 }, 'start')

@@ -5379,6 +5379,50 @@ body.page-show-content .section-bg {
   max-width: 560px;
   max-width: 28rem;
 }
+.section.hero-2 .section-images {
+  position: relative;
+  padding-bottom: 40%;
+  margin-left: auto;
+}
+@media (min-width: 992px) {
+  .section.hero-2 .section-images {
+    margin-top: -15%;
+    width: 75%;
+  }
+}
+@media (max-width: 767px) {
+  .section.hero-2 .section-images {
+    padding-bottom: 60%;
+  }
+}
+.section.hero-2 .section-images > img {
+  position: absolute;
+  width: 25%;
+  filter: blur(var(--blur));
+}
+.section.hero-2 .section-images > img:nth-child(1) {
+  top: 0;
+  right: 0;
+}
+.section.hero-2 .section-images > img:nth-child(2) {
+  top: 21%;
+  left: 53%;
+  width: 10%;
+}
+.section.hero-2 .section-images > img:nth-child(3) {
+  bottom: 12%;
+  left: 0;
+  width: 15%;
+}
+.section.hero-2 .section-images > img:nth-child(4) {
+  bottom: 0%;
+  left: 35%;
+}
+.section.hero-2 .section-images > img:nth-child(5) {
+  bottom: 10%;
+  right: 10%;
+  width: 12%;
+}
 .section.hero-2 .section-action {
   margin-left: auto;
 }

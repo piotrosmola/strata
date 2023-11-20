@@ -6,6 +6,14 @@
     includeBlock('blocks/hero-2.php', array(
       'title' => 'Our<br /> Services',
       'description' => 'Every brand moment is an opportunity for positive reinforcement.',
+      'images' => array(
+        'assets/img/square01.jpg',
+        'assets/img/square02.jpg',
+        'assets/img/square03.jpg',
+        'assets/img/square04.jpg',
+        'assets/img/square05.jpg'
+      ),
+      'largeTitle' => true
     ));
   ?>
 
