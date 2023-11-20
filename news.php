@@ -24,7 +24,7 @@
         <!-- Moments Grid -->
         <div class="news-grid mb-layout-xs">
           <!-- News Card -->
-          <a href="#" class="news-card" data-cursor="oval" data-cursor-text="Read More">
+          <a href="single-news.php" class="news-card" data-cursor="oval" data-cursor-text="Read More">
             <div class="news-card-media">
               <img src="assets/img/project03.jpg" alt="" />
             </div>
@@ -35,7 +35,7 @@
             </div>
           </a>
           <!-- News Card -->
-          <a href="#" class="news-card" data-cursor="oval" data-cursor-text="Read More">
+          <a href="single-news.php" class="news-card" data-cursor="oval" data-cursor-text="Read More">
             <div class="news-card-media">
               <img src="assets/img/project02.jpg" alt="" />
             </div>
@@ -46,7 +46,7 @@
             </div>
           </a>
           <!-- News Card -->
-          <a href="#" class="news-card" data-cursor="oval" data-cursor-text="Read More">
+          <a href="single-news.php" class="news-card" data-cursor="oval" data-cursor-text="Read More">
             <div class="news-card-media">
               <img src="assets/img/project01.jpg" alt="" />
             </div>
@@ -57,7 +57,7 @@
             </div>
           </a>
           <!-- News Card -->
-          <a href="#" class="news-card" data-cursor="oval" data-cursor-text="Read More">
+          <a href="single-news.php" class="news-card" data-cursor="oval" data-cursor-text="Read More">
             <div class="news-card-media">
               <img src="assets/img/project04.jpg" alt="" />
             </div>
@@ -68,7 +68,7 @@
             </div>
           </a>
           <!-- News Card -->
-          <a href="#" class="news-card" data-cursor="oval" data-cursor-text="Read More">
+          <a href="single-news.php" class="news-card" data-cursor="oval" data-cursor-text="Read More">
             <div class="news-card-media">
               <img src="assets/img/project05.jpg" alt="" />
             </div>
@@ -79,7 +79,7 @@
             </div>
           </a>
           <!-- News Card -->
-          <a href="#" class="news-card" data-cursor="oval" data-cursor-text="Read More">
+          <a href="single-news.php" class="news-card" data-cursor="oval" data-cursor-text="Read More">
             <div class="news-card-media">
               <img src="assets/img/project06.jpg" alt="" />
             </div>

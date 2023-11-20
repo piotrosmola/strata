@@ -13,7 +13,7 @@
             <?php foreach ($moments as $key => $moment): ?>
             <div class="swiper-slide">
               <!-- Moment Card -->
-              <a href="#" class="moment-card" data-cursor="oval">
+              <a href="<?php echo $moment['url']; ?>" class="moment-card" data-cursor="oval">
                 <div class="moment-card-media">
                   <?php if($moment['image']): ?><img src="<?php echo $moment['image']; ?>" alt="" /><?php endif; ?>
                   <?php if($moment['video']): ?><video src="<?php echo $moment['video']; ?>" alt="" data-play-on-hover></video><?php endif; ?>

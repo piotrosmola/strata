@@ -54,7 +54,7 @@
               can help create a cohesive and authentic brand experience that resonates with your target audience. This thorough understanding ensures that every
               touch point reflects your brand’s core identity, creating a consistent and compelling experience.</p>
             <!-- Media Row -->
-            <div class="row media-row gutters-lg">
+            <div class="row media-row">
               <div class="col-sm-6">
                 <!-- Media -->
                 <div class="media">
@@ -122,28 +122,28 @@
           'category' => 'Insights',
           'theme' => 'green',
           'image' => 'assets/img/project03.jpg',
-          'url' => '/single-news.php'
+          'url' => 'single-news.php'
         ),
         array(
           'title' => 'What is the future of Automotive Event Experiences?',
           'category' => 'Insights',
           'theme' => 'green',
           'image' => 'assets/img/project02.jpg',
-          'url' => '/single-news.php'
+          'url' => 'single-news.php'
         ),
         array(
           'title' => 'Delivering Unforgettable Brand Moments: The Power of Hybrid Events',
           'category' => 'Event',
           'theme' => 'pink',
           'image' => 'assets/img/project05.jpg',
-          'url' => '/single-news.php'
+          'url' => 'single-news.php'
         ),
         array(
           'title' => 'How Strata are offering their clients the added value they expect Insights',
           'category' => 'Insights',
           'theme' => 'green',
           'image' => 'assets/img/project03.jpg',
-          'url' => '/single-news.php'
+          'url' => 'single-news.php'
         ),
       )
     ));

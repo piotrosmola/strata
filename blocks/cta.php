@@ -15,7 +15,7 @@
         <div class="col-lg-8 col-md-8 wysiwyg mb-2 mb-md-0">
           <!-- Content -->
           <div class="section-content">
-            <h2><?php echo $title ?></h2>
+            <h2 data-split-chars data-animate="true"><?php echo $title ?></h2>
             <p class="lead"><?php echo $description ?></p>
           </div>
         </div>

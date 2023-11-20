@@ -102,28 +102,28 @@
           'category' => 'Insights',
           'theme' => 'green',
           'image' => 'assets/img/project03.jpg',
-          'url' => '/single-news.php'
+          'url' => 'single-news.php'
         ),
         array(
           'title' => 'What is the future of Automotive Event Experiences?',
           'category' => 'Insights',
           'theme' => 'green',
           'image' => 'assets/img/project02.jpg',
-          'url' => '/single-news.php'
+          'url' => 'single-news.php'
         ),
         array(
           'title' => 'Delivering Unforgettable Brand Moments: The Power of Hybrid Events',
           'category' => 'Event',
           'theme' => 'pink',
           'image' => 'assets/img/project05.jpg',
-          'url' => '/single-news.php'
+          'url' => 'single-news.php'
         ),
         array(
           'title' => 'How Strata are offering their clients the added value they expect Insights',
           'category' => 'Insights',
           'theme' => 'green',
           'image' => 'assets/img/project03.jpg',
-          'url' => '/single-news.php'
+          'url' => 'single-news.php'
         ),
       )
     ));

@@ -35,11 +35,11 @@
         </div>
         <div class="module module-navigation col-xl-2 col-md-3">
           <ul class="nav nav-footer">
-            <li><a href="#">Moments</a></li>
-            <li><a href="#">Our Culture</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">News & Insights</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="moments.php">Moments</a></li>
+            <li><a href="about.php">Our Culture</a></li>
+            <li><a href=" services.php">Services</a></li>
+            <li><a href="news.php">News & Insights</a></li>
+            <li><a href="contact.php">Contact Us</a></li>
           </ul>
         </div>
         <div class="module module-locations col-md-4">

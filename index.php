@@ -16,7 +16,8 @@
       <div class="container-inner">
         <!-- Content -->
         <div class="section-content">
-          <h1 class="outline-text" data-animate="true" data-fill-first="true" data-hover-lines data-split-chars>Every Moment Matters</h1>
+          <h1 class="outline-text" data-animate="true" data-fill-first="true" data-animate="true" data-hover-lines="true" data-split-chars>Every Moment Matters
+          </h1>
         </div>
         <!-- Action -->
         <div class="section-action">
@@ -79,6 +80,87 @@
       'image' => 'assets/img/project07.jpg'
     ));
   ?>
+
+  <!-- Section - Moments -->
+  <section class="section">
+    <!-- Container -->
+    <div class="section-container container">
+      <div class="container-inner">
+        <!-- Moments Grid -->
+        <div class="moments-grid mb-layout-xs">
+          <!-- Moment Card -->
+          <a href="single-moment.php" class="moment-card" data-cursor="oval">
+            <div class="moment-card-media">
+              <img src="assets/img/project01.jpg" alt="" />
+            </div>
+            <div class="moment-card-content">
+              <span class="badge badge-green">Insight</span>
+              <h5>Porsche Showroom</h5>
+            </div>
+          </a>
+          <!-- Moment Card -->
+          <a href="single-moment.php" class="moment-card" data-cursor="oval">
+            <div class="moment-card-media">
+              <img src="assets/img/project02.jpg" alt="" />
+            </div>
+            <div class="moment-card-content">
+              <span class="badge badge-green">Insight</span>
+              <h5>Porsche Showroom</h5>
+            </div>
+          </a>
+          <!-- Moment Card -->
+          <a href="single-moment.php" class="moment-card" data-cursor="oval">
+            <div class="moment-card-media">
+              <img src="assets/img/project03.jpg" alt="" />
+            </div>
+            <div class="moment-card-content">
+              <span class="badge badge-green">Insight</span>
+              <h5>Porsche Showroom</h5>
+            </div>
+          </a>
+          <!-- Moment Card -->
+          <a href="single-moment.php" class="moment-card" data-cursor="oval">
+            <div class="moment-card-media">
+              <img src="assets/img/project04.jpg" alt="" />
+            </div>
+            <div class="moment-card-content">
+              <span class="badge badge-green">Insight</span>
+              <h5>Porsche Showroom</h5>
+            </div>
+          </a>
+          <!-- Moment Card -->
+          <a href="single-moment.php" class="moment-card" data-cursor="oval">
+            <div class="moment-card-media">
+              <img src="assets/img/project05.jpg" alt="" />
+            </div>
+            <div class="moment-card-content">
+              <span class="badge badge-green">Insight</span>
+              <h5>Porsche Showroom</h5>
+            </div>
+          </a>
+          <!-- Moment Card -->
+          <a href="single-moment.php" class="moment-card" data-cursor="oval">
+            <div class="moment-card-media">
+              <img src="assets/img/project06.jpg" alt="" />
+            </div>
+            <div class="moment-card-content">
+              <span class="badge badge-green">Insight</span>
+              <h5>Porsche Showroom</h5>
+            </div>
+          </a>
+        </div>
+        <div class="text-center">
+          <!-- Button -->
+          <a href="single-moment.php" class="btn btn-oval" data-mp>
+            <span class="btn-bg" data-mp-item data-mp-scale="1.15"></span>
+            <span class="btn-outline" data-mp-item="0.05" data-mp-scale="1.075"></span>
+            <span class="btn-label">More Moments</span>
+            <i class="btn-icon i i-arrow-down"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Section - Media with Content #2 -->
   <?php

@@ -137,35 +137,35 @@
           'category' => 'Insights',
           'theme' => 'green',
           'image' => 'assets/img/project01.jpg',
-          'url' => '/single-moment.php'
+          'url' => 'single-moment.php'
         ),
         array(
           'title' => 'Amazon Conference',
           'category' => 'Insights',
           'theme' => 'green',
           'image' => 'assets/img/project02.jpg',
-          'url' => '/single-moment.php'
+          'url' => 'single-moment.php'
         ),
         array(
           'title' => 'Snow Fest',
           'category' => 'Insights',
           'theme' => 'green',
           'image' => 'assets/img/project03.jpg',
-          'url' => '/single-moment.php'
+          'url' => 'single-moment.php'
         ),
         array(
           'title' => 'Amazon Conference',
           'category' => 'Insights',
           'theme' => 'green',
           'image' => 'assets/img/project04.jpg',
-          'url' => '/single-moment.php'
+          'url' => 'single-moment.php'
         ),
         array(
           'title' => 'Apple Showroom',
           'category' => 'Insights',
           'theme' => 'green',
           'image' => 'assets/img/project05.jpg',
-          'url' => '/single-moment.php'
+          'url' => 'single-moment.php'
         )
       )
     ));

@@ -111,7 +111,7 @@
       'image' => 'assets/img/about-sustainability.jpg',
       'link' => array(
         'title' => 'Read More',
-        'url' => '#'
+        'url' => 'sustainability.php'
       ),
       'logotypes' => array(
         array(

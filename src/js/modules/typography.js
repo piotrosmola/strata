@@ -43,7 +43,11 @@ const Typography = {
 
     elementsToSplit.forEach(el => {
       const text = el.innerHTML
-      el.innerHTML = `<span>${text}</span><span>${text}</span>`
+      if (el.dataset.hoverLines) {
+        el.innerHTML = `<span>${text}</span><span>${text}</span>`
+      } else {
+        el.innerHTML = `<span>${text}</span>`
+      }
 
       el.querySelectorAll('span').forEach((span, spanIndex) => {
         const lineSplit = new SplitText(span, { type: 'lines' })

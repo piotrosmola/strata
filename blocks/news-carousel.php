@@ -13,7 +13,7 @@
             <?php foreach ($items as $key => $news): ?>
             <div class="swiper-slide">
               <!-- News Card -->
-              <a href="single-news.php" class="news-card" data-cursor="oval" data-cursor-text="Read More">
+              <a href="<?php echo $news['url']; ?>" class="news-card" data-cursor="oval" data-cursor-text="Read More">
                 <div class="news-card-media">
                   <?php if($news['image']): ?><img src="<?php echo $news['image']; ?>" alt="" /><?php endif; ?>
                   <?php if($news['video']): ?><video src="<?php echo $news['video']; ?>" alt="" data-play-on-hover></video><?php endif; ?>
