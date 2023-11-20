@@ -29,6 +29,10 @@ h1,
   font-size: calc(7rem + 2vw);
   line-height: 0.85;
 
+  @include media('<=xl') {
+    font-size: calc(6.5rem + 1.5vw);
+  }
+
   @include media('<=lg') {
     font-size: calc(5rem + 0.5vw);
   }

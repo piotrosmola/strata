@@ -14,6 +14,7 @@ import Scroll from './modules/scroll'
 import ScrollEffects from './modules/scroll-effects'
 import Tabs from './modules/tabs'
 import Typography from './modules/typography'
+import VideoModal from './modules/video-modal'
 
 $(() => {
   Navigation.init()
@@ -32,6 +33,7 @@ window.addEventListener('page-loaded', () => {
   Tabs.init()
   Panel.init()
   ScrollEffects.init()
+  VideoModal.init()
 
   if (!isTouchDevice()) {
     Mouse.init()

@@ -1,0 +1,78 @@
+/* Video Modal
+----------------------------------------------------------*/
+
+.video-modal {
+  $b: &;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 400;
+  overflow: auto;
+  display: none;
+  color: $color-inverted;
+  background-color: $color-body;
+  color: $color-global;
+
+  // display: block !important;
+
+  &-close {
+    @include reset(button);
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: block;
+    margin: 0 0.5em;
+    color: $color-global;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: $color-global;
+      content: ' ';
+      @include transition-primary('transform');
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      transform: rotate(45deg);
+    }
+
+    @include media('<=sm') {
+      top: 1.5rem;
+      right: 1.5rem;
+    }
+
+    &:hover {
+      &::before,
+      &::after {
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  &-iframe {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &.open {
+    #{$b}-iframe {
+    }
+  }
+}

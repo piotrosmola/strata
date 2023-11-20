@@ -8410,6 +8410,12 @@ h1,
   font-size: calc(7rem + 2vw);
   line-height: 0.85;
 }
+@media (max-width: 1439px) {
+  h1,
+  .h1 {
+    font-size: calc(6.5rem + 1.5vw);
+  }
+}
 @media (max-width: 1199px) {
   h1,
   .h1 {
@@ -8976,6 +8982,77 @@ blockquote[data-animate].visible p::before {
   transform: rotate(45deg);
 }
 
+/* Video Modal
+----------------------------------------------------------*/
+.video-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 400;
+  overflow: auto;
+  display: none;
+  color: black;
+  background-color: black;
+  color: white;
+}
+.video-modal-close {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  outline: none;
+  color: inherit;
+  position: absolute;
+  top: 40px;
+  top: 2rem;
+  right: 40px;
+  right: 2rem;
+  width: 50px;
+  width: 2.5rem;
+  height: 50px;
+  height: 2.5rem;
+  display: block;
+  margin: 0 0.5em;
+  color: white;
+}
+.video-modal-close::before, .video-modal-close::after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: white;
+  content: " ";
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-property: transform;
+  transition-delay: 0s;
+}
+.video-modal-close::before {
+  transform: rotate(-45deg);
+}
+.video-modal-close::after {
+  transform: rotate(45deg);
+}
+@media (max-width: 767px) {
+  .video-modal-close {
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+}
+.video-modal-close:hover::before, .video-modal-close:hover::after {
+  transform: rotate(0deg);
+}
+.video-modal-iframe {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 /* ---------------------------------------------------------------------------- */
 /* --- HELPERS
 /* ----------------------------------------------------------------------------- */
