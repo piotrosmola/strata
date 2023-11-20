@@ -17,9 +17,9 @@ import Typography from './modules/typography'
 import VideoModal from './modules/video-modal'
 
 $(() => {
+  Preloader.init()
   Navigation.init()
   Scroll.init()
-  Preloader.init()
   Page.init()
 })
 

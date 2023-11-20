@@ -29,6 +29,8 @@ const ScrollEffects = {
       })
 
       tl.fromTo(media, { opacity: 0, '--blur': '20px', scale: 0.8 }, { opacity: 1, '--blur': '0px', scale: 1 })
+
+      section.poTimeline = tl
     })
   },
   initMediaRow() {
@@ -49,6 +51,8 @@ const ScrollEffects = {
       items.forEach((item, index) => {
         tl.fromTo(item, { opacity: 0, '--blur': '20px', scale: 0.8 }, { opacity: 1, '--blur': '0px', scale: 1 }, index * 0.2)
       })
+
+      section.poTimeline = tl
     })
   },
   initMomentsGrid() {
@@ -66,6 +70,8 @@ const ScrollEffects = {
         })
 
         tl.from(card, { scale: 0.65, opacity: 0 }).to(card, { scale: 1, opacity: 1 })
+
+        card.poTimeline = tl
       })
     })
   },
@@ -106,6 +112,8 @@ const ScrollEffects = {
           index === 0 ? 'start' : '>'
         )
       })
+
+      section.poTimeline = tl
     })
   },
   initMarquee() {
@@ -148,6 +156,7 @@ const ScrollEffects = {
         },
         'start'
       )
+      el.poTimeline = tl
     })
   },
   initBlurIn() {
@@ -164,6 +173,8 @@ const ScrollEffects = {
       })
 
       tl.fromTo(el, { opacity: 0, '--blur': '20px', scale: 0.8 }, { opacity: 1, '--blur': '0px', scale: 1 })
+
+      el.poTimeline = tl
     })
   },
   initHero() {
@@ -196,6 +207,8 @@ const ScrollEffects = {
       // }
 
       tl.to(waves, { x: '-25%', opacity: 0 }, 'start')
+
+      section.poTimeline = tl
     })
 
     // Hero #2
@@ -219,7 +232,21 @@ const ScrollEffects = {
       })
 
       tl.to(waves, { x: '25%', opacity: 0 }, 'start')
+
+      section.poTimeline = tl
     })
+  },
+  killAll() {
+    document.querySelectorAll('.section.media-with-content').forEach(section => section.poTimeline?.scrollTrigger?.kill())
+    document.querySelectorAll('.media-row').forEach(section => section.poTimeline?.scrollTrigger?.kill())
+    document.querySelectorAll('.intro').forEach(section => section.poTimeline?.scrollTrigger?.kill())
+    document.querySelectorAll('.marquee').forEach(section => section.poTimeline?.scrollTrigger?.kill())
+    document.querySelectorAll('[data-blur-in]').forEach(section => section.poTimeline?.scrollTrigger?.kill())
+    document.querySelectorAll('.section.hero-1').forEach(section => section.poTimeline?.scrollTrigger?.kill())
+    document.querySelectorAll('.section.hero-2').forEach(section => section.poTimeline?.scrollTrigger?.kill())
+    document
+      .querySelectorAll('.moments-grid')
+      .forEach(grid => grid.querySelectorAll('.moment-card').forEach((card, index) => card?.poTimeline?.scrollTrigger?.kill()))
   }
 }
 

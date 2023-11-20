@@ -2,6 +2,7 @@ import gsap from 'gsap'
 import imagesLoaded from 'imagesloaded'
 
 import Preloader from './preloader'
+import ScrollEffects from './scroll-effects'
 
 imagesLoaded.makeJQueryPlugin($)
 
@@ -39,8 +40,6 @@ const Page = {
             width: `${bounds.width}px`,
             height: `${bounds.height}px`
           })
-
-          console.log(bounds, window.getComputedStyle($media[0]))
 
           $preloaderMedia.html('').append(_.$mediaClone)
 
@@ -112,6 +111,7 @@ const Page = {
   replace() {
     const _ = this
 
+    ScrollEffects.killAll()
     _.$content.html('').append(_.$tmp.children())
     window.dispatchEvent(new Event('resize'))
   },

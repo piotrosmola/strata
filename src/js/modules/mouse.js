@@ -1,15 +1,18 @@
 import Cursor from '../lib/cursor'
 import MouseParallax from '../lib/mouse-parallax'
+import Preloader from './preloader'
 
 const Mouse = {
   init() {
     const _ = this
 
     _.$cursor = document.querySelector('#cursor')
-    _.$mouseParallax = document.querySelectorAll('[data-mp]')
+    _.$mouseParallax = (!Preloader.initialized ? document : document.querySelector('#content')).querySelectorAll('[data-mp]')
 
     Array.from(this.$mouseParallax).forEach(el => new MouseParallax(el))
-    _.cursorRef = new Cursor(_.$cursor)
+
+    if (!Preloader.initialized) _.cursorRef = new Cursor(_.$cursor)
+    else _.cursorRef.initEvents(document.querySelector('#content'))
   }
 }
 

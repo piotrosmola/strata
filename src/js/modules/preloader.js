@@ -8,6 +8,7 @@ const Preloader = {
   $body: $('body'),
   $value: $('[data-loader-progress-value]'),
   $media: $('[data-loader-media]'),
+  initialized: false,
   init(mode = 'DEFAULT') {
     const _ = this
 
@@ -106,6 +107,8 @@ const Preloader = {
       // enablePageScroll()
 
       Scroll.scroller?.paused(false)
+
+      _.initialized = true
     }, 1000)
   },
   show() {

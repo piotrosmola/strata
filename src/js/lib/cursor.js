@@ -60,13 +60,13 @@ class Cursor {
     this.mousePos = getMousePos(ev)
   }
 
-  initEvents() {
+  initEvents(context = document) {
     const mouseMove = ev => this.setMouseMove(ev)
 
     window.removeEventListener('mousemove', mouseMove)
     window.addEventListener('mousemove', mouseMove, false)
 
-    document.querySelectorAll('[data-cursor]').forEach(el => {
+    context.querySelectorAll('[data-cursor]').forEach(el => {
       el.addEventListener(
         'mouseover',
         () => {
