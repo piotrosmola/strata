@@ -1,12 +1,18 @@
-import { enablePageScroll } from 'scroll-lock'
+// import { disablePageScroll, enablePageScroll } from 'scroll-lock'
+import Navigation from './navigation'
+import Scroll from './scroll'
 
 const Preloader = {
   $el: $('#page-loader'),
-  $loader: $('[data-page-progress]'),
+  $loader: $('[data-loader-progress]'),
   $body: $('body'),
-  $value: $('[data-page-progress-value]'),
+  $value: $('[data-loader-progress-value]'),
+  $media: $('[data-loader-media]'),
   init(mode = 'DEFAULT') {
     const _ = this
+
+    _.show()
+    _.$body.addClass('page-loading')
 
     if (mode === 'DEV') {
       _.$el.hide()
@@ -14,7 +20,7 @@ const Preloader = {
     }
 
     function loadbar() {
-      var img = Array.from(document.images).filter(o => !o.src.includes('cloudflare')),
+      var img = Array.from(document.images),
         c = 0,
         tot = img.length
 
@@ -52,15 +58,31 @@ const Preloader = {
     const _ = this
 
     _.$loader.css({
-      transition: 'stroke-dashoffset 0.75s linear',
       'stroke-dashoffset': 945 - (perc / 100) * 945
     })
     _.$value.text(`${perc}%`)
   },
   start() {
     const _ = this
+    Scroll.scroller?.paused(true)
 
-    _.$body.addClass('page-changed')
+    _.$loader.css({
+      transition: 'none'
+    })
+    _.set(0)
+    setTimeout(() => {
+      _.$loader.css({
+        transition: 'stroke-dashoffset 0.25s linear'
+      })
+    }, 100)
+
+    setTimeout(() => {
+      Scroll.scroller?.scrollTo(0)
+      Scroll.handle({ progress: 0, scrollTop: () => 0 })
+      Navigation.hide()
+    }, 750)
+
+    _.$body.addClass('page-loading')
   },
   hide() {
     const _ = this
@@ -68,23 +90,29 @@ const Preloader = {
     const eventHidden = new Event('page-loader-hidden')
 
     setTimeout(() => {
-      _.$loader.addClass('loaded')
+      _.$body.removeClass('page-loading')
       _.$body.addClass('page-loaded')
       _.$body.removeClass('page-hide-content')
       window.dispatchEvent(eventLoaded)
     }, 750)
 
     setTimeout(() => {
+      _.$el.removeClass('loading')
       _.$body.addClass('page-show-content')
       _.$body.addClass('page-loaded-first-time')
+      _.$media.html('')
 
       window.dispatchEvent(eventHidden)
-      enablePageScroll()
+      // enablePageScroll()
+
+      Scroll.scroller?.paused(false)
     }, 1000)
   },
   show() {
     const _ = this
 
+    _.$body.removeClass('page-loaded')
+    _.$body.removeClass('page-show-content')
     _.$body.addClass('page-hide-content')
   }
 }

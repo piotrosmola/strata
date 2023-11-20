@@ -66,4 +66,12 @@
       }
     }
   }
+
+  .section-content {
+    @include last-mb-0;
+
+    @include media('>lg') {
+      padding-top: $header-height-desktop;
+    }
+  }
 }

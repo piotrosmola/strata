@@ -185,7 +185,7 @@
       'description' => 'If you need some help making a moment that matters, we\'d love to talk.',
       'link' => array(
         'title' => 'Say Hello',
-        'url' => '#'
+        'url' => 'contact.php'
       )
     ));
   ?>

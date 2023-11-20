@@ -18,12 +18,16 @@
 
   .section-map {
     position: absolute;
-    top: -100%;
+    top: -95%;
     left: -80%;
     right: -20%;
 
+    @include media('<=1920px') {
+      top: -80%;
+    }
+
     @include media('<=xxl') {
-      top: -75%;
+      top: -70%;
     }
     @include media('<=xl') {
       top: -50%;

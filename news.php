@@ -4,7 +4,7 @@
   <!-- Section - Hero #2 -->
   <?php
     includeBlock('blocks/hero-2.php', array(
-      'title' => 'Moments <br>That Matter',
+      'title' => 'News <br>&amp; Insights',
       'align' => 'center',
       'description' => 'Every brand moment is an opportunity for positive reinforcement.',
     ));
@@ -139,7 +139,7 @@
       'description' => 'If you need some help making a moment that matters, we\'d love to talk.',
       'link' => array(
         'title' => 'Say Hello',
-        'url' => '#'
+        'url' => 'contact.php'
       )
     ));
   ?>

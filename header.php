@@ -30,6 +30,19 @@ function includeBlock($filePath, $variables = array())
 </head>
 
 <body>
+
+  <!-- Preloader -->
+  <div id="preloader" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: black; z-index: 450;">
+    <div class="preloader-inner">
+      <svg viewBox="0 0 300 300">
+        <circle r="149" cx="150" cy="150" fill="none" />
+        <circle r="149" cx="150" cy="150" fill="none" data-loader-progress style="stroke-dasharray: 945; stroke-dashoffset: 945;" />
+      </svg>
+      <span data-loader-progress-value>0%</span>
+    </div>
+    <div class="preloader-media" data-loader-media></div>
+  </div>
+
   <div id="wrapper">
 
     <!-- Header -->
@@ -64,18 +77,6 @@ function includeBlock($filePath, $variables = array())
       </div>
     </header>
     <!-- Header / End -->
-
-    <!-- Preloader -->
-    <div id="preloader" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: black; z-index: 450;">
-      <div>
-        <svg viewBox="0 0 300 300">
-          <circle r="149" cx="150" cy="150" fill="none" />
-          <circle r="149" cx="150" cy="150" fill="none" data-page-progress style="stroke-dasharray: 945; stroke-dashoffset: 945;" />
-        </svg>
-        <span data-page-progress-value>0%</span>
-      </div>
-    </div>
-
 
     <!-- Navigation -->
     <nav id="navigation">

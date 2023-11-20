@@ -184,17 +184,17 @@ const ScrollEffects = {
         }
       })
 
-      if (textLines.length) {
-        Array.from(textLines[0].children).forEach((line, i) => {
-          const solidLines = textLines[1]
-          line.addEventListener('mouseenter', () => {
-            Array.from(solidLines.children).forEach((solidLine, k) => {
-              if (i === k) gsap.to(solidLine, { '--progress': '100%', duration: 0.5, ease: 'power3.out' })
-              else gsap.to(solidLine, { '--progress': '0%', duration: 0.5, ease: 'power3.out' })
-            })
-          })
-        })
-      }
+      // if (textLines.length) {
+      //   Array.from(textLines[0].children).forEach((line, i) => {
+      //     const solidLines = textLines[1]
+      //     line.addEventListener('mouseenter', () => {
+      //       Array.from(solidLines.children).forEach((solidLine, k) => {
+      //         if (i === k) gsap.to(solidLine, { '--progress': '100%', duration: 0.5, ease: 'power3.out' })
+      //         else gsap.to(solidLine, { '--progress': '0%', duration: 0.5, ease: 'power3.out' })
+      //       })
+      //     })
+      //   })
+      // }
 
       tl.to(waves, { x: '-25%', opacity: 0 }, 'start')
     })

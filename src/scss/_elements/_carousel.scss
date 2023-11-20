@@ -54,6 +54,11 @@
         max-width: 8rem;
         object-fit: contain;
         display: block;
+
+        @include media('<=sm') {
+          max-height: 3rem;
+          max-width: 7rem;
+        }
       }
     }
   }

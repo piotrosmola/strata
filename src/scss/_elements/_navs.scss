@@ -14,6 +14,9 @@
   flex-direction: column;
 
   > li {
+    padding: 0 1rem;
+    margin-left: -1rem;
+
     &:not(:last-child) {
       margin-bottom: 1rem;
     }

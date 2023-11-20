@@ -9,6 +9,14 @@
   &-bg {
     @include cover;
     z-index: 0;
+    opacity: 0;
+    transform: scale(1.25);
+    transition: 1s opacity $easeOutQuad, 2s transform $easeOutQuad;
+
+    body.page-show-content & {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 
   &-inner {

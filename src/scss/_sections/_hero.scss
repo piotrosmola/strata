@@ -8,9 +8,10 @@
   align-items: center;
 
   .section-bg {
-    transform: translateY(25%);
+    margin-top: 25vh;
+    transform-origin: right center;
     @include media('<=sm') {
-      transform: translateY(50%);
+      margin-top: 50vh;
       right: -100%;
     }
   }
@@ -48,10 +49,10 @@
   align-items: flex-end;
 
   .section-bg {
-    top: -75%;
+    top: -65%;
 
     @include media('<=xl') {
-      top: -65%;
+      top: -55%;
       left: -25%;
       right: -25%;
     }

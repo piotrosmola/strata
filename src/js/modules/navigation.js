@@ -1,4 +1,5 @@
-import { disablePageScroll, enablePageScroll } from 'scroll-lock'
+// import { disablePageScroll, enablePageScroll } from 'scroll-lock'
+import Scroll from './scroll'
 
 const $body = $('body')
 
@@ -33,11 +34,13 @@ const Navigation = {
       if (!$body.hasClass('navigation-open')) {
         $self.addClass('open')
         $body.addClass('navigation-open')
-        disablePageScroll(_.$nav[0])
+        // disablePageScroll(_.$nav[0])
+        Scroll.scroller?.paused(true)
       } else {
         $self.removeClass('open')
         $body.removeClass('navigation-open')
-        enablePageScroll(_.$nav[0])
+        // enablePageScroll(_.$nav[0])
+        Scroll.scroller?.paused(false)
       }
       return false
     })

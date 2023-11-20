@@ -17,9 +17,9 @@ const Tabs = {
           $target
             .fadeIn(150, function () {})
             .addClass('active')
-            .trigger('tabs:show')
+            .trigger('refresh-scroll')
 
-          $(window).trigger('tabs:show')
+          $(window).trigger('refresh-scroll')
         })
         .removeClass('active')
       $nav.find('.active').removeClass('active')

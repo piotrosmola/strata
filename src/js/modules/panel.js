@@ -9,7 +9,9 @@ const Panel = {
         const $self = $(this)
         if (!$self.parents('.panel').hasClass('panel-blocked')) {
           $self.parents('.panel').toggleClass('open')
-          $self.next('.panel-content').slideToggle(200)
+          $self.next('.panel-content').slideToggle(200, function () {
+            window.dispatchEvent(new Event('resize'))
+          })
         }
         return false
       })

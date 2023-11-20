@@ -151,11 +151,11 @@
         </div>
         <div class="text-center">
           <!-- Button -->
-          <a href="single-moment.php" class="btn btn-oval" data-mp>
+          <a href="moments.php" class="btn btn-oval" data-mp>
             <span class="btn-bg" data-mp-item data-mp-scale="1.15"></span>
             <span class="btn-outline" data-mp-item="0.05" data-mp-scale="1.075"></span>
+            <i class="btn-icon i i-arrow-top-right"></i>
             <span class="btn-label">More Moments</span>
-            <i class="btn-icon i i-arrow-down"></i>
           </a>
         </div>
       </div>
@@ -210,7 +210,7 @@
       'description' => 'If you need some help making a moment that matters, we\'d love to talk.',
       'link' => array(
         'title' => 'Say Hello',
-        'url' => '#'
+        'url' => 'contact.php'
       )
     ));
   ?>
