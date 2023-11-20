@@ -39,6 +39,11 @@
     transform: scale(1.1);
     animation: showLoader 0.25s forwards;
 
+    @include media('portrait') {
+      width: min(20rem, 50vw);
+      height: min(20rem, 50vw);
+    }
+
     @keyframes showLoader {
       0% {
         opacity: 0;
@@ -79,6 +84,10 @@
       font-size: 3rem;
       @include font('secondary', 'extrabold');
       opacity: 0.2;
+
+      @include media('<=sm') {
+        font-size: 2rem;
+      }
     }
 
     > svg {
@@ -301,6 +310,14 @@
   @include layout-spacing;
   display: flex;
   user-select: none;
+  opacity: 0;
+  visibility: hidden;
+  @include transition-secondary('opacity, visibility');
+
+  body.page-show-content & {
+    opacity: 1;
+    visibility: visible;
+  }
 
   @include media('<=md') {
     display: none;

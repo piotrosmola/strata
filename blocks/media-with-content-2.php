@@ -14,7 +14,7 @@
             <?php if ($logotypes): ?>
             <ul class="list-logotypes">
               <?php foreach ($logotypes as $key => $logo): ?>
-              <li>
+              <li data-animation="fade-in-down" data-animation-delay="<?php echo 250 * $key; ?>">
                 <img src="<?php echo $logo['image'] ?>" alt="">
               </li>
               <?php endforeach; ?>

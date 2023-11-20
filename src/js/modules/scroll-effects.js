@@ -59,7 +59,7 @@ const ScrollEffects = {
             pin: false,
             trigger: card,
             scrub: true,
-            start: `top 150%`,
+            start: `top 200%`,
             end: `bottom 50%`,
             invalidateOnRefresh: true
           }
@@ -77,18 +77,12 @@ const ScrollEffects = {
 
       const tl = gsap.timeline({
         scrollTrigger: {
-          pin: true,
+          pin: window.innerWidth > 991,
           trigger: section,
           scrub: 1,
-          start: `top top`,
-          end: () => `bottom ${-window.innerHeight * 0.5}`,
+          start: `top ${window.innerWidth > 991 ? 'top' : window.innerHeight * 0.5}`,
+          end: () => `bottom ${window.innerWidth > 991 ? -window.innerHeight * 0.5 : window.innerHeight * 0.5}`,
           invalidateOnRefresh: true
-          // snap: {
-          //   snapTo: 'labels',
-          //   duration: { min: 0.2, max: 3 },
-          //   delay: 0.2,
-          //   ease: 'power1.inOut'
-          // }
         }
       })
 

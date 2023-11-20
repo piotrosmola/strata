@@ -105,7 +105,7 @@
                   <!-- Map Marker -->
                   <div class="section-map-marker" style="--left: 69.5%; --top: 60%">
                     <span class="section-map-marker-dot green"></span>
-                    <div class="section-map-marker-popup">
+                    <div class="section-map-marker-popup" data-animation="fade-in-down">
                       <h5>BrackLEY Office</h5>
                       <address>Featherbed Court, Mixbury,<br>Brackley, NN13 5RN</address>
                     </div>
@@ -113,7 +113,7 @@
                   <!-- Map Marker -->
                   <div class="section-map-marker" style="--left: 81%; --top: 73%">
                     <span class="section-map-marker-dot pink"></span>
-                    <div class="section-map-marker-popup bottom">
+                    <div class="section-map-marker-popup bottom" data-animation="fade-in-up" data-animation-delay="200">
                       <h5>London Office</h5>
                       <address>17 Macklin St, London WC2B 5NR</address>
                     </div>

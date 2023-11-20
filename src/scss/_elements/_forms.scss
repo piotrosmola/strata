@@ -37,6 +37,7 @@ label:not(.custom-control-label) {
 
 .form-control {
   @include reset('all');
+  border-radius: 0;
   appearance: none;
   box-shadow: none;
   border-bottom: 1px solid $color-global;

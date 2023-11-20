@@ -27,8 +27,6 @@ const Animations = {
         }
       }
     })
-
-    window.addEventListener('scroll', () => _.handle(Scroll.direction))
   },
   animateRun($el) {
     const animation = $el.data('animation')
@@ -100,9 +98,9 @@ const Animations = {
           _.animateReset($(this))
         })
       } else if (direction === 'DOWN' && selfOffset < -selfHeight && $self.hasClass('in')) {
-        $('[data-animation], [data-animate]', $self).each(function () {
-          _.animateReset($(this))
-        })
+        // $('[data-animation], [data-animate]', $self).each(function () {
+        //   _.animateReset($(this))
+        // })
       }
     })
 

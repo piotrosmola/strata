@@ -9,7 +9,7 @@
 
   .section-bg {
     transform: translateY(25%);
-    @include media('<=xs') {
+    @include media('<=sm') {
       transform: translateY(50%);
       right: -100%;
     }
@@ -26,8 +26,10 @@
   }
 
   .section-content {
-    max-width: 80%;
-    @include last-mb-0;
+    @include media('>lg') {
+      max-width: 80%;
+      @include last-mb-0;
+    }
 
     @include media('<=sm') {
       margin-bottom: $layout-spacing-mobile-xs;
@@ -48,7 +50,13 @@
   .section-bg {
     top: -75%;
 
-    @include media('<=xs') {
+    @include media('<=xl') {
+      top: -65%;
+      left: -25%;
+      right: -25%;
+    }
+
+    @include media('<=md') {
       top: 0%;
       left: -100%;
       right: -100%;

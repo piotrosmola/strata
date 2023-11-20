@@ -2,6 +2,8 @@ import gsap from 'gsap'
 import { ScrollSmoother } from 'gsap/ScrollSmoother'
 import { Draggable, ScrollTrigger } from 'gsap/all'
 
+import Animations from './animations'
+
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, Draggable)
 
 const $body = $('body')
@@ -29,8 +31,8 @@ const Scroll = {
       effects: true,
       smoothTouch: 0.1,
       onUpdate: e => {
-        // Animations.handle(scrolled, Scroll.direction)
         _.handle(e)
+        Animations.handle(_.direction)
       }
     })
 

@@ -121,16 +121,19 @@
     &-navigation {
       .nav-primary {
         li {
-          @include transition-secondary(' opacity');
-          opacity: 0;
+          padding: 0 0.5rem;
+          @include transition-secondary(' clip-path');
+
+          clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
 
           body.navigation-open & {
-            @for $i from 1 through 10 {
-              &:nth-child(#{$i}) {
-                transition-delay: $i * 0.1s + 0.2s;
-              }
-            }
-            opacity: 1;
+            // @for $i from 1 through 10 {
+            //   &:nth-child(#{$i}) {
+            //     // transition-delay: $i * 0.1s + 0.2s;
+            //   }
+            // }
+            transition-delay: 0.5s;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
           }
         }
       }

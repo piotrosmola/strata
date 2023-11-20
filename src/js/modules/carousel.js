@@ -1,4 +1,4 @@
-import Swiper, { Navigation } from 'swiper'
+import Swiper, { FreeMode, Navigation } from 'swiper'
 
 const Carousel = {
   init() {
@@ -30,7 +30,7 @@ const Carousel = {
       })
 
       const swiperRef = new Swiper(container, {
-        modules: [Navigation],
+        modules: [Navigation, FreeMode],
         slidesPerView,
         spaceBetween,
         freeMode: true,
