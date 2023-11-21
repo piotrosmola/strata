@@ -75,6 +75,14 @@ const Page = {
 
       return false
     })
+
+    $(window).on('popstate', function (event) {
+      Preloader.show()
+      setTimeout(() => {
+        _.load(document.location.href)
+        Preloader.start()
+      }, 500)
+    })
   },
   load(url) {
     const _ = this

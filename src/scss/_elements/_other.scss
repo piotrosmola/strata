@@ -300,6 +300,11 @@
     visibility: visible;
   }
 
+  body.page-show-content.navigation-open & {
+    opacity: 0;
+    visibility: hidden;
+  }
+
   @include media('<=md') {
     display: none;
   }

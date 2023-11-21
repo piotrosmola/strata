@@ -7383,6 +7383,10 @@ body.page-show-content .scroller {
   opacity: 1;
   visibility: visible;
 }
+body.page-show-content.navigation-open .scroller {
+  opacity: 0;
+  visibility: hidden;
+}
 @media (max-width: 991px) {
   .scroller {
     display: none;
