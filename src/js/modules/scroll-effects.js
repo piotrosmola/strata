@@ -281,7 +281,7 @@ const ScrollEffects = {
         }
       })
 
-      tl.fromTo(waves, { opacity: 0, y: '-20%' }, { y: '20%', opacity: 1 })
+      tl.fromTo(waves, { opacity: 0, y: '-30%' }, { y: '10%', opacity: 1 })
 
       section.poTimeline = tl
     })

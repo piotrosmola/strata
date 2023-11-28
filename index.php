@@ -217,6 +217,39 @@
     ));
   ?>
 
+  <!-- Section - Media with Content #2 (Two cols) -->
+  <?php
+    includeBlock('blocks/media-with-content-2-two-cols.php', array(
+      'columns' => array(
+        array(
+          'title' => 'Our Mission',
+          'content' => '
+            <p>With communications changing faster than ever, our many combined decades of experience and adaptability really matter.</p>
+            <p>We work as an extension of your team to manage every aspect of a project; strategy and planning, creative services, content, technical production, logistics, storage, and asset management.</p>
+          ',
+          'image' => 'assets/img/about01.jpg',
+          'link' => array(
+            'title' => 'Read More',
+            'url' => 'sustainability.php'
+          )
+        ),
+        array(
+          'title' => 'Our Values',
+          'content' => '
+            <p>With communications changing faster than ever, our many combined decades of experience and adaptability really matter.</p>
+            <p>We work as an extension of your team to manage every aspect of a project; strategy and planning, creative services, content, technical production, logistics, storage, and asset management.</p>
+          ',
+          'image' => 'assets/img/about02.jpg',
+          'link' => array(
+            'title' => 'Read More',
+            'url' => 'sustainability.php'
+          )
+        )
+      )
+    ));
+  ?>
+
+
   <!-- Section - Clients -->
   <?php
     includeBlock('blocks/clients.php', array(
