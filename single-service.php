@@ -47,38 +47,6 @@
     ));
   ?>
 
-  <!-- Section - Boxes -->
-  <?php
-    includeBlock('blocks/features.php', array(
-      'boxes' => array(
-        array(
-          'title' => 'We Specialize in Providing',
-          'items' => array(
-            'Creative Communications & Strategies',
-            'Brand Ideation & Design Implementation',
-            'Moving Image',
-            'Digital Solutions',
-            'Event Management & Production',
-            'Brand Activation',
-            'Logistics and Asset Management'
-          )
-          ),
-        array(
-          'title' => 'In order to give our clients the very best in',
-          'items' => array(
-            'Brand Engagement & Installations',
-            'Stakeholder Engagement',
-            'Stakeholder Communications',
-            'Conferences',
-            'Exhibitions',
-            'Reward & Recognition Programmes',
-            'Experiential Activation',
-          )
-        )
-      )
-    ));
-  ?>
-
   <!-- Section - Content #1 -->
   <?php
     includeBlock('blocks/content-1.php', array(
@@ -181,6 +149,14 @@
         ),
         array(
           'image' => 'assets/img/dan.svg',
+          'url' => '#'
+        ),
+        array(
+          'image' => 'assets/img/awwards.svg',
+          'url' => '#'
+        ),
+        array(
+          'image' => 'assets/img/clutch.svg',
           'url' => '#'
         )
       )

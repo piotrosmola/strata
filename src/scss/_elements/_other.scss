@@ -92,15 +92,15 @@
 
 /* Stats */
 .stats-row {
-  @include media('>sm') {
-    > * {
-      @for $i from 1 through 3 {
-        &:nth-child(#{$i}) {
-          margin-top: 2rem * $i;
-        }
-      }
-    }
-  }
+  // @include media('>sm') {
+  //   > * {
+  //     @for $i from 1 through 3 {
+  //       &:nth-child(#{$i}) {
+  //         margin-top: 2rem * $i;
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 .stat {

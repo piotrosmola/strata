@@ -6,8 +6,15 @@
     includeBlock('blocks/hero-2.php', array(
       'title' => 'Our Culture',
       'description' => 'Every brand moment is an opportunity for positive reinforcement.',
-      'align' => 'right',
+
       'largeTitle' => true
+    ));
+  ?>
+
+  <!-- Section - Single Media -->
+  <?php
+    includeBlock('blocks/single-media.php', array(
+      'image' => 'assets/img/about02.jpg',
     ));
   ?>
 
@@ -39,7 +46,23 @@
             'title' => 'Read More',
             'url' => '#'
           )
-        )
+        ),
+        array(
+          'title' => 'Creative Communications<br> & Strategies',
+          'content' => '<p>Every brand moment is an opportunity for positive reinforcement, a chance for your brand message to have clarity and relevance.</p>',
+          'link' => array(
+            'title' => 'Read More',
+            'url' => '#'
+          )
+        ),
+        array(
+          'title' => 'Brand Ideation<br> & Design Implementation',
+          'content' => '<p>Every brand moment is an opportunity for positive reinforcement, a chance for your brand message to have clarity and relevance.</p>',
+          'link' => array(
+            'title' => 'Read More',
+            'url' => '#'
+          )
+        ),
       )
     ));
   ?>
@@ -84,8 +107,7 @@
 
   <!-- Marquee -->
   <?php
-    includeBlock('blocks/marquee.php', array(
-      'text' => 'Everytime. Everywhere.',
+    includeBlock('blocks/media-parallax.php', array(
       'image' => 'assets/img/hero-service.jpg'
     ));
   ?>
@@ -151,6 +173,14 @@
         ),
         array(
           'image' => 'assets/img/dan.svg',
+          'url' => '#'
+        ),
+        array(
+          'image' => 'assets/img/awwards.svg',
+          'url' => '#'
+        ),
+        array(
+          'image' => 'assets/img/clutch.svg',
           'url' => '#'
         )
       )

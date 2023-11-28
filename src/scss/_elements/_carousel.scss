@@ -41,8 +41,11 @@
 
 /* Logotypes */
 .carousel-logotypes {
+  overflow: visible;
+
   .swiper-wrapper {
     align-items: center;
+    transition-timing-function: linear;
 
     .swiper-slide {
       display: flex;
@@ -90,6 +93,40 @@
         @include media('<=sm') {
           margin: 1rem 0;
         }
+      }
+    }
+  }
+}
+
+/* Logotypes */
+.logotypes {
+  overflow: visible;
+  margin-left: -3rem;
+  margin-right: -3rem;
+  mask-image: linear-gradient(to right, transparent, white 3rem, white calc(100% - 3rem), transparent);
+
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 12rem;
+
+    img {
+      max-height: 4rem;
+      max-width: 8rem;
+      object-fit: contain;
+      display: block;
+
+      @include media('<=sm') {
+        max-height: 3rem;
+        max-width: 7rem;
       }
     }
   }

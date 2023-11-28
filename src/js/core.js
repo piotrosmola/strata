@@ -4,7 +4,7 @@ import Animations from './modules/animations'
 import Background from './modules/background'
 import Carousel from './modules/carousel'
 import Counter from './modules/counter'
-import Cta from './modules/cta'
+import Logotypes from './modules/logotypes'
 import Mouse from './modules/mouse'
 import Navigation from './modules/navigation'
 import Page from './modules/page'
@@ -29,9 +29,9 @@ window.addEventListener('page-loaded', () => {
   Animations.init()
   Background.init()
   Carousel.init()
-  Cta.init()
   Tabs.init()
   Panel.init()
+  Logotypes.init()
   ScrollEffects.init()
   VideoModal.init()
 

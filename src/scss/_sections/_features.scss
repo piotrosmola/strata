@@ -12,6 +12,15 @@
       left: -100%;
       right: -100%;
     }
+
+    .bg-image {
+      mask-image: linear-gradient(to right, rgba(black, 0), rgba(black, 1), rgba(black, 0));
+
+      img {
+        mask-image: linear-gradient(to bottom, rgba(black, 0), rgba(black, 1), rgba(black, 0));
+        opacity: 0.3;
+      }
+    }
   }
 
   .container-inner > .row > * {

@@ -90,6 +90,14 @@
     }
 
     &-logo {
+      @include transition-primary('opacity, visibility, transform');
+
+      body.scrolled:not(.navigation-open) & {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-50%);
+      }
+
       img {
         height: $header-height-desktop * 0.25;
         display: block;

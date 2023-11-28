@@ -19,7 +19,7 @@
         <div class="section-content fullwidth">
           <div class="row justify-content-center">
             <div class="col-lg-10">
-              <h1 class="h2 outline-text"><strong>Say hello</strong> To InnovatIVe Brand experiences</h1>
+              <h1 class="h2"><strong>Say hello</strong> To InnovatIVe Brand experiences</h1>
               <p class="lead border-left">Every brand moment is an opportunity for positive reinforcement.</p>
             </div>
           </div>
@@ -37,17 +37,23 @@
           <div class="col-lg-10">
             <!-- Details -->
             <div class="row row-details">
-              <div class="col-md-6 mb-layout-sm">
+              <div class="col-md-4 col-sm-6 mb-layout-sm">
                 <h5 class="border-bottom">General Enquiries</h5>
                 <address class="text-lg">
                   <a href="#">info@stratacreate.com</a><br>
                   <a href="#">+44 (0)20 7605 4500</a>
                 </address>
               </div>
-              <div class="col-md-6 mb-layout-sm">
+              <div class="col-md-4 col-sm-6 mb-layout-sm">
                 <h5 class="border-bottom">New Business</h5>
                 <address class="text-lg">
                   <a href="#">giles.cattle@stratacreate.com</a><br>
+                </address>
+              </div>
+              <div class="col-md-4 col-sm-6 mb-layout-sm">
+                <h5 class="border-bottom">Careers</h5>
+                <address class="text-lg">
+                  <a href="#">careers@stratacreate.com</a><br>
                 </address>
               </div>
             </div>
@@ -195,6 +201,14 @@
         ),
         array(
           'image' => 'assets/img/dan.svg',
+          'url' => '#'
+        ),
+        array(
+          'image' => 'assets/img/awwards.svg',
+          'url' => '#'
+        ),
+        array(
+          'image' => 'assets/img/clutch.svg',
           'url' => '#'
         )
       )

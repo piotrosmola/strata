@@ -53,21 +53,21 @@
         <div class="row stats-row">
           <div class="col-sm-4">
             <!-- Stat -->
-            <div class="stat" data-speed="1.1">
+            <div class="stat">
               <div class="stat-value"><span data-animate="count" data-count-to="90">0</span></div>
               <h5 class="stat-title">Customer Engaged</h5>
             </div>
           </div>
           <div class="col-sm-4">
             <!-- Stat -->
-            <div class="stat" data-speed="1.2">
+            <div class="stat">
               <div class="stat-value"><span data-animate="count" data-count-to="120">0</span></div>
               <h5 class="stat-title">Locations Covered</h5>
             </div>
           </div>
           <div class="col-sm-4">
             <!-- Stat -->
-            <div class="stat" data-speed="1.3">
+            <div class="stat">
               <div class="stat-value"><span data-animate="count" data-count-to="5">0</span>k</div>
               <h5 class="stat-title">Positive Feedback</h5>
             </div>
@@ -87,52 +87,6 @@
         array('url' => 'assets/img/project02.jpg'),
         array('url' => 'assets/img/project05.jpg'),
         array('url' => 'assets/img/project01.jpg')
-      )
-    ));
-  ?>
-
-  <!-- Section - Single Media -->
-  <section class="section">
-    <!-- Container -->
-    <div class="section-container container">
-      <div class="container-inner">
-        <!-- Media -->
-        <div class="media" data-blur-in>
-          <img src="assets/img/project05.jpg" alt="">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section - Accordion -->
-  <?php
-    includeBlock('blocks/accordion.php', array(
-      'theme' => 'green',
-      'panels' => array(
-        array(
-          'title' => 'Creative Communications<br> & Strategies',
-          'content' => '<p>Every brand moment is an opportunity for positive reinforcement, a chance for your brand message to have clarity and relevance.</p>',
-          'link' => array(
-            'title' => 'Read More',
-            'url' => '#'
-          )
-        ),
-        array(
-          'title' => 'Brand Ideation<br> & Design Implementation',
-          'content' => '<p>Every brand moment is an opportunity for positive reinforcement, a chance for your brand message to have clarity and relevance.</p>',
-          'link' => array(
-            'title' => 'Read More',
-            'url' => '#'
-          )
-        ),
-        array(
-          'title' => 'Digital<br> Solutions',
-          'content' => '<p>Every brand moment is an opportunity for positive reinforcement, a chance for your brand message to have clarity and relevance.</p>',
-          'link' => array(
-            'title' => 'Read More',
-            'url' => '#'
-          )
-        )
       )
     ));
   ?>
@@ -162,6 +116,46 @@
     </div>
   </section>
 
+  <!-- Section - Single Media -->
+  <?php
+    includeBlock('blocks/single-media.php', array(
+      'image' => 'assets/img/project05.jpg',
+    ));
+  ?>
+
+  <!-- Section - Boxes -->
+  <?php
+    includeBlock('blocks/features.php', array(
+      'boxes' => array(
+        array(
+          'title' => 'We Specialize in Providing',
+          'items' => array(
+            'Creative Communications & Strategies',
+            'Brand Ideation & Design Implementation',
+            'Moving Image',
+            'Digital Solutions',
+            'Event Management & Production',
+            'Brand Activation',
+            'Logistics and Asset Management'
+          )
+          ),
+        array(
+          'title' => 'In order to give our clients the very best in',
+          'items' => array(
+            'Brand Engagement & Installations',
+            'Stakeholder Engagement',
+            'Stakeholder Communications',
+            'Conferences',
+            'Exhibitions',
+            'Reward & Recognition Programmes',
+            'Experiential Activation',
+          )
+        )
+      )
+    ));
+  ?>
+
+
   <!-- Section - Media + Caption -->
   <section class="section">
     <!-- Container -->
@@ -184,17 +178,11 @@
   </section>
 
   <!-- Section - Single Media -->
-  <section class="section">
-    <!-- Container -->
-    <div class="section-container container">
-      <div class="container-inner">
-        <!-- Media -->
-        <div class="media" data-blur-in>
-          <img src="assets/img/project03.jpg" alt="">
-        </div>
-      </div>
-    </div>
-  </section>
+  <?php
+    includeBlock('blocks/single-media.php', array(
+      'image' => 'assets/img/project03.jpg',
+    ));
+  ?>
 
   <!-- Section - Content #1 -->
   <?php
@@ -231,6 +219,14 @@
         ),
         array(
           'image' => 'assets/img/dan.svg',
+          'url' => '#'
+        ),
+        array(
+          'image' => 'assets/img/awwards.svg',
+          'url' => '#'
+        ),
+        array(
+          'image' => 'assets/img/clutch.svg',
           'url' => '#'
         )
       )

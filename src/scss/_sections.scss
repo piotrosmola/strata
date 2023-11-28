@@ -6,6 +6,10 @@
   @include layout-spacing;
   position: relative;
 
+  + .section {
+    margin-top: -1px;
+  }
+
   &-bg {
     @include cover;
     z-index: 0;
@@ -78,4 +82,5 @@
 @import '_sections/intro';
 @import '_sections/marquee';
 @import '_sections/features';
+@import '_sections/media-parallax';
 @import '_sections/contact';

@@ -17,7 +17,7 @@
       <div class="container-inner">
         <!-- Content -->
         <div class="section-content">
-          <h1 class="outline-text" data-animate="true" data-fill-first="true" data-animate="true" data-hover-lines="true" data-split-chars>Every Moment Matters
+          <h1 data-animate="true" data-split-chars>Every Moment Matters
           </h1>
         </div>
         <!-- Action -->
@@ -76,8 +76,7 @@
 
   <!-- Marquee -->
   <?php
-    includeBlock('blocks/marquee.php', array(
-      'text' => 'Everytime. Everywhere.',
+    includeBlock('blocks/media-parallax.php', array(
       'image' => 'assets/img/project07.jpg'
     ));
   ?>
@@ -97,6 +96,7 @@
             <div class="moment-card-content">
               <span class="badge badge-green">Insight</span>
               <h5>Porsche Showroom</h5>
+              <p>Donec convallis laoreet dui, nec fermentum ante scelerisque non.</p>
             </div>
           </a>
           <!-- Moment Card -->
@@ -107,6 +107,7 @@
             <div class="moment-card-content">
               <span class="badge badge-green">Insight</span>
               <h5>Porsche Showroom</h5>
+              <p>Donec convallis laoreet dui, nec fermentum ante scelerisque non.</p>
             </div>
           </a>
           <!-- Moment Card -->
@@ -117,6 +118,7 @@
             <div class="moment-card-content">
               <span class="badge badge-green">Insight</span>
               <h5>Porsche Showroom</h5>
+              <p>Donec convallis laoreet dui, nec fermentum ante scelerisque non.</p>
             </div>
           </a>
           <!-- Moment Card -->
@@ -127,6 +129,7 @@
             <div class="moment-card-content">
               <span class="badge badge-green">Insight</span>
               <h5>Porsche Showroom</h5>
+              <p>Donec convallis laoreet dui, nec fermentum ante scelerisque non.</p>
             </div>
           </a>
           <!-- Moment Card -->
@@ -137,6 +140,7 @@
             <div class="moment-card-content">
               <span class="badge badge-green">Insight</span>
               <h5>Porsche Showroom</h5>
+              <p>Donec convallis laoreet dui, nec fermentum ante scelerisque non.</p>
             </div>
           </a>
           <!-- Moment Card -->
@@ -147,6 +151,40 @@
             <div class="moment-card-content">
               <span class="badge badge-green">Insight</span>
               <h5>Porsche Showroom</h5>
+              <p>Donec convallis laoreet dui, nec fermentum ante scelerisque non.</p>
+            </div>
+          </a>
+          <!-- Moment Card -->
+          <a href="single-moment.php" class="moment-card" data-cursor="oval">
+            <div class="moment-card-media">
+              <img src="assets/img/project01.jpg" alt="" />
+            </div>
+            <div class="moment-card-content">
+              <span class="badge badge-green">Insight</span>
+              <h5>Porsche Showroom</h5>
+              <p>Donec convallis laoreet dui, nec fermentum ante scelerisque non.</p>
+            </div>
+          </a>
+          <!-- Moment Card -->
+          <a href="single-moment.php" class="moment-card" data-cursor="oval">
+            <div class="moment-card-media">
+              <img src="assets/img/project02.jpg" alt="" />
+            </div>
+            <div class="moment-card-content">
+              <span class="badge badge-green">Insight</span>
+              <h5>Porsche Showroom</h5>
+              <p>Donec convallis laoreet dui, nec fermentum ante scelerisque non.</p>
+            </div>
+          </a>
+          <!-- Moment Card -->
+          <a href="single-moment.php" class="moment-card" data-cursor="oval">
+            <div class="moment-card-media">
+              <img src="assets/img/project03.jpg" alt="" />
+            </div>
+            <div class="moment-card-content">
+              <span class="badge badge-green">Insight</span>
+              <h5>Porsche Showroom</h5>
+              <p>Donec convallis laoreet dui, nec fermentum ante scelerisque non.</p>
             </div>
           </a>
         </div>
@@ -202,6 +240,14 @@
         ),
         array(
           'image' => 'assets/img/dan.svg',
+          'url' => '#'
+        ),
+        array(
+          'image' => 'assets/img/awwards.svg',
+          'url' => '#'
+        ),
+        array(
+          'image' => 'assets/img/clutch.svg',
           'url' => '#'
         )
       )

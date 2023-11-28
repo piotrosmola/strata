@@ -18,14 +18,6 @@
           <?php echo $title ?></h1>
         <p class="lead border-<?php echo $align ? $align : 'left'; ?>"><?php echo $description ?></p>
       </div>
-      <?php if($images): ?>
-      <!-- Images -->
-      <div class="section-images">
-        <?php foreach ($images as $key => $image): ?>
-        <img src="<?php echo $image ?>" alt="">
-        <?php endforeach; ?>
-      </div>
-      <?php endif; ?>
     </div>
   </div>
 </section>

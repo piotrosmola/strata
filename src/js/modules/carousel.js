@@ -1,4 +1,4 @@
-import Swiper, { FreeMode, Navigation } from 'swiper'
+import Swiper, { Autoplay, FreeMode, Navigation } from 'swiper'
 
 const Carousel = {
   init() {
@@ -21,6 +21,12 @@ const Carousel = {
         ]
       )
       const breakpoints = {}
+      const autoplay = el.getAttribute('data-autoplay')
+        ? {
+            enabled: true,
+            delay: 3000
+          }
+        : false
 
       breakpointsAttr.forEach(item => {
         breakpoints[item[0]] = {
@@ -30,12 +36,12 @@ const Carousel = {
       })
 
       const swiperRef = new Swiper(container, {
-        modules: [Navigation, FreeMode],
+        modules: [Navigation, FreeMode, Autoplay],
         slidesPerView,
         spaceBetween,
         freeMode: true,
-        simulateTouch: false,
         touchStartPreventDefault: false,
+        autoplay,
         breakpoints,
         watchSlidesProgress: true,
         navigation: {

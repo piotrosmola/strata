@@ -4,10 +4,15 @@
     <div class="section-container container">
       <div class="container-inner">
         <h5 class="mb-layout-xs"><?php echo $title; ?></h5>
-        <div class="carousel carousel-logotypes swiper">
-          <div class="swiper-wrapper">
+        <div class="logotypes">
+          <div class="logotypes-wrapper">
             <?php foreach ($logotypes as $key => $logo): ?>
-            <div class="swiper-slide">
+            <div class="logotypes-item">
+              <img src="<?php echo $logo['image'] ?>" alt="">
+            </div>
+            <?php endforeach; ?>
+            <?php foreach ($logotypes as $key => $logo): ?>
+            <div class="logotypes-item">
               <img src="<?php echo $logo['image'] ?>" alt="">
             </div>
             <?php endforeach; ?>

@@ -99,6 +99,14 @@
         array(
           'image' => 'assets/img/dan.svg',
           'url' => '#'
+        ),
+        array(
+          'image' => 'assets/img/awwards.svg',
+          'url' => '#'
+        ),
+        array(
+          'image' => 'assets/img/clutch.svg',
+          'url' => '#'
         )
       )
     ));

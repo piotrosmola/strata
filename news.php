@@ -89,6 +89,39 @@
               <h5>Strata welcomes Julie Phillips as new Finance Director</h5>
             </div>
           </a>
+          <!-- News Card -->
+          <a href="single-news.php" class="news-card" data-cursor="oval" data-cursor-text="Read More">
+            <div class="news-card-media">
+              <img src="assets/img/project03.jpg" alt="" />
+            </div>
+            <div class="news-card-content">
+              <span class="btn btn-arrow btn-green"><i class="btn-icon i i-arrow-top-right"></i></span>
+              <span class="badge badge-green">Insight</span>
+              <h5>How Strata are offering their clients the added value they expect Insights</h5>
+            </div>
+          </a>
+          <!-- News Card -->
+          <a href="single-news.php" class="news-card" data-cursor="oval" data-cursor-text="Read More">
+            <div class="news-card-media">
+              <img src="assets/img/project02.jpg" alt="" />
+            </div>
+            <div class="news-card-content">
+              <span class="btn btn-arrow btn-pink"><i class="btn-icon i i-arrow-top-right"></i></span>
+              <span class="badge badge-pink">Event</span>
+              <h5>Press Release: Strata Acquires On Event Production Co.</h5>
+            </div>
+          </a>
+          <!-- News Card -->
+          <a href="single-news.php" class="news-card" data-cursor="oval" data-cursor-text="Read More">
+            <div class="news-card-media">
+              <img src="assets/img/project01.jpg" alt="" />
+            </div>
+            <div class="news-card-content">
+              <span class="btn btn-arrow btn-green"><i class="btn-icon i i-arrow-top-right"></i></span>
+              <span class="badge badge-green">Insight</span>
+              <h5>What is the future of Automotive Event Experiences?</h5>
+            </div>
+          </a>
         </div>
         <div class="text-center">
           <!-- Button -->
@@ -126,6 +159,14 @@
         ),
         array(
           'image' => 'assets/img/dan.svg',
+          'url' => '#'
+        ),
+        array(
+          'image' => 'assets/img/awwards.svg',
+          'url' => '#'
+        ),
+        array(
+          'image' => 'assets/img/clutch.svg',
           'url' => '#'
         )
       )

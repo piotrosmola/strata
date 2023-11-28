@@ -4,15 +4,15 @@
 .moments-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 0 10%;
+  gap: 0 8%;
   align-items: center;
 
   @include media('<=xxl') {
-    gap: 7%;
+    gap: 5%;
   }
 
   @include media('<=lg') {
-    gap: 5%;
+    gap: 4%;
   }
 
   > * {
@@ -53,10 +53,11 @@
 
   &-content {
     @include cover;
-    background-color: rgba($color-body, 0.5);
+    background-color: rgba($color-body, 0.65);
     padding: 2.5rem;
     display: flex;
     flex-direction: column;
+    @include last-mb-0;
     @include transition-secondary('opacity, transform,visibility');
     @media (hover: hover) {
       opacity: 0;
@@ -70,12 +71,19 @@
 
     h5 {
       margin-top: auto;
-      margin-bottom: 0;
-      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.65rem;
       max-width: 14rem;
       @include media('<=xl') {
         font-size: 1.4rem;
       }
+    }
+
+    p {
+      font-size: 0.85rem;
+      line-height: 1.2;
+      opacity: 0.6;
+      max-width: 14rem;
     }
   }
 
@@ -84,6 +92,7 @@
     width: 100%;
     @include transition-secondary('transform');
     padding-top: 125%;
+    transform: scale(1.05);
 
     video,
     img {
@@ -104,7 +113,7 @@
       transform: scale(1);
     }
     #{$b}-media {
-      // transform: scale(1.05);
+      transform: scale(1);
     }
   }
 }

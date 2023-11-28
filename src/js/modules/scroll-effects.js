@@ -10,8 +10,10 @@ const ScrollEffects = {
     _.initMomentsGrid()
     _.initMediaRow()
     _.initMediaWithContent()
+    _.initMediaParallax()
     _.initBlurIn()
     _.initHero()
+    _.initCta()
   },
   initMediaWithContent() {
     document.querySelectorAll('.section.media-with-content').forEach(section => {
@@ -86,7 +88,7 @@ const ScrollEffects = {
           pin: window.innerWidth > 991,
           trigger: section,
           scrub: 1,
-          start: `top ${window.innerWidth > 991 ? 'top' : window.innerHeight * 0.5}`,
+          start: () => `top ${window.innerWidth > 991 ? 'top' : window.innerHeight * 0.5}`,
           end: () => `bottom ${window.innerWidth > 991 ? -window.innerHeight * 0.5 : window.innerHeight * 0.5}`,
           invalidateOnRefresh: true
         }
@@ -94,7 +96,7 @@ const ScrollEffects = {
 
       tl.addLabel('start')
       section.querySelectorAll('.section-bg img').forEach((card, index) => {
-        tl.fromTo(card, { '--blur': '10px', scale: 0.75, opacity: 0 }, { scale: 1.25, opacity: 0.4, '--blur': '0px' }, `start+=${index * 0.1}`)
+        tl.fromTo(card, { '--blur': '10px', scale: 0.75, opacity: 0.2 }, { scale: 1.25, opacity: 0.4, '--blur': '0px' }, `start+=${index * 0.1}`)
       })
       tl.addLabel('zooming')
       tl.fromTo(bg, { scale: 1 }, { scale: () => (window.innerWidth > window.innerHeight ? 2.75 : 4), ease: 'power3.in' }, 'start+=95%').fromTo(
@@ -159,6 +161,34 @@ const ScrollEffects = {
       el.poTimeline = tl
     })
   },
+  initMediaParallax() {
+    document.querySelectorAll('.media-parallax').forEach(el => {
+      const media = el.querySelector('.section-bg')
+      const { height } = media.getBoundingClientRect()
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          pin: false,
+          trigger: el,
+          scrub: true,
+          invalidateOnRefresh: true,
+          start: () => `top ${window.innerHeight * 0.5 + height / 2 + window.innerHeight * 0.1}`,
+          end: () => `bottom ${window.innerHeight * 0.5 - height / 2 - window.innerHeight * 0.1}`
+        }
+      })
+
+      tl.fromTo(
+        media,
+        {
+          y: '-15%'
+        },
+        {
+          y: '15%'
+        },
+        'start'
+      )
+      el.poTimeline = tl
+    })
+  },
   initBlurIn() {
     document.querySelectorAll('[data-blur-in]').forEach(el => {
       const tl = gsap.timeline({
@@ -206,7 +236,7 @@ const ScrollEffects = {
       //   })
       // }
 
-      tl.to(waves, { x: '-25%', opacity: 0 }, 'start')
+      tl.to(waves, { y: '30%', opacity: 0 }, 'start')
 
       section.poTimeline = tl
     })
@@ -231,7 +261,27 @@ const ScrollEffects = {
         tl.fromTo(image, { opacity: 1, '--blur': '0px', scale: 1 }, { opacity: 0, '--blur': '20px', scale: 0.5 }, index * 0.05)
       })
 
-      tl.to(waves, { x: '25%', opacity: 0 }, 'start')
+      tl.to(waves, { y: '25%', opacity: 0 }, 'start')
+
+      section.poTimeline = tl
+    })
+  },
+  initCta: () => {
+    document.querySelectorAll('.cta').forEach(section => {
+      const waves = section.querySelector('.waves')
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          pin: false,
+          trigger: section,
+          scrub: 1,
+          start: `top bottom`,
+          end: () => `bottom top`,
+          invalidateOnRefresh: true
+        }
+      })
+
+      tl.fromTo(waves, { opacity: 0, y: '-20%' }, { y: '20%', opacity: 1 })
 
       section.poTimeline = tl
     })
@@ -240,6 +290,7 @@ const ScrollEffects = {
     document.querySelectorAll('.section.media-with-content').forEach(section => section.poTimeline?.scrollTrigger?.kill())
     document.querySelectorAll('.media-row').forEach(section => section.poTimeline?.scrollTrigger?.kill())
     document.querySelectorAll('.intro').forEach(section => section.poTimeline?.scrollTrigger?.kill())
+    document.querySelectorAll('.cta').forEach(section => section.poTimeline?.scrollTrigger?.kill())
     document.querySelectorAll('.marquee').forEach(section => section.poTimeline?.scrollTrigger?.kill())
     document.querySelectorAll('[data-blur-in]').forEach(section => section.poTimeline?.scrollTrigger?.kill())
     document.querySelectorAll('.section.hero-1').forEach(section => section.poTimeline?.scrollTrigger?.kill())

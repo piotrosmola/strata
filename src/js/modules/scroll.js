@@ -115,7 +115,7 @@ const Scroll = {
       $body.removeClass('viewport-scrolled')
     }
 
-    if (_.scrolled > 100) {
+    if (_.scrolled > 38) {
       $body.addClass('scrolled')
     } else {
       $body.removeClass('scrolled')

@@ -61,8 +61,7 @@
 
   <!-- Marquee -->
   <?php
-    includeBlock('blocks/marquee.php', array(
-      'text' => 'Everytime. Everywhere.',
+    includeBlock('blocks/media-parallax.php', array(
       'image' => 'assets/img/marquee-eco.jpg'
     ));
   ?>
@@ -152,6 +151,14 @@
         ),
         array(
           'image' => 'assets/img/dan.svg',
+          'url' => '#'
+        ),
+        array(
+          'image' => 'assets/img/awwards.svg',
+          'url' => '#'
+        ),
+        array(
+          'image' => 'assets/img/clutch.svg',
           'url' => '#'
         )
       )
