@@ -19,7 +19,7 @@
         <div class="section-content fullwidth">
           <div class="row justify-content-center">
             <div class="col-lg-10">
-              <h1 class="h2"><strong>Say hello</strong> To InnovatIVe Brand experiences</h1>
+              <h1 class="h2">Say hello To InnovatIVe Brand experiences</h1>
               <p class="lead border-left">Every brand moment is an opportunity for positive reinforcement.</p>
             </div>
           </div>

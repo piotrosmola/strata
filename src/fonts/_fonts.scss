@@ -13,3 +13,51 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Sofia Sans';
+  src: url($font-path + 'SofiaSans-ExtraBold.woff2') format('woff2'), url($font-path + 'SofiaSans-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sofia Sans';
+  src: url($font-path + 'SofiaSans-Light.woff2') format('woff2'), url($font-path + 'SofiaSans-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sofia Sans';
+  src: url($font-path + 'SofiaSans-Bold.woff2') format('woff2'), url($font-path + 'SofiaSans-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sofia Sans';
+  src: url($font-path + 'SofiaSans-Regular.woff2') format('woff2'), url($font-path + 'SofiaSans-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sofia Sans';
+  src: url($font-path + 'SofiaSans-Black.woff2') format('woff2'), url($font-path + 'SofiaSans-Black.woff') format('woff');
+  font-weight: 1000;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sofia Sans';
+  src: url($font-path + 'SofiaSans-Thin.woff2') format('woff2'), url($font-path + 'SofiaSans-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}

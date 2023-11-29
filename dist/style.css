@@ -574,6 +574,48 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   font-display: swap;
 }
 @font-face {
+  font-family: "Sofia Sans";
+  src: url(../dist/de6e87ce6925cc7dc301.woff2) format("woff2"), url(../dist/4facb8ebe93879fc0f1d.woff) format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sofia Sans";
+  src: url(../dist/5d8e7fcb19508d75b482.woff2) format("woff2"), url(../dist/1abf3c5f0e60befea400.woff) format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sofia Sans";
+  src: url(../dist/87b1cc6e54a0bd2526b2.woff2) format("woff2"), url(../dist/6b528e96de8b4355bde4.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sofia Sans";
+  src: url(../dist/54814627c29af4c49902.woff2) format("woff2"), url(../dist/8a197dec0f07e3b333bb.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sofia Sans";
+  src: url(../dist/e7e6497f5ddae046655a.woff2) format("woff2"), url(../dist/7d68f2a9c140188c1965.woff) format("woff");
+  font-weight: 1000;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sofia Sans";
+  src: url(../dist/029fbdd10f36b265ae23.woff2) format("woff2"), url(../dist/de9390dabe095026fc17.woff) format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
   font-family: "Icons";
   src: url(../dist/dd88d60e24145f9edb1c.woff?777f933d6dec931c5e1b4c6b143b94e7) format("woff"), url(../dist/428e171ab4f49f029964.ttf?777f933d6dec931c5e1b4c6b143b94e7) format("truetype");
   font-weight: normal;
