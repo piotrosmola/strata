@@ -1,0 +1,25 @@
+{
+    "name": "acf/video",
+    "title": "Video",
+    "description": "A video block.",
+    "style": [],
+    "script": [],
+    "category": "cbd-blocks",
+    "icon": "video-alt3",
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "video.php",
+        "renderCallback": "cbd_block_render"
+    },
+    "supports": {
+        "align": false,
+        "customClassName": false,
+        "mode": false
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "image": "preview.png"
+        }
+    }
+}

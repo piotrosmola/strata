@@ -1,0 +1,25 @@
+{
+    "name": "acf/image",
+    "title": "Image",
+    "description": "An image block.",
+    "style": [],
+    "script": [],
+    "category": "cbd-blocks",
+    "icon": "format-image",
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "image.php",
+        "renderCallback": "cbd_block_render"
+    },
+    "supports": {
+        "align": false,
+        "customClassName": false,
+        "mode": false
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "image": "preview.png"
+        }
+    }
+}

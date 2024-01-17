@@ -1,0 +1,25 @@
+{
+    "name": "acf/services",
+    "title": "Services",
+    "description": "A services block.",
+    "style": [],
+    "script": [],
+    "category": "cbd-blocks",
+    "icon": "admin-tools",
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "services.php",
+        "renderCallback": "cbd_block_render"
+    },
+    "supports": {
+        "align": false,
+        "customClassName": false,
+        "mode": false
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "image": "preview.png"
+        }
+    }
+}

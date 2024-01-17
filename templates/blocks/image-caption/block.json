@@ -1,0 +1,25 @@
+{
+    "name": "acf/image-caption",
+    "title": "Image Caption",
+    "description": "An image caption block.",
+    "style": [],
+    "script": [],
+    "category": "cbd-blocks",
+    "icon": "format-image",
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "image-caption.php",
+        "renderCallback": "cbd_block_render"
+    },
+    "supports": {
+        "align": false,
+        "customClassName": false,
+        "mode": false
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "image": "preview.png"
+        }
+    }
+}

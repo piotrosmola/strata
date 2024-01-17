@@ -1,0 +1,25 @@
+{
+    "name": "acf/quote",
+    "title": "Quote",
+    "description": "A quote block.",
+    "style": [],
+    "script": [],
+    "category": "cbd-blocks",
+    "icon": "format-quote",
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "quote.php",
+        "renderCallback": "cbd_block_render"
+    },
+    "supports": {
+        "align": false,
+        "customClassName": false,
+        "mode": false
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "image": "preview.png"
+        }
+    }
+}

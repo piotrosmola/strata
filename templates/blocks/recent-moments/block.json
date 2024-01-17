@@ -1,0 +1,25 @@
+{
+    "name": "acf/recent-moments",
+    "title": "Recent Moments",
+    "description": "A recent moments block.",
+    "style": [],
+    "script": [],
+    "category": "cbd-blocks",
+    "icon": "camera-alt",
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "recent-moments.php",
+        "renderCallback": "cbd_block_render"
+    },
+    "supports": {
+        "align": false,
+        "customClassName": false,
+        "mode": false
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "image": "preview.png"
+        }
+    }
+}

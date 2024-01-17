@@ -1,0 +1,25 @@
+{
+    "name": "acf/shortext",
+    "title": "Shortext",
+    "description": "A shortext block.",
+    "style": [],
+    "script": [],
+    "category": "cbd-blocks",
+    "icon": "text",
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "shortext.php",
+        "renderCallback": "cbd_block_render"
+    },
+    "supports": {
+        "align": false,
+        "customClassName": false,
+        "mode": false
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "image": "preview.png"
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "name": "acf/cards",
+    "title": "Cards",
+    "description": "A cards block.",
+    "style": [],
+    "script": [],
+    "category": "cbd-blocks",
+    "icon": "admin-page",
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "cards.php",
+        "renderCallback": "cbd_block_render"
+    },
+    "supports": {
+        "align": false,
+        "customClassName": false,
+        "mode": false
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "image": "preview.png"
+        }
+    }
+}

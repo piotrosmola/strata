@@ -1,0 +1,25 @@
+{
+    "name": "acf/moment",
+    "title": "Moment",
+    "description": "A moment block.",
+    "style": [],
+    "script": [],
+    "category": "cbd-blocks",
+    "icon": "camera-alt",
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "moment.php",
+        "renderCallback": "cbd_block_render"
+    },
+    "supports": {
+        "align": false,
+        "customClassName": false,
+        "mode": false
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "image": "preview.png"
+        }
+    }
+}

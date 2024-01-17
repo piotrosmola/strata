@@ -1,0 +1,25 @@
+{
+    "name": "acf/stats",
+    "title": "Stats",
+    "description": "A stats block.",
+    "style": [],
+    "script": [],
+    "category": "cbd-blocks",
+    "icon": "chart-bar",
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "stats.php",
+        "renderCallback": "cbd_block_render"
+    },
+    "supports": {
+        "align": false,
+        "customClassName": false,
+        "mode": false
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "image": "preview.png"
+        }
+    }
+}

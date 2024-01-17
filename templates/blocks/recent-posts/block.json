@@ -1,0 +1,25 @@
+{
+    "name": "acf/recent-posts",
+    "title": "Recent Posts",
+    "description": "A recent posts block.",
+    "style": [],
+    "script": [],
+    "category": "cbd-blocks",
+    "icon": "admin-post",
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "recent-posts.php",
+        "renderCallback": "cbd_block_render"
+    },
+    "supports": {
+        "align": false,
+        "customClassName": false,
+        "mode": false
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "image": "preview.png"
+        }
+    }
+}

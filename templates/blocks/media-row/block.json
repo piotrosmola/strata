@@ -1,0 +1,25 @@
+{
+    "name": "acf/media-row",
+    "title": "Media Row",
+    "description": "A media row block.",
+    "style": [],
+    "script": [],
+    "category": "cbd-blocks",
+    "icon": "images-alt",
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "media-row.php",
+        "renderCallback": "cbd_block_render"
+    },
+    "supports": {
+        "align": false,
+        "customClassName": false,
+        "mode": false
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "image": "preview.png"
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "name": "acf/accordion",
+    "title": "Accordion",
+    "description": "An accordion block.",
+    "style": [],
+    "script": [],
+    "category": "cbd-blocks",
+    "icon": "menu-alt3",
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "accordion.php",
+        "renderCallback": "cbd_block_render"
+    },
+    "supports": {
+        "align": false,
+        "customClassName": false,
+        "mode": false
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "image": "preview.png"
+        }
+    }
+}

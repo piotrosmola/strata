@@ -1,0 +1,25 @@
+{
+    "name": "acf/features",
+    "title": "Features",
+    "description": "A features block.",
+    "style": [],
+    "script": [],
+    "category": "cbd-blocks",
+    "icon": "list-view",
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "features.php",
+        "renderCallback": "cbd_block_render"
+    },
+    "supports": {
+        "align": false,
+        "customClassName": false,
+        "mode": false
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "image": "preview.png"
+        }
+    }
+}

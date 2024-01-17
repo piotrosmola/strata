@@ -1,0 +1,25 @@
+{
+    "name": "acf/featured-moments",
+    "title": "Featured Moments",
+    "description": "A featured moments block.",
+    "style": [],
+    "script": [],
+    "category": "cbd-blocks",
+    "icon": "camera-alt",
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "featured-moments.php",
+        "renderCallback": "cbd_block_render"
+    },
+    "supports": {
+        "align": false,
+        "customClassName": false,
+        "mode": false
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "image": "preview.png"
+        }
+    }
+}
