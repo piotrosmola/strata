@@ -11,6 +11,7 @@ const Carousel = {
 
       const slidesPerView = el.getAttribute('data-slides-per-view')
       const spaceBetween = eval(el.getAttribute('data-space-between'))
+      const loop = eval(el.getAttribute('data-loop'))
       const breakpointsAttr = eval(
         el.getAttribute('data-breakpoints') || [
           ['0', 2, 30],
@@ -43,6 +44,9 @@ const Carousel = {
         touchStartPreventDefault: false,
         autoplay,
         breakpoints,
+        loop,
+        loopAddBlankSlides: true,
+        loopAdditionalSlides: 3,
         watchSlidesProgress: true,
         navigation: {
           nextEl: el.querySelector('.swiper-button-next'),

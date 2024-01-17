@@ -2,8 +2,8 @@
 
 @font-face {
   font-family:"Icons";
-  src:url("../fonts/icons-777f933d6dec931c5e1b4c6b143b94e7.woff?777f933d6dec931c5e1b4c6b143b94e7") format("woff"),
-		url("../fonts/icons-777f933d6dec931c5e1b4c6b143b94e7.ttf?777f933d6dec931c5e1b4c6b143b94e7") format("truetype");
+  src:url("../fonts/icons-378003e4e5c94a06c4e821949109a10b.woff?378003e4e5c94a06c4e821949109a10b") format("woff"),
+		url("../fonts/icons-378003e4e5c94a06c4e821949109a10b.ttf?378003e4e5c94a06c4e821949109a10b") format("truetype");
   font-weight:normal;
   font-style:normal;
 }
@@ -32,7 +32,8 @@ $icons: (
   plus: "f113",
   tick: "f114",
   ticket: "f115",
-  twitter: "f116",
+  tiktok: "f116",
+  twitter: "f117",
 );
 
 @mixin icon($icon) {
@@ -138,6 +139,10 @@ $icons: (
 
 .i-ticket:before {
   @include icon(ticket);
+}
+
+.i-tiktok:before {
+  @include icon(tiktok);
 }
 
 .i-twitter:before {

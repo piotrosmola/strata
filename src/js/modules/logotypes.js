@@ -13,7 +13,7 @@ const Logotypes = {
       const carousel = marqueeCarousel(items, {
         paused: false,
         draggable: true,
-        speed: 2,
+        speed: 8,
         center: false
       })
     })

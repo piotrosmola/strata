@@ -16,7 +16,7 @@
 				<h3 class="outline-text mb-layout-xs"><?php echo $title; ?></h3>
 			<?php endif; ?>
 			<?php if($moments): ?>
-				<div class="carousel carousel-moments swiper" data-breakpoints="[['0', 1, 30], ['575', 2, 30], ['991', 3, 60]]">
+				<div class="carousel carousel-moments swiper" data-breakpoints="[['0', 1, 30], ['575', 2, 30], ['991', 3, 60]]" data-autoplay="true" data-loop="true">
 					<div class="swiper-wrapper">
 						<?php foreach($moments as $post):setup_postdata($post); ?>
 							<div class="swiper-slide">

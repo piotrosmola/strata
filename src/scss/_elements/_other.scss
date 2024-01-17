@@ -92,6 +92,7 @@
 
 /* Stats */
 .stats-row {
+  justify-content: center;
   // @include media('>sm') {
   //   > * {
   //     @for $i from 1 through 3 {
@@ -106,22 +107,24 @@
 .stat {
   margin-bottom: 2rem;
   @include last-mb-0;
+  text-align: center;
 
   &-value {
     @include font('secondary', 'extrabold');
-    font-size: calc(7rem + 2vw);
+    font-size: calc(6rem + 1.75vw);
     line-height: 0.85;
     color: transparent;
     -webkit-text-stroke: 1px $color-global;
+    letter-spacing: -0.04em;
 
     @include media('<=lg') {
-      font-size: calc(5rem + 0.5vw);
+      font-size: calc(4.25rem + 0.5vw);
     }
     @include media('<=md') {
-      font-size: 4.5rem;
+      font-size: 4rem;
     }
     @include media('<=xs') {
-      font-size: 4rem;
+      font-size: 3.75rem;
     }
   }
 }

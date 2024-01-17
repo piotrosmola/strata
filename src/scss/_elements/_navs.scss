@@ -18,7 +18,10 @@
     margin-left: -1rem;
 
     &:not(:last-child) {
-      margin-bottom: 1rem;
+      margin-bottom: 1.25vh;
+      @include media('<=xs') {
+        margin-bottom: 1rem;
+      }
     }
 
     > a {
@@ -27,20 +30,30 @@
       font-size: calc(2.25rem + 4vh);
       line-height: 1.1;
       display: inline-block;
+      @include media('height<=760px', '>xxl') {
+        font-size: calc(2.25rem + 1vh);
+      }
 
       @include media('<=xxl') {
         font-size: calc(2rem + 3vh);
         line-height: 1.05;
+        @include media('height<=660px', '>lg') {
+          font-size: 2.5rem;
+        }
       }
       @include media('<=lg') {
         font-size: 2.5rem;
+
+        @include media('height<=660px', '>xs') {
+          font-size: 2.25rem;
+        }
       }
       @include media('>xs') {
         color: transparent;
         -webkit-text-stroke: 1px $color-global;
       }
       @include media('<=xs') {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
       }
 
       > span {
@@ -161,10 +174,10 @@
 }
 
 /* Tabs */
-
 .nav-tabs {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 1rem;
   overflow: auto;
   margin-left: -$outer-margin;
@@ -174,7 +187,7 @@
 
   &-centered {
     justify-content: center;
-    gap: 5%;
+    gap: 4%;
   }
 
   li {
@@ -183,17 +196,16 @@
       @include reset('button');
       text-transform: uppercase;
       @include font('secondary', 'bold');
-      font-size: 1.55rem;
+      font-size: 1.4rem;
       filter: blur(1px);
       opacity: 0.4;
       transform: scale(0.8);
       @include transition-primary('transform, opacity, filter');
       letter-spacing: 0.07em;
       padding: 0.25rem 0;
-      white-space: nowrap;
 
       @include media('<=sm') {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
       }
 
       &::before {

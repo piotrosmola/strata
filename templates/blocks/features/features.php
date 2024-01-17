@@ -27,7 +27,7 @@
 				<?php if($features): ?>
 					<?php foreach($features as $key => $feature): ?>
 						<!-- Feature Card -->
-						<div class="section-card wysiwyg" data-speed="<?php echo 1 + ($key * 0.15); ?>">
+						<div class="section-card wysiwyg">
 							<?php if($feature['title']) echo '<h5>'.$feature['title'].'</h5>'; ?>
 							<?php echo $feature['text']; ?>
 						</div>

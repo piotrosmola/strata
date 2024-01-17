@@ -8,7 +8,7 @@
             ['0', 1, 30],
             ['575', 2, 30],
             ['991', 3, 60],
-          ]">
+          ]" data-autoplay="true" data-loop="true">
           <div class="swiper-wrapper">
             <?php foreach ($moments as $key => $moment): ?>
             <div class="swiper-slide">

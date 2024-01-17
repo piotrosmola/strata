@@ -34,7 +34,7 @@
 								<div class="panel-content">
 									<?php if($text || $link): ?>
 										<div class="wysiwyg">
-											<?php echo $ptext; ?>
+											<?php echo $text; ?>
 											<?php if($link): ?>
 												<a href="<?php echo $link['url']; ?>"<?php if($link['target']) echo ' target="'.$link['target'].'"'; ?> class="btn btn-primary" data-mp>
 													<span class="btn-outline" data-mp-item data-mp-scale="1.1"></span>
