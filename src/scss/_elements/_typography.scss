@@ -296,11 +296,11 @@ blockquote {
       content: ' ';
     }
 
-    @include media('<=md') {
-      font-size: 1.5rem;
+    @include media('<=lg') {
+      font-size: 1.25rem;
     }
+
     @include media('<=xs') {
-      font-size: 1.35rem;
       padding-left: 2rem;
     }
   }

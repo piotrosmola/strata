@@ -14,8 +14,20 @@
   }
 
   .section-content {
+    h2 {
+      // font-size: calc(2.5rem + 1.75vw);
+      // line-height: 1;
+
+      // @include media('<=lg') {
+      //   font-size: calc(2.5rem + 0.5vw);
+      // }
+      // @include media('<=md') {
+      //   font-size: 2.5rem;
+      // }
+    }
+
     p {
-      max-width: 24rem;
+      max-width: 32rem;
     }
   }
 }

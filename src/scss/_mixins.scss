@@ -218,4 +218,8 @@
   font-size: 0.5rem;
   letter-spacing: 0.45em;
   text-transform: uppercase;
+
+  @include media('<=xs') {
+    letter-spacing: 0.325em;
+  }
 }

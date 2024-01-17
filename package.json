@@ -4,7 +4,8 @@
   "author": "Piotr Osmola",
   "scripts": {
     "dev": "webpack --config build/webpack.dev.conf.js",
-    "build": "webpack --config build/webpack.prod.conf.js; rm -rf node_modules/",
+    "build": "webpack --config build/webpack.prod.conf.js",
+    "deploy": "webpack --config build/webpack.prod.conf.js; rm -rf node_modules/",
     "images": "grunt imagemin",
     "icons": "grunt clean --icons; grunt webfont",
     "validate": "grunt validation"

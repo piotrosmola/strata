@@ -81,18 +81,18 @@
       }
 
       &:nth-child(2n) {
-        margin: 4rem 0;
-        padding: 0 1.5rem;
+        // margin: 4rem 0;
+        // padding: 0 1.5rem;
         @include media('<=xl') {
-          margin: 3rem 0;
-          padding: 0 0.75rem;
+          // margin: 3rem 0;
+          // padding: 0 0.75rem;
         }
-        @include media('<=lg') {
-          margin: 2rem 0;
-        }
-        @include media('<=sm') {
-          margin: 1rem 0;
-        }
+        // @include media('<=lg') {
+        //   margin: 2rem 0;
+        // }
+        // @include media('<=sm') {
+        //   margin: 1rem 0;
+        // }
       }
     }
   }

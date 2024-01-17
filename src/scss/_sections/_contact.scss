@@ -6,7 +6,7 @@
     position: relative;
     z-index: 1;
     @include media('<=md') {
-      padding-bottom: 85%;
+      padding-bottom: 95%;
     }
   }
 
@@ -33,7 +33,7 @@
       top: -50%;
     }
     @include media('<=md') {
-      top: -80%;
+      top: -40%;
       left: -100%;
       right: 0%;
     }

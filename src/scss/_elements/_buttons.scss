@@ -248,6 +248,7 @@
   font-size: 0.85rem;
   @include transition-primary('transform, color');
   padding: 0;
+  flex-shrink: 0;
 
   &::before {
     @include cover;

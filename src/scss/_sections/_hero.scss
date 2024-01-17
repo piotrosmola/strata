@@ -7,6 +7,11 @@
   display: flex;
   align-items: center;
 
+  @include media('<=lg', 'portrait') {
+    min-height: 80vh;
+    margin-bottom: -15vh;
+  }
+
   .section-bg {
     margin-top: 18vh;
     transform-origin: right center;
@@ -69,7 +74,7 @@
     display: flex;
     flex-direction: column;
 
-    @include media('<=sm') {
+    @include media('<=lg') {
       padding-top: 5rem;
     }
 
@@ -200,6 +205,12 @@
     .lead {
       max-width: 28rem;
     }
+
+    h1.h2 {
+      @include media('<=xs') {
+        font-size: 2.5rem;
+      }
+    }
   }
 
   .section-action {
@@ -307,7 +318,7 @@
   }
 
   .section-content {
-    @include media('>sm') {
+    @include media('>md') {
       max-width: 80%;
       @include last-mb-0;
     }

@@ -34,7 +34,7 @@
     content: ' ';
   }
 
-  @include media('<=sm') {
+  @include media('<=lg') {
     height: $header-height-mobile;
   }
 
@@ -101,7 +101,7 @@
       img {
         height: $header-height-desktop * 0.25;
         display: block;
-        @include media('<=sm') {
+        @include media('<=lg') {
           height: $header-height-mobile * 0.3;
         }
       }

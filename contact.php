@@ -37,20 +37,20 @@
           <div class="col-lg-10">
             <!-- Details -->
             <div class="row row-details">
-              <div class="col-md-4 col-sm-6 mb-layout-sm">
+              <div class="col-lg-4 col-sm-6 mb-layout-sm">
                 <h5 class="border-bottom">General Enquiries</h5>
                 <address class="text-lg">
                   <a href="#">info@stratacreate.com</a><br>
                   <a href="#">+44 (0)20 7605 4500</a>
                 </address>
               </div>
-              <div class="col-md-4 col-sm-6 mb-layout-sm">
+              <div class="col-lg-4 col-sm-6 mb-layout-sm">
                 <h5 class="border-bottom">New Business</h5>
                 <address class="text-lg">
                   <a href="#">giles.cattle@stratacreate.com</a><br>
                 </address>
               </div>
-              <div class="col-md-4 col-sm-6 mb-layout-sm">
+              <div class="col-lg-4 col-sm-6 mb-layout-sm">
                 <h5 class="border-bottom">Careers</h5>
                 <address class="text-lg">
                   <a href="#">careers@stratacreate.com</a><br>

@@ -53,7 +53,9 @@
     }
 
     .wysiwyg {
-      max-width: 65%;
+      @include media('>lg') {
+        max-width: 65%;
+      }
     }
   }
 

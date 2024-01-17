@@ -20,10 +20,6 @@ function includeBlock($filePath, $variables = array())
   <!-- Title -->
   <title>Strata</title>
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
   <!-- CSS Core -->
   <link rel="stylesheet" href="./dist/style.css" />
 </head>

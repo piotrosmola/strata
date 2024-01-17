@@ -85,6 +85,10 @@
         margin-top: 3rem;
       }
 
+      @include media('<=xs') {
+        margin-top: 2rem;
+      }
+
       body.navigation-open & {
         opacity: 1;
         transition-delay: 0.4s;
@@ -119,6 +123,11 @@
     }
 
     &-navigation {
+      @include media('<=md', '>xs') {
+        margin-bottom: auto;
+        margin-top: auto;
+      }
+
       .nav-primary {
         li {
           @include transition-secondary('opacity');

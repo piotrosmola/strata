@@ -5,10 +5,6 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 
 const webpackConfig = merge(baseWebpackConfig, {
   mode: 'development',
-  output: {
-    path: path.resolve(__dirname, '../dist'),
-    filename: '[name].bundle.js'
-  },
   plugins: [
     new BrowserSyncPlugin({
       host: 'localhost',
