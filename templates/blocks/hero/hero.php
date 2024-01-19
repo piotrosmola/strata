@@ -2,6 +2,7 @@
 /**
  * Block Name: Hero
  */
+require(get_template_directory() . '/inc/breadcrumbs.php');
 ?>
 <?php $title = get_field('title'); ?>
 <?php $text = get_field('text'); ?>
@@ -12,6 +13,7 @@
 <?php $center = get_field('center'); ?>
 <?php $full_width = get_field('full_width'); ?>
 <?php $align = get_field('align'); ?>
+<?php $add_breadcrumbs = get_field('add_breadcrumbs'); ?>
 <?php $title_size = get_field('title_size') ?? 'h3'; ?>
 <?php $layout = get_field('layout') ?? 'hero-2'; ?>
 <!-- Section - Hero #1 -->
@@ -34,6 +36,7 @@
         <div class="container-inner">
             <!-- Content -->
             <div class="section-content<?php if($image) echo ' has-images'; ?><?php if($center) echo ' fullwidth'; ?>">
+                <?php if($add_breadcrumbs): echo get_breadcrumbs(); endif; ?>
                 <?php if($center): ?>
                     <div class="row<?php if($full_width) echo ' justify-content-center'; ?>"><div class="<?php echo ($full_width) ? 'col-lg-10' : 'col-md-9 ml-auto'; ?>">
                 <?php endif; ?>

@@ -2,6 +2,7 @@
 /**
  * Block Name: Moment
  */
+require(get_template_directory() . '/inc/breadcrumbs.php');
 ?>
 <?php $bg_video = get_field('bg_video'); ?>
 <?php $image = get_field('image'); ?>
@@ -39,6 +40,7 @@
 	        <?php if($title || $title || $text): ?>
 	            <!-- Content -->
 	            <div class="section-content">
+                <?php echo get_breadcrumbs(); ?>
 	            	<?php if($subtitle): ?>
 	                	<div class="collab"><?php echo $subtitle; ?></div>
 	                <?php endif; ?>

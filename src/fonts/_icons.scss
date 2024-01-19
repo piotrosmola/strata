@@ -2,8 +2,8 @@
 
 @font-face {
   font-family:"Icons";
-  src:url("../fonts/icons-378003e4e5c94a06c4e821949109a10b.woff?378003e4e5c94a06c4e821949109a10b") format("woff"),
-		url("../fonts/icons-378003e4e5c94a06c4e821949109a10b.ttf?378003e4e5c94a06c4e821949109a10b") format("truetype");
+  src:url("../fonts/icons-0d0bad530d85c9db1bff1ef0f94bd4f7.woff?0d0bad530d85c9db1bff1ef0f94bd4f7") format("woff"),
+		url("../fonts/icons-0d0bad530d85c9db1bff1ef0f94bd4f7.ttf?0d0bad530d85c9db1bff1ef0f94bd4f7") format("truetype");
   font-weight:normal;
   font-style:normal;
 }
@@ -12,28 +12,29 @@
 $icons: (
 
   angle-down: "f101",
-  angle-up: "f102",
-  arrow-down: "f103",
-  arrow-left-fat: "f104",
-  arrow-left: "f105",
-  arrow-right: "f106",
-  arrow-top-right-fat: "f107",
-  arrow-top-right: "f108",
-  attach: "f109",
-  chart: "f10a",
-  chat: "f10b",
-  check: "f10c",
-  email: "f10d",
-  facebook: "f10e",
-  instagram: "f10f",
-  linkedin: "f110",
-  map-marker: "f111",
-  play: "f112",
-  plus: "f113",
-  tick: "f114",
-  ticket: "f115",
-  tiktok: "f116",
-  twitter: "f117",
+  angle-right: "f102",
+  angle-up: "f103",
+  arrow-down: "f104",
+  arrow-left-fat: "f105",
+  arrow-left: "f106",
+  arrow-right: "f107",
+  arrow-top-right-fat: "f108",
+  arrow-top-right: "f109",
+  attach: "f10a",
+  chart: "f10b",
+  chat: "f10c",
+  check: "f10d",
+  email: "f10e",
+  facebook: "f10f",
+  instagram: "f110",
+  linkedin: "f111",
+  map-marker: "f112",
+  play: "f113",
+  plus: "f114",
+  tick: "f115",
+  ticket: "f116",
+  tiktok: "f117",
+  twitter: "f118",
 );
 
 @mixin icon($icon) {
@@ -59,6 +60,10 @@ $icons: (
 
 .i-angle-down:before {
   @include icon(angle-down);
+}
+
+.i-angle-right:before {
+  @include icon(angle-right);
 }
 
 .i-angle-up:before {

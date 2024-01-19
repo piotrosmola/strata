@@ -3,6 +3,7 @@
  * The template for displaying single post
  * @package CBD
  */
+require(get_template_directory() . '/inc/breadcrumbs.php');
 ?>
 <?php $author = get_user_by('id', get_the_author_ID()); ?>
 <?php $avatar = get_field('avatar', $author); ?>
@@ -23,6 +24,7 @@
         <div class="container-inner">
             <!-- Content -->
             <div class="section-content fullwidth">
+              <?php echo get_breadcrumbs(); ?>
             	<?php if($categories): ?>
             		<?php foreach($categories as $category): ?>
                 		<span class="badge badge-<?php echo (get_field('color', $category)) ?? 'green'; ?>"><?php echo $category->name; ?></span>
