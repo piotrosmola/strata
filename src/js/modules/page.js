@@ -2,12 +2,15 @@ import gsap from 'gsap'
 import imagesLoaded from 'imagesloaded'
 
 import Preloader from './preloader'
+import Scroll from './scroll'
 import ScrollEffects from './scroll-effects'
 
 imagesLoaded.makeJQueryPlugin($)
 
 const Page = {
   $workItemImage: null,
+  previousPosition: 0,
+  momentPopEvent: false,
 
   init() {
     const _ = this
@@ -19,10 +22,18 @@ const Page = {
     _.$body.append(_.$tmp)
 
     _.$body.on('click', 'a:not([target="_blank"])', function () {
+      _.momentPopEvent = false
       _.$workItemImage = null
 
       const $self = $(this)
       const url = $self.attr('href')
+      const $momentsSection = $self.parents('.moments')
+
+      if ($momentsSection.length) {
+        _.previousPosition = Scroll.scroller.scrollTop()
+      } else {
+        _.previousPosition = null
+      }
 
       if (url !== '#' && !url.includes('mailto:') && !url.includes('tel:')) {
         if ($self.hasClass('moment-card')) {
@@ -77,6 +88,13 @@ const Page = {
     })
 
     $(window).on('popstate', function (event) {
+      Scroll.scroller?.paused(true)
+
+      if (_.$body.find('.hero-moment')) {
+        _.momentPopEvent = true
+      } else {
+        _.momentPopEvent = false
+      }
       Preloader.show()
       setTimeout(() => {
         _.load(document.location.href)
@@ -89,6 +107,7 @@ const Page = {
 
     _.$tmp.load(`${url} #content`, function (res) {
       document.title = $(res).filter('title').text()
+
       _.$tmp.find('.section').unwrap()
       _.updateUrl(url)
 
@@ -121,10 +140,15 @@ const Page = {
 
     ScrollEffects.killAll()
     _.$content.html('').append(_.$tmp.children())
+    _.$tmp.html('')
     window.dispatchEvent(new Event('resize'))
   },
-  goHome() {
+  handlePageLoaded() {
     const _ = this
+
+    if (_.$body.find('.moments').length && _.previousPosition && _.momentPopEvent) {
+      Scroll.scroller.scrollTo(_.previousPosition, true)
+    }
   }
 }
 

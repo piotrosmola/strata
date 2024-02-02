@@ -10,7 +10,7 @@
   ?>
 
   <!-- Section - Moments -->
-  <section class="section">
+  <section class="section moments">
     <!-- Container -->
     <div class="section-container container">
       <div class="container-inner">
@@ -105,6 +105,17 @@
           <a href="single-moment.php" class="moment-card" data-cursor="oval">
             <div class="moment-card-media">
               <img src="assets/img/project02.jpg" alt="" />
+            </div>
+            <div class="moment-card-content">
+              <span class="badge badge-green">Insight</span>
+              <h5>Porsche Showroom</h5>
+              <p>Donec convallis laoreet dui, nec fermentum ante scelerisque non.</p>
+            </div>
+          </a>
+          <!-- Moment Card -->
+          <a href="single-moment.php" class="moment-card" data-cursor="oval">
+            <div class="moment-card-media">
+              <img src="assets/img/project03.jpg" alt="" />
             </div>
             <div class="moment-card-content">
               <span class="badge badge-green">Insight</span>

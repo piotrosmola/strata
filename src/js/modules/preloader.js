@@ -78,7 +78,7 @@ const Preloader = {
     }, 100)
 
     setTimeout(() => {
-      Scroll.scroller?.scrollTo(0)
+      Scroll.scroller?.scrollTo(0, false)
       Scroll.handle({ progress: 0, scrollTop: () => 0 })
       Navigation.hide()
     }, 750)

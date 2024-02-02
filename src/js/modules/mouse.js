@@ -12,7 +12,7 @@ const Mouse = {
     Array.from(this.$mouseParallax).forEach(el => new MouseParallax(el))
 
     if (!Preloader.initialized) _.cursorRef = new Cursor(_.$cursor)
-    else _.cursorRef.initEvents(document.querySelector('#content'))
+    else _.cursorRef?.initEvents(document.querySelector('#content'))
   }
 }
 

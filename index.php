@@ -82,7 +82,7 @@
   ?>
 
   <!-- Section - Moments -->
-  <section class="section">
+  <section class="section moments">
     <!-- Container -->
     <div class="section-container container">
       <div class="container-inner">

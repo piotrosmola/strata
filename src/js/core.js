@@ -35,6 +35,8 @@ window.addEventListener('page-loaded', () => {
   ScrollEffects.init()
   VideoModal.init()
 
+  Page.handlePageLoaded()
+
   if (!isTouchDevice()) {
     Mouse.init()
   }

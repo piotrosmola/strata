@@ -144,7 +144,7 @@ address {
   &.text-lg {
     font-size: 1.4rem;
 
-    @include media('<=md') {
+    @include media('<=xxl') {
       font-size: 1.2rem;
     }
     @include media('<=xs') {

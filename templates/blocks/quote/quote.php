@@ -8,14 +8,15 @@
 <?php $image = get_field('image'); ?>
 <?php $quote = get_field('quote'); ?>
 <?php $cite = get_field('cite'); ?>
+<?php $reverse = get_field('reverse'); ?>
 <!-- Section - Media + Quote -->
 <section class="section">
   <!-- Container -->
   <div class="section-container container">
     <div class="container-inner">
-      <div class="row gutters-lg">
+      <div class="row gutters-lg <?php echo $reverse ? 'reverse' : '' ?>">
         <?php if($type === 'video' && $video): ?>
-        <div class="<?php if($quote || $cite) echo 'col-sm-4 '; ?>mb-layout-sm mb-sm-0">
+        <div class=" <?php if($quote || $cite) echo 'col-sm-4 '; ?>mb-layout-sm mb-sm-0">
           <!-- Media -->
           <div class="media">
             <video src="<?php echo $video; ?>" autoplay muted playsinline></video>

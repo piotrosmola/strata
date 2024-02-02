@@ -4,23 +4,20 @@
 .moments-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 0 8%;
   align-items: center;
-
-  @include media('<=xxl') {
-    gap: 5%;
-  }
-
-  @include media('<=lg') {
-    gap: 4%;
-  }
+  justify-content: space-between;
 
   > * {
-    flex: 1 0 25%;
+    flex: 0 0 27%;
     // margin-bottom: 5%;
+
+    @include media('<=xxl') {
+      flex: 0 0 29%;
+    }
 
     @include media('<=lg') {
       margin-bottom: 2rem;
+      flex: 0 0 30%;
     }
 
     @include media('>lg') {
@@ -36,7 +33,7 @@
     }
 
     @include media('<=md') {
-      flex: 1 0 50%;
+      flex: 0 0 48%;
     }
 
     @include media('<=xs') {
