@@ -5709,15 +5709,25 @@ body.page-show-content .section-bg {
 /* Intro
 ----------------------------------------------------------*/
 .section.intro {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
+}
+@media (max-width: 991px) {
+  .section.intro {
+    min-height: 60vh;
+  }
 }
 .section.intro .section-bg {
   position: absolute;
   bottom: auto;
   height: 100vh;
   transition: none;
+}
+@media (max-width: 991px) {
+  .section.intro .section-bg {
+    display: none;
+  }
 }
 .section.intro .section-bg > img {
   position: absolute;

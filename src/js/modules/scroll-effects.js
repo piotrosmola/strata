@@ -96,7 +96,9 @@ const ScrollEffects = {
 
       tl.addLabel('start')
       section.querySelectorAll('.section-bg img').forEach((card, index) => {
-        tl.fromTo(card, { '--blur': '10px', scale: 0.75, opacity: 0.2 }, { scale: 1.25, opacity: 0.4, '--blur': '0px' }, `start+=${index * 0.1}`)
+        if (window.innerWidth > 991) {
+          tl.fromTo(card, { '--blur': '10px', scale: 0.75, opacity: 0.2 }, { scale: 1.25, opacity: 0.4, '--blur': '0px' }, `start+=${index * 0.1}`)
+        }
       })
       tl.addLabel('zooming')
       tl.fromTo(bg, { scale: 1 }, { scale: () => (window.innerWidth > window.innerHeight ? 2.75 : 4), ease: 'power3.in' }, 'start+=95%').fromTo(

@@ -2,15 +2,23 @@
 ----------------------------------------------------------*/
 
 .section.intro {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
+
+  @include media('<=md') {
+    min-height: 60vh;
+  }
 
   .section-bg {
     position: absolute;
     bottom: auto;
     height: 100vh;
     transition: none;
+
+    @include media('<=md') {
+      display: none;
+    }
 
     > img {
       position: absolute;
