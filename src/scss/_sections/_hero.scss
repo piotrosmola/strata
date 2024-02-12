@@ -13,11 +13,17 @@
   }
 
   .section-bg {
-    margin-top: 18vh;
-    transform-origin: right center;
-    @include media('<=sm') {
-      margin-top: 50vh;
-      right: -100%;
+    &:not(.has-video):not(.has-image) {
+      margin-top: 18vh;
+      transform-origin: right center;
+      @include media('<=sm') {
+        margin-top: 50vh;
+        right: -100%;
+      }
+    }
+    &.has-video,
+    &.has-image {
+      mask-image: linear-gradient(to bottom, rgba(black, 0.75), transparent);
     }
   }
 

@@ -5384,15 +5384,19 @@ body.page-show-content .section-bg {
     margin-bottom: -15vh;
   }
 }
-.section.hero-1 .section-bg {
+.section.hero-1 .section-bg:not(.has-video):not(.has-image) {
   margin-top: 18vh;
   transform-origin: right center;
 }
 @media (max-width: 767px) {
-  .section.hero-1 .section-bg {
+  .section.hero-1 .section-bg:not(.has-video):not(.has-image) {
     margin-top: 50vh;
     right: -100%;
   }
+}
+.section.hero-1 .section-bg.has-video, .section.hero-1 .section-bg.has-image {
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), transparent);
+          mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), transparent);
 }
 @media (min-width: 768px) {
   .section.hero-1 .section-container > .container-inner {
@@ -6199,7 +6203,11 @@ body.page-show-content .section-bg {
   opacity: 1;
 }
 .bg-video img {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 2;
   transition-duration: 0.3s;
   transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
