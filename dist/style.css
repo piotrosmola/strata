@@ -617,7 +617,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
 }
 @font-face {
   font-family: "Icons";
-  src: url(../dist/08731849a99c6a0ee918.woff?0d0bad530d85c9db1bff1ef0f94bd4f7) format("woff"), url(../dist/032ec7692aa60d04b41f.ttf?0d0bad530d85c9db1bff1ef0f94bd4f7) format("truetype");
+  src: url(../dist/52eb84373a8271730565.woff?0d0bad530d85c9db1bff1ef0f94bd4f7) format("woff"), url(../dist/41f5010b436701ea69d2.ttf?0d0bad530d85c9db1bff1ef0f94bd4f7) format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -5395,8 +5395,8 @@ body.page-show-content .section-bg {
   }
 }
 .section.hero-1 .section-bg.has-video, .section.hero-1 .section-bg.has-image {
-  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), transparent);
-          mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), transparent);
+  -webkit-mask-image: linear-gradient(to bottom, black, transparent);
+          mask-image: linear-gradient(to bottom, black, transparent);
 }
 @media (min-width: 768px) {
   .section.hero-1 .section-container > .container-inner {
