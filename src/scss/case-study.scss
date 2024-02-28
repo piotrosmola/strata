@@ -1,0 +1,368 @@
+@use 'sass:math';
+@use 'sass:list';
+
+// Import Libs
+@import 'include-media/dist/_include-media.scss';
+@import 'sass-easing/_easings.scss';
+@import 'normalize.css/normalize';
+
+// Import Config
+@import 'variables';
+@import 'mixins';
+
+// Import Icons & Fonts
+@import '../fonts/icons';
+@import '../fonts/fonts';
+
+// Import Partials'
+@import '_elements/backgrounds';
+@import '_elements/typography';
+@import '_elements/buttons';
+@import '_elements/waves';
+@import '_sections/marquee';
+@import '_sections/intro';
+
+$prefix: '.strata';
+$screen-shadow: 0px 4px 170px rgba(255, 255, 255, 0.15);
+
+#{$prefix}-case-study {
+  position: relative;
+  font-family: $font-primary;
+  font-weight: $font-primary-regular;
+  background-color: $color-body;
+  min-height: 100vh;
+  color: $color-global;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .container {
+    margin: 0 auto;
+    padding-left: $outer-margin;
+    padding-right: $outer-margin;
+    width: 100%;
+
+    &-inner {
+      @include media('>sm') {
+        max-width: 90%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  @each $breakpoint in $breakpoints-extended {
+    $name: list.nth($breakpoint, 1);
+    $size: list.nth($breakpoint, 2);
+    $container: list.nth($breakpoint, 3);
+    @media only screen and (min-width: $size) {
+      .container {
+        @if ($container == 'auto') {
+          width: 100%;
+        } @else {
+          width: calc(#{$container} + 2 * #{$outer-margin});
+        }
+      }
+    }
+  }
+
+  h1,
+  .h1 {
+    font-size: calc(6rem + 1.75vw);
+    line-height: 0.85;
+
+    @include media('<=xl') {
+      font-size: calc(5rem + 1.25vw);
+    }
+
+    @include media('<=lg') {
+      font-size: calc(4rem + 0.5vw);
+    }
+    @include media('<=md') {
+      font-size: 3.75rem;
+    }
+    @include media('<=xs') {
+      font-size: 3rem;
+    }
+  }
+
+  h2:not(.h2-marquee),
+  .h2:not(.h2-marquee) {
+    font-size: calc(5rem + 1.5vw);
+    line-height: 0.9;
+
+    @include media('<=xxl') {
+      font-size: calc(4.5rem + 0.75vw);
+    }
+
+    @include media('<=lg') {
+      font-size: calc(4rem + 0.25vw);
+    }
+    @include media('<=md') {
+      font-size: 3.5rem;
+    }
+    @include media('<=xs') {
+      font-size: 2.5rem;
+    }
+  }
+
+  h3,
+  .h3 {
+    font-size: calc(3rem + 1.75vw);
+    line-height: 1;
+
+    @include media('<=lg') {
+      font-size: calc(2.75rem + 0.5vw);
+    }
+    @include media('<=md') {
+      font-size: 2.5rem;
+    }
+    @include media('<=xs') {
+      font-size: 2rem;
+    }
+  }
+
+  h4 {
+    font-size: 3rem;
+
+    @include media('<=lg') {
+      font-size: 2.5rem;
+    }
+    @include media('<=md') {
+      font-size: 2rem;
+    }
+    @include media('<=xs') {
+      font-size: 1.75rem;
+    }
+  }
+
+  h6 {
+    font-size: 0.8rem;
+    letter-spacing: 1em;
+  }
+
+  p {
+    font-size: 1.15rem;
+  }
+
+  section[class^='strata-section'],
+  section[class*='strata-section'] {
+    position: relative;
+    @include media('>lg') {
+      padding-top: $layout-spacing-desktop-lg;
+      padding-bottom: $layout-spacing-desktop-lg;
+    }
+    @include media('<=lg') {
+      padding-top: $layout-spacing-mobile;
+      padding-bottom: $layout-spacing-mobile;
+    }
+
+    .section-bg {
+      @include cover;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  #{$prefix}-case-study-content {
+    overflow: hidden;
+  }
+
+  #{$prefix}-section-hero {
+    .logo {
+      margin-bottom: 2rem;
+      display: inline-block;
+      margin-bottom: $layout-spacing-desktop-sm;
+      height: 113px;
+
+      @include media('<=lg') {
+        margin-bottom: $layout-spacing-mobile-sm;
+      }
+
+      @include media('<=sm') {
+        height: 80px;
+      }
+    }
+
+    h1 {
+      margin-bottom: 3rem;
+    }
+  }
+
+  #{$prefix}-section-header {
+    text-align: center;
+    max-width: 60rem;
+    margin-left: auto;
+    margin-right: auto;
+    @include last-mb-0;
+
+    @include media('>lg') {
+      margin-bottom: $layout-spacing-desktop;
+    }
+
+    @include media('<=lg') {
+      margin-bottom: $layout-spacing-mobile;
+    }
+
+    .btn-oval {
+      margin-top: $layout-spacing-desktop-sm;
+
+      @include media('<=lg') {
+        margin-top: $layout-spacing-mobile-sm;
+      }
+    }
+
+    + #{prefix}-strata-showcase {
+      margin-top: -5vh;
+    }
+  }
+
+  #{$prefix}-section-browser {
+    padding: 0 !important;
+  }
+
+  #{$prefix}-screen {
+    display: block;
+    box-shadow: $screen-shadow;
+    border-radius: 1rem;
+  }
+
+  #{$prefix}-section-image-content {
+    @include media('>sm') {
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        .section-image,
+        .section-content {
+          width: 40%;
+        }
+      }
+    }
+    @include media('<=sm') {
+      .section-content {
+        margin-bottom: $layout-spacing-desktop-xs;
+      }
+    }
+  }
+
+  #{$prefix}-screen {
+    display: block;
+    box-shadow: $screen-shadow;
+    border-radius: 1rem;
+    max-width: 100%;
+  }
+
+  #{$prefix}-screen-composition {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    > img {
+      max-width: 45%;
+
+      &:nth-child(2) {
+        margin-top: 20%;
+      }
+    }
+  }
+
+  #{$prefix}-section-intro {
+    padding: 0 !important;
+
+    .section-content {
+      padding-top: 0;
+    }
+  }
+
+  #{$prefix}-browser {
+    &-header {
+      background-color: rgba($color-global, 0.05);
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      padding: 0 1rem;
+      border-radius: 1rem 1rem 0 0;
+      backdrop-filter: blur(30px);
+
+      > span {
+        width: 5px;
+        height: 5px;
+        background-color: rgba($color-global, 0.2);
+        border-radius: 50%;
+        &:not(:last-child) {
+          margin-right: 6px;
+        }
+      }
+    }
+
+    &-video {
+      box-shadow: $screen-shadow;
+      overflow: hidden;
+      border-radius: 0 0 1rem 1rem;
+      video {
+        margin-left: -1px;
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+
+  #{$prefix}-section-video {
+    height: 90vh;
+    video {
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  #{$prefix}-showcase {
+    mask-image: linear-gradient(to bottom, rgba(black, 0), rgba(black, 1) 30%, rgba(black, 1) 70%, rgba(black, 0) 100%);
+    padding-bottom: 0 !important;
+    overflow: hidden;
+    &-inner {
+      display: flex;
+      justify-content: space-around;
+      max-height: 110vh;
+      gap: 5%;
+      padding: 0 5vw;
+      margin: 0 -10%;
+      transform: rotate(15deg);
+    }
+
+    &-col {
+      flex: 1 0 0;
+      max-width: 100%;
+
+      > * {
+        &:not(:last-child) {
+          margin-bottom: 5vw;
+        }
+      }
+    }
+  }
+
+  #{$prefix}-text-marquee {
+    h1 {
+      span {
+        &:after {
+          position: relative;
+          top: -0.1em;
+          width: 0.2em;
+          height: 0.2em;
+          vertical-align: middle;
+          content: ' ';
+          border-radius: 50%;
+          border: 1px solid $color-global;
+          display: inline-block;
+          margin: 0 0.4em 0 0.5em;
+        }
+      }
+    }
+  }
+}

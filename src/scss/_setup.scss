@@ -13,9 +13,9 @@ html {
 body {
   color: $color-global;
   font-family: $font-primary;
+  font-weight: $font-primary-regular;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-weight: $font-primary-regular;
   line-height: 1.5;
   overflow-x: hidden;
   position: relative;

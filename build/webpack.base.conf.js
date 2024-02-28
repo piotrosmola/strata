@@ -10,7 +10,9 @@ function resolve(dir) {
 module.exports = {
   entry: {
     core: './src/js/core.js',
-    style: './src/scss/style.scss'
+    'case-study-core': './src/js/case-study.js',
+    style: './src/scss/style.scss',
+    'case-study-style': './src/scss/case-study.scss'
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
