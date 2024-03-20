@@ -23,19 +23,21 @@
     position: absolute;
     top: 2rem;
     right: 2rem;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3rem;
+    height: 3rem;
     display: block;
-    margin: 0 0.5em;
     color: $color-global;
+    background-color: rgba($color-body, 0.5);
+    backdrop-filter: blur(30px);
+    border-radius: 50%;
 
     &::before,
     &::after {
       position: absolute;
       top: 50%;
-      left: 0;
+      left: 20%;
       height: 1px;
-      width: 100%;
+      width: 60%;
       background-color: $color-global;
       content: ' ';
       @include transition-primary('transform');
@@ -62,7 +64,8 @@
     }
   }
 
-  &-iframe {
+  &-iframe,
+  &-video {
     display: block;
     position: absolute;
     top: 0;
