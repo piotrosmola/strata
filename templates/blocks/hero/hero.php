@@ -7,6 +7,7 @@ require(get_template_directory() . '/inc/breadcrumbs.php');
 <?php $title = get_field('title'); ?>
 <?php $text = get_field('text'); ?>
 <?php $image = get_field('image'); ?>
+<?php $videoBg = get_field('video_bg'); ?>
 <?php $video = get_field('video'); ?>
 <?php $button = get_field('button'); ?>
 <?php $reverse = get_field('reverse'); ?>
@@ -19,16 +20,16 @@ require(get_template_directory() . '/inc/breadcrumbs.php');
 <!-- Section - Hero #1 -->
 <section class="section <?php echo $layout; ?><?php if($align) echo ' '.$align; ?><?php if($layout == 'hero-3' && $reverse) echo ' reversed'; ?>">
   <!-- Background -->
-  <div class="section-bg <?php if($video) echo 'has-video'; ?> <?php if($image) echo 'has-image'; ?>">
+  <div class="section-bg <?php if($videoBg) echo 'has-video'; ?> <?php if($image) echo 'has-image'; ?>">
     <div
-      class="<?php if($image && !$video) echo 'bg-image'; elseif($video) echo 'bg-video'; else echo 'waves bg-video'; ?><?php if($layout == 'hero-2' && !$image) echo ' reversed'; ?>">
+      class="<?php if($image && !$videoBg) echo 'bg-image'; elseif($videoBg) echo 'bg-video'; else echo 'waves bg-video'; ?><?php if($layout == 'hero-2' && !$image) echo ' reversed'; ?>">
       <?php if($image): ?>
       <?php echo wp_get_attachment_image($image, 'full'); ?>
       <?php endif; ?>
-      <?php if($video): ?>
-      <video src="<?php echo $video; ?>" autoplay muted loop playsinline></video>
+      <?php if($videoBg): ?>
+      <video src="<?php echo $videoBg; ?>" autoplay muted loop playsinline></video>
       <?php endif; ?>
-      <?php if(!$image && !$video): ?>
+      <?php if(!$image && !$videoBg): ?>
       <div class="waves-inner">
         <video src="<?php echo get_template_directory_uri(); ?>/img/waves.mp4" autoplay loop muted playsinline></video>
         <img src="<?php echo get_template_directory_uri(); ?>/img/waves.jpg" alt="waves">
