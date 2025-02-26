@@ -1,3 +1,5 @@
+import Scroll from './scroll'
+
 const $body = $('body')
 
 const VideoModal = {
@@ -24,9 +26,11 @@ const VideoModal = {
         $close.on('click', function () {
           $modal.fadeOut(150, function () {
             $modal.remove()
+            Scroll.scroller?.paused(false)
           })
         })
         $body.append($modal)
+        Scroll.scroller?.paused(true)
       }
 
       $modal.fadeIn(150).addClass('open')

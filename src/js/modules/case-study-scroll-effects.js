@@ -1,6 +1,3 @@
-import gsap from 'gsap'
-import { SplitText } from 'gsap/SplitText'
-
 const CaseStudyScrollEffects = {
   init() {
     const _ = this
@@ -9,6 +6,10 @@ const CaseStudyScrollEffects = {
     _.initScreenCompositon()
     _.initMarquee()
     _.initShowcase()
+
+    setTimeout(() => {
+      ScrollTrigger.refresh()
+    }, 1000)
   },
   initIntro() {
     document.querySelectorAll('.strata-section-intro').forEach(section => {

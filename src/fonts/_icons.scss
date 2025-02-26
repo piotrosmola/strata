@@ -1,7 +1,7 @@
 
 
 @font-face {
-  font-family:"Icons";
+  font-family:"StrataIcons";
   src:url("../fonts/icons-0d0bad530d85c9db1bff1ef0f94bd4f7.woff?0d0bad530d85c9db1bff1ef0f94bd4f7") format("woff"),
 		url("../fonts/icons-0d0bad530d85c9db1bff1ef0f94bd4f7.ttf?0d0bad530d85c9db1bff1ef0f94bd4f7") format("truetype");
   font-weight:normal;
@@ -38,13 +38,13 @@ $icons: (
 );
 
 @mixin icon($icon) {
-  font-family: "Icons";
+  font-family: "StrataIcons";
   $code: map-get($icons, $icon);
   content: unquote('\'\\#{ $code }\'');
 }
 
 .i {
-  font-family: "Icons";
+  font-family: "StrataIcons";
   display:inline-block;
   line-height:1;
   font-weight:normal;

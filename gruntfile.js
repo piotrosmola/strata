@@ -18,7 +18,7 @@ module.exports = function (grunt) {
           fontFilename: 'icons-{hash}',
           normalize: true,
           htmlDemo: false,
-          fontFamilyName: 'Icons',
+          fontFamilyName: 'StrataIcons',
           template: 'icons.tmpl.scss',
           templateOptions: {
             baseClass: 'i',

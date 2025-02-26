@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="font-size: 18px;">
+<html lang="en" class="strata-case-study" style="font-size: 18px;">
 
 <head>
   <!-- Meta -->
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="./dist/case-study-style.css" />
 </head>
 
-<body class="strata-case-study">
+<body class="strata-case-study-body">
 
   <div id="wrapper">
 

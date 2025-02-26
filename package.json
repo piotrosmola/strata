@@ -7,7 +7,7 @@
     "build": "webpack --config build/webpack.prod.conf.js",
     "deploy": "webpack --config build/webpack.prod.conf.js; rm -rf node_modules/",
     "images": "grunt imagemin",
-    "icons": "grunt clean --icons; grunt webfont",
+    "icons": "grunt clean --icons; grunt --verbose --force webfont",
     "validate": "grunt validation"
   },
   "devDependencies": {

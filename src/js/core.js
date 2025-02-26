@@ -1,3 +1,7 @@
+import gsap from 'gsap'
+import { ScrollSmoother } from 'gsap/ScrollSmoother'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { SplitText } from 'gsap/SplitText'
 import isTouchDevice from 'is-touch-device'
 
 import Animations from './modules/animations'
@@ -22,6 +26,11 @@ $(() => {
   Scroll.init()
   Page.init()
 })
+
+window.gsap = gsap
+window.ScrollTrigger = ScrollTrigger
+window.SplitText = SplitText
+window.SmoothScroll = ScrollSmoother
 
 window.addEventListener('page-loaded', () => {
   Counter.init()

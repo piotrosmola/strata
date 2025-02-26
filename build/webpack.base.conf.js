@@ -74,7 +74,27 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               postcssOptions: {
-                plugins: [require('autoprefixer'), require('pixrem')]
+                plugins: [
+                  require('autoprefixer'),
+                  require('pixrem'),
+                  root => {
+                    const skipSelectors = ['body']
+                    if (root.source.input.file.endsWith('case-study.scss')) {
+                      root.walkRules(rule => {
+                        const selectors = rule.selectors.map(selector => {
+                          const isExactMatch = skipSelectors.some(skip => selector === skip || selector.match(new RegExp(`(^|\\s|\\.|#)${skip}($|\\s|\\.|:)`)))
+
+                          if (isExactMatch) {
+                            return selector
+                          }
+
+                          return `.strata-case-study ${selector}`
+                        })
+                        rule.selectors = selectors
+                      })
+                    }
+                  }
+                ]
               }
             }
           },
